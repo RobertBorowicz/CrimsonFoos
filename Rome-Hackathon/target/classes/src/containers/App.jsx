@@ -24,21 +24,26 @@ export default class App extends React.Component {
     // test state -- remove for production
     constructor(props) {
         super(props);
-        let players = MockData.getPlayers();
+        this.players = MockData.getPlayers();
         let games = MockData.getGames();
         this.state = {
             view: (
                 <PlayersAtTheTable
-                    players={players}
+                    players={JSON.parse(JSON.stringify(this.players))}
                     onSubmit={this.handlePlayersAtTheTable.bind(this)}
                 />
             ),
             viewName: App.playersAtTheTableView,
-            players: players,
+            players: this.players,
             games: games
         };
     }
 
+    render() {
+        WebApiClient.get('/api/player/');
+        return <div>Testing</div>;
+    }
+/*
     componentDidMount() {
         //this.fetchAllPlayers();  // production call
     }
@@ -51,15 +56,15 @@ export default class App extends React.Component {
             this.setState({players: players});
         }
     }
-
+*/
     /* Handle requests to toggle view */
-
+/*
     handlePlayersAtTheTableView() {
         if (this.state.viewName !== App.playersAtTheTableView) {
             this.setState({
                 view: (
                     <PlayersAtTheTable
-                        players={this.state.players}
+                        players={JSON.parse(JSON.stringify(this.state.players))}
                         onSubmit={this.handlePlayersAtTheTable.bind(this)}
                     />
                 ),
@@ -122,9 +127,9 @@ export default class App extends React.Component {
             });
         }
     }
-
+*/
     /* Handle requests to modify data */
-
+/*
     handlePlayersAtTheTable(players) {
         console.log(players);
     }
@@ -165,5 +170,5 @@ export default class App extends React.Component {
             </div>
         );
     }
-
+*/
 }

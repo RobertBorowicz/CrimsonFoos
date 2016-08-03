@@ -1,9 +1,19 @@
 package rome.services;
 
+import java.sql.Connection;
+import java.sql.Statement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 import rome.caches.PlayersCache;
+import rome.database.PlayersDAO;
+import rome.database.PlayersDAOImpl;
 import rome.model.base.Player;
+import rome.database.DBConnection;
 
 /**
  * The Player controller.
@@ -23,7 +33,19 @@ public class PlayerService {
      * @return a list of all player
      */
     public List<Player> getAllPlayers() {
-        return cache.getAll();
+
+        ConfigurableApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
+        List<Player> players;
+
+        PlayersDAO conn = (PlayersDAO) context.getBean("playerDAO");
+
+        players = conn.getPlayers();
+
+        for (Player p : players) {
+            System.out.println(p.getNickname());
+        }
+
+        return players;
     }
 
     /**
