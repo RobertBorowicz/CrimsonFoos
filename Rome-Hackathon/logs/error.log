@@ -1,0 +1,50 @@
+Jul 25, 2016 11:54:06 PM rome.model.InformationRequest$HotelRequest run
+WARNING: Hotwire request failed: Malibu, CA
+Jul 25, 2016 11:54:06 PM rome.model.InformationRequest$HotelRequest run
+WARNING: Hotwire request failed: Coronado, CA
+Jul 25, 2016 11:54:06 PM rome.model.InformationRequest$HotelRequest run
+WARNING: Hotwire request failed: Lincoln City, OR
+Jul 25, 2016 11:54:06 PM rome.model.InformationRequest$HotelRequest run
+WARNING: Hotwire request failed: Galveston, TX
+Jul 25, 2016 11:54:06 PM rome.model.InformationRequest$HotelRequest run
+WARNING: Hotwire request failed: Clearwater Beach, FL
+Jul 25, 2016 11:54:06 PM rome.model.InformationRequest$HotelRequest run
+WARNING: Hotwire request failed: Atlantic Beach, FL
+Jul 25, 2016 11:54:06 PM rome.model.InformationRequest$HotelRequest run
+WARNING: Hotwire request failed: South Beach, FL
+Jul 25, 2016 11:54:06 PM rome.model.InformationRequest$HotelRequest run
+WARNING: Hotwire request failed: East Hampton, NY
+Jul 25, 2016 11:54:06 PM rome.model.InformationRequest$HotelRequest run
+WARNING: Hotwire request failed: Santa Barbara, CA
+Jul 25, 2016 11:54:06 PM rome.model.InformationRequest$HotelRequest run
+WARNING: Hotwire request failed: Ocean City, MD
+Jul 25, 2016 11:54:06 PM rome.model.InformationRequest$HotelRequest run
+WARNING: Hotwire request failed: Naples Beach, FL
+Jul 25, 2016 11:54:06 PM rome.model.InformationRequest$HotelRequest run
+WARNING: Hotwire request failed: Biloxi, MS
+Jul 25, 2016 11:54:06 PM rome.model.InformationRequest$HotelRequest run
+WARNING: Hotwire request failed: Waikiki, HI
+Jul 25, 2016 11:54:06 PM rome.model.InformationRequest$HotelRequest run
+WARNING: Hotwire request failed: Martha's Vineyard, MA
+Jul 25, 2016 11:54:06 PM rome.model.InformationRequest$HotelRequest run
+WARNING: Hotwire request failed: Palm Beach, FL
+Jul 25, 2016 11:54:06 PM rome.model.InformationRequest$HotelRequest run
+WARNING: Hotwire request failed: Cape May, NJ
+Jul 25, 2016 11:54:06 PM rome.model.InformationRequest$HotelRequest run
+WARNING: Hotwire request failed: St. Simons, GA
+Jul 25, 2016 11:54:06 PM rome.model.InformationRequest$HotelRequest run
+WARNING: Hotwire request failed: Santa Cruz, CA
+Jul 25, 2016 11:54:06 PM rome.model.InformationRequest$HotelRequest run
+WARNING: Hotwire request failed: Corpus Christi, TX
+Jul 25, 2016 11:54:06 PM rome.model.InformationRequest$HotelRequest run
+WARNING: Hotwire request failed: Laguna Beach, CA
+Jul 25, 2016 11:54:06 PM rome.model.InformationRequest$HotelRequest run
+WARNING: Hotwire request failed: Hilton Head, SC
+Jul 25, 2016 11:54:06 PM rome.model.InformationRequest$HotelRequest run
+WARNING: Hotwire request failed: Cape Hatteras National Seashore, NC
+Jul 25, 2016 11:54:07 PM rome.model.InformationRequest$BusinessRequest run
+WARNING: Yelp request failed: South Beach, FL / golf courses
+Jul 25, 2016 11:54:07 PM rome.services.GoogleAPI getDistance
+WARNING: Failed to get distance: Alabama / Hawaii
+Jul 25, 2016 11:54:09 PM rome.model.InformationRequest$BusinessRequest run
+WARNING: Yelp request failed: St. Simons, GA / water parks

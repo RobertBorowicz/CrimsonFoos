@@ -1,0 +1,39 @@
+.games-list {
+  margin: 0 40px 0 40px;
+}
+
+.single-game {
+  padding: 12px 20px 12px 20px;
+  margin-bottom: 8px;
+  color: white;
+  border-style: hidden;
+  border-radius: 6px;
+}
+
+.winner-red-team {
+  background-color: red;
+}
+
+.winner-blue-team {
+  background-color: blue;
+}
+
+.team {
+  display: inline-block;
+  font-size: 20px;
+}
+
+.left {
+  position: relative;
+  left: 2px;
+  text-align: left;
+}
+
+.right {
+  text-align: right;
+}
+
+.center {
+  font-size: 24px;
+  margin: 30px 12px 8px 0;
+}

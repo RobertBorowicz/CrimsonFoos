@@ -1,0 +1,80 @@
+Apr 15, 2016 8:54:25 PM groupone.services.LoggerFactory logResult
+INFO: ranked vacations
+USER:
+  Vacation Type:     Ski
+  Starting Location: Austin, AZ
+  Group Size:        3
+  GroupDynamic:      Church
+  Budget:            4000
+  Vacation Duration: 4
+VACATIONS:
+  1. Winter Park, CO [ Score: 91.86 ]
+  2. Taos, NM [ Score: 85.68 ]
+  3. Angel Fire, NM [ Score: 77.38 ]
+  4. Steamboat, CO [ Score: 59.66 ]
+  5. Sugarloaf, ME [ Score: 58.03 ]
+
+Apr 15, 2016 9:02:31 PM groupone.services.LoggerFactory logResult
+INFO: ranked vacations
+USER:
+  Vacation Type:     Beach
+  Starting Location: Pflugerville, TX
+  Group Size:        2
+  GroupDynamic:      Couple
+  Budget:            5000
+  Vacation Duration: 7
+VACATIONS:
+  1. Manele Bay, HI [ Score: 94.27 ]
+  2. Naples Beach, FL [ Score: 94.18 ]
+  3. Kiawah Island, SC [ Score: 93.27 ]
+  4. Santa Barbara, CA [ Score: 93.23 ]
+  5. Laguna Beach, CA [ Score: 92.25 ]
+
+Apr 15, 2016 9:49:19 PM groupone.services.LoggerFactory logResult
+INFO: ranked vacations
+USER:
+  Vacation Type:     Ski
+  Starting Location: Austin, TX
+  Group Size:        4
+  GroupDynamic:      Young Adults
+  Budget:            4000
+  Vacation Duration: 3
+VACATIONS:
+  1. Sugarloaf, ME [ Score: 97.32 ]
+  2. Lake Tahoe, CA [ Score: 97.05 ]
+  3. Jackson Hole, WY [ Score: 93.79 ]
+  4. Crested Butte, CO [ Score: 93.65 ]
+  5. Vail, CO [ Score: 92.47 ]
+
+Apr 15, 2016 9:49:50 PM groupone.services.LoggerFactory logResult
+INFO: ranked vacations
+USER:
+  Vacation Type:     Ski
+  Starting Location: Austin, TX
+  Group Size:        4
+  GroupDynamic:      Young Adults
+  Budget:            4000
+  Vacation Duration: 3
+VACATIONS:
+  1. Sugarloaf, ME [ Score: 97.32 ]
+  2. Lake Tahoe, CA [ Score: 97.05 ]
+  3. Jackson Hole, WY [ Score: 93.79 ]
+  4. Crested Butte, CO [ Score: 93.65 ]
+  5. Vail, CO [ Score: 92.47 ]
+
+Apr 15, 2016 9:50:07 PM groupone.services.LoggerFactory logResult
+INFO: ranked vacations
+USER:
+  Vacation Type:     Ski
+  Starting Location: Austin, TX
+  Group Size:        4
+  GroupDynamic:      Young Adults
+  Budget:            4000
+  Vacation Duration: 3
+VACATIONS:
+  1. Sugarloaf, ME [ Score: 97.32 ]
+  2. Lake Tahoe, CA [ Score: 97.05 ]
+  3. Jackson Hole, WY [ Score: 93.79 ]
+  4. Crested Butte, CO [ Score: 93.65 ]
+  5. Vail, CO [ Score: 92.47 ]
+
