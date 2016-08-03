@@ -45,8 +45,8 @@ public class PlayerController {
     }
 
     /**
-     * Retrieve a single player.
-     * @param id the id of the player to be retrieved
+     * Retrieve a single player.o
+     * @param id the id of the player t be retrieved
      * @return the player with the given id and the status code
      */
     @RequestMapping(value = "/api/player/{id}", method = RequestMethod.GET,

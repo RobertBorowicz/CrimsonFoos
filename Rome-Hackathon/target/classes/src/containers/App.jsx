@@ -19,28 +19,28 @@ export default class App extends React.Component {
     static updatePlayerView = 'updatePlayerView';
     static deletePlayerView = 'deletePlayerView';
 
-    //state = {view: null, viewName: null, players: null, games_view: null};
+    state = {view: null, viewName: null, players: null, games: null};
 
     // test state -- remove for production
-    constructor(props) {
+    /*constructor(props) {
         super(props);
-        let players = MockData.getPlayers();
+        this.players = MockData.getPlayers();
         let games = MockData.getGames();
         this.state = {
             view: (
                 <PlayersAtTheTable
-                    players={players}
+                    players={JSON.parse(JSON.stringify(this.players))}
                     onSubmit={this.handlePlayersAtTheTable.bind(this)}
                 />
             ),
             viewName: App.playersAtTheTableView,
-            players: players,
+            players: this.players,
             games: games
         };
-    }
+    }*/
 
     componentDidMount() {
-        //this.fetchAllPlayers();  // production call
+        this.fetchAllPlayers();  // production call
     }
 
     fetchAllPlayers() {
@@ -48,7 +48,17 @@ export default class App extends React.Component {
         // i.e. games_view, players, etc...
         let players = WebApiClient.get('/api/player/');
         if (players !== null) {
-            this.setState({players: players});
+            this.setState({
+                view: (
+                    <PlayersAtTheTable
+                        players={JSON.parse(JSON.stringify(this.players))}
+                        onSubmit={this.handlePlayersAtTheTable.bind(this)}
+                    />
+                ),
+                viewName: App.playersAtTheTableView,
+                players: players,
+                games: MockData.getGames()
+            });
         }
     }
 
@@ -59,7 +69,7 @@ export default class App extends React.Component {
             this.setState({
                 view: (
                     <PlayersAtTheTable
-                        players={this.state.players}
+                        players={JSON.parse(JSON.stringify(this.state.players))}
                         onSubmit={this.handlePlayersAtTheTable.bind(this)}
                     />
                 ),
