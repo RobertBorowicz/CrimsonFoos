@@ -19,8 +19,25 @@ export default class App extends React.Component {
     static updatePlayerView = 'updatePlayerView';
     static deletePlayerView = 'deletePlayerView';
 
-    state = {view: null, viewName: null, players: null, games: null};
+    state = {view: null, viewName: null, players: null, games_view: null};
 
+    componentDidMount() {
+        let request = new XMLHttpRequest();
+        request.open('GET', '/api/player/', true);
+        request.setRequestHeader('Content-Type', 'application/json');
+        request.onload = () => {
+            if (request.status === 200) {
+                console.log(JSON.parse(request.responseText));
+            }
+        };
+        request.send();
+    }
+
+    render() {
+        //let player = WebApiClient.get('/api/player/1');
+        //console.log(player.id);
+        return <div>Getting player...</div>;
+    }
     // test state -- remove for production
     /*constructor(props) {
         super(props);
@@ -38,7 +55,7 @@ export default class App extends React.Component {
             games: games
         };
     }*/
-
+/*
     componentDidMount() {
         this.fetchAllPlayers();  // production call
     }
@@ -51,7 +68,7 @@ export default class App extends React.Component {
             this.setState({
                 view: (
                     <PlayersAtTheTable
-                        players={JSON.parse(JSON.stringify(this.players))}
+                        players={JSON.parse(JSON.stringify(players))}
                         onSubmit={this.handlePlayersAtTheTable.bind(this)}
                     />
                 ),
@@ -60,10 +77,10 @@ export default class App extends React.Component {
                 games: MockData.getGames()
             });
         }
-    }
+    }*/
 
     /* Handle requests to toggle view */
-
+/*
     handlePlayersAtTheTableView() {
         if (this.state.viewName !== App.playersAtTheTableView) {
             this.setState({
@@ -132,9 +149,9 @@ export default class App extends React.Component {
             });
         }
     }
-
+*/
     /* Handle requests to modify data */
-
+/*
     handlePlayersAtTheTable(players) {
         console.log(players);
     }
@@ -156,7 +173,11 @@ export default class App extends React.Component {
             console.log('handling delete');
         }
     }
+
     render() {
+        if (!this.state.view) {
+            return <div>Loading data...</div>;
+        }
         return (
             <div className='app'>
                 <div id='app-menu'>
@@ -175,5 +196,5 @@ export default class App extends React.Component {
             </div>
         );
     }
-
+*/
 }

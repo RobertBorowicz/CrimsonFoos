@@ -8,6 +8,7 @@
     "build": "webpack -p --display-error-details"
   },
   "keywords": [
+    "crimson",
     "foosball",
     "tracker"
   ],
@@ -33,8 +34,10 @@
   },
   "dependencies": {
     "deep-equal": "^1.0.1",
+    "moment": "^2.14.1",
     "react": "^15.1.0",
     "react-bootstrap": "^0.30.0",
+    "react-datepicker": "^0.28.1",
     "react-dom": "^15.1.0"
   }
 }

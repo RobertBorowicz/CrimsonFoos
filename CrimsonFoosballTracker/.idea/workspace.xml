@@ -2,17 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="185a2e6c-e3b5-4e9b-99fc-5be3fad3aadf" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Rome-Hackathon/src/main/java/rome/controllers/MatchupsController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Rome-Hackathon/src/main/java/rome/model/base/Matchup.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Rome-Hackathon/src/main/java/rome/services/RecommendedMatchupService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Rome-Hackathon/target/classes/rome/controllers/PlayerController.class" afterPath="$PROJECT_DIR$/../Rome-Hackathon/target/classes/rome/controllers/PlayerController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Rome-Hackathon/src/main/java/rome/controllers/PlayerController.java" afterPath="$PROJECT_DIR$/../Rome-Hackathon/src/main/java/rome/controllers/PlayerController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Rome-Hackathon/src/main/resources/configuration/applicationContext.xml" afterPath="$PROJECT_DIR$/../Rome-Hackathon/src/main/resources/configuration/applicationContext.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Rome-Hackathon/src/main/resources/package.json" afterPath="$PROJECT_DIR$/../Rome-Hackathon/src/main/resources/package.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Rome-Hackathon/src/main/resources/resources/dist/bundle.js" afterPath="$PROJECT_DIR$/../Rome-Hackathon/src/main/resources/resources/dist/bundle.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Rome-Hackathon/src/main/resources/src/ajax/WebApiClient.jsx" afterPath="$PROJECT_DIR$/../Rome-Hackathon/src/main/resources/src/ajax/WebApiClient.jsx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Rome-Hackathon/src/main/resources/src/components/games_view/GamesView.jsx" afterPath="$PROJECT_DIR$/../Rome-Hackathon/src/main/resources/src/components/games_view/GamesView.jsx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Rome-Hackathon/src/main/resources/src/components/games_view/games-view.scss" afterPath="$PROJECT_DIR$/../Rome-Hackathon/src/main/resources/src/components/games_view/games-view.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Rome-Hackathon/src/main/resources/src/containers/App.jsx" afterPath="$PROJECT_DIR$/../Rome-Hackathon/src/main/resources/src/containers/App.jsx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Rome-Hackathon/src/main/resources/src/mocks/MockData.jsx" afterPath="$PROJECT_DIR$/../Rome-Hackathon/src/main/resources/src/mocks/MockData.jsx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Rome-Hackathon/target/classes/configuration/applicationContext.xml" afterPath="$PROJECT_DIR$/../Rome-Hackathon/target/classes/configuration/applicationContext.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Rome-Hackathon/target/classes/package.json" afterPath="$PROJECT_DIR$/../Rome-Hackathon/target/classes/package.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Rome-Hackathon/target/classes/resources/dist/bundle.js" afterPath="$PROJECT_DIR$/../Rome-Hackathon/target/classes/resources/dist/bundle.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Rome-Hackathon/target/classes/src/ajax/WebApiClient.jsx" afterPath="$PROJECT_DIR$/../Rome-Hackathon/target/classes/src/ajax/WebApiClient.jsx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Rome-Hackathon/target/classes/src/components/games_view/GamesView.jsx" afterPath="$PROJECT_DIR$/../Rome-Hackathon/target/classes/src/components/games_view/GamesView.jsx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Rome-Hackathon/target/classes/src/components/games_view/games-view.scss" afterPath="$PROJECT_DIR$/../Rome-Hackathon/target/classes/src/components/games_view/games-view.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Rome-Hackathon/target/classes/src/containers/App.jsx" afterPath="$PROJECT_DIR$/../Rome-Hackathon/target/classes/src/containers/App.jsx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Rome-Hackathon/target/classes/src/mocks/MockData.jsx" afterPath="$PROJECT_DIR$/../Rome-Hackathon/target/classes/src/mocks/MockData.jsx" />
     </list>
     <ignored path="CrimsonFoosballTracker.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -34,11 +41,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="App.jsx" pinned="false" current-in-tab="false">
+      <file leaf-file-name="App.jsx" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../Rome-Hackathon/src/main/resources/src/containers/App.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="49" selection-start-line="17" selection-start-column="49" selection-end-line="17" selection-end-column="49" />
+            <state relative-caret-position="345">
+              <caret line="23" column="14" selection-start-line="23" selection-start-column="14" selection-end-line="23" selection-end-column="14" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -46,63 +53,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GamesView.jsx" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../Rome-Hackathon/src/main/resources/src/components/games_view/GamesView.jsx">
+      <file leaf-file-name="PlayerService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../Rome-Hackathon/src/main/java/rome/services/PlayerService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="31" column="40" selection-start-line="31" selection-start-column="40" selection-end-line="31" selection-end-column="40" />
+            <state relative-caret-position="300">
+              <caret line="23" column="7" selection-start-line="23" selection-start-column="7" selection-end-line="23" selection-end-column="7" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../Rome-Hackathon/src/main/resources/package.json">
+      <file leaf-file-name="WebApiClient.jsx" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../Rome-Hackathon/src/main/resources/src/ajax/WebApiClient.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="29" column="30" selection-start-line="29" selection-start-column="30" selection-end-line="29" selection-end-column="30" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MatchupsController.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/../Rome-Hackathon/src/main/java/rome/controllers/MatchupsController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="589">
-              <caret line="41" column="57" selection-start-line="41" selection-start-column="57" selection-end-line="41" selection-end-column="57" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Matchup.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../Rome-Hackathon/src/main/java/rome/model/base/Matchup.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="3" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="applicationContext.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../Rome-Hackathon/src/main/resources/configuration/applicationContext.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="424">
-              <caret line="51" column="24" selection-start-line="51" selection-start-column="24" selection-end-line="51" selection-end-column="24" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RecommendedMatchupService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../Rome-Hackathon/src/main/java/rome/services/RecommendedMatchupService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+            <state relative-caret-position="630">
+              <caret line="42" column="8" selection-start-line="42" selection-start-column="8" selection-end-line="44" selection-end-column="69" />
               <folding />
             </state>
           </provider>
@@ -111,8 +76,8 @@
       <file leaf-file-name="PlayerController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../Rome-Hackathon/src/main/java/rome/controllers/PlayerController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="48" column="39" selection-start-line="0" selection-start-column="0" selection-end-line="126" selection-end-column="0" />
+            <state relative-caret-position="300">
+              <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -140,10 +105,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/../Rome-Hackathon/src/main/java/rome/model/base/Player.java" />
         <option value="$PROJECT_DIR$/../Rome-Hackathon/src/main/java/rome/caches/PlayersCache.java" />
         <option value="$PROJECT_DIR$/../Rome-Hackathon/src/main/java/rome/caches/ProjectCacheManager.java" />
-        <option value="$PROJECT_DIR$/../Rome-Hackathon/src/main/java/rome/services/PlayerService.java" />
         <option value="$PROJECT_DIR$/../Rome-Hackathon/src/main/java/rome/caches/ProjectCache.java" />
         <option value="$PROJECT_DIR$/../Rome-Hackathon/pom.xml" />
         <option value="$PROJECT_DIR$/../Rome-Hackathon/src/main/resources/src/components/create_player/CreatePlayerForm.jsx" />
@@ -161,7 +124,6 @@
         <option value="$PROJECT_DIR$/../Rome-Hackathon/src/main/resources/src/components/form/form.scss" />
         <option value="$PROJECT_DIR$/../Rome-Hackathon/src/main/resources/src/components/nav_menu/NavBurgerMenu.jsx" />
         <option value="$PROJECT_DIR$/../Rome-Hackathon/src/main/resources/src/components/player_form/player_form.scss" />
-        <option value="$PROJECT_DIR$/../Rome-Hackathon/src/main/resources/src/mocks/MockData.jsx" />
         <option value="$PROJECT_DIR$/../Rome-Hackathon/src/main/resources/src/components/delete_player_view/DeleteAlert.jsx" />
         <option value="$PROJECT_DIR$/../Rome-Hackathon/src/main/resources/src/components/delete_player_view/DeletePlayerAlert.jsx" />
         <option value="$PROJECT_DIR$/../Rome-Hackathon/src/main/resources/src/components/update_player_view/UpdatePlayerAlert.jsx" />
@@ -173,8 +135,6 @@
         <option value="$PROJECT_DIR$/../Rome-Hackathon/src/main/resources/src/containers/app.scss" />
         <option value="$PROJECT_DIR$/../Rome-Hackathon/src/main/resources/src/components/games_view/Game.jsx" />
         <option value="$PROJECT_DIR$/../Rome-Hackathon/src/main/resources/src/components/players_view/players-view.scss" />
-        <option value="$PROJECT_DIR$/../Rome-Hackathon/src/main/resources/src/components/games_view/games-view.scss" />
-        <option value="$PROJECT_DIR$/../Rome-Hackathon/src/main/resources/src/components/games_view/GamesView.jsx" />
         <option value="$PROJECT_DIR$/../Rome-Hackathon/src/main/resources/src/components/update_player_view/UpdatePlayerView.jsx" />
         <option value="$PROJECT_DIR$/../Rome-Hackathon/src/main/resources/src/components/player_form/player-form.scss" />
         <option value="$PROJECT_DIR$/../Rome-Hackathon/src/main/resources/src/components/alerts/modify-player-alert.scss" />
@@ -186,11 +146,16 @@
         <option value="$PROJECT_DIR$/../Rome-Hackathon/src/main/resources/src/components/nav_menu/NavMenu.jsx" />
         <option value="$PROJECT_DIR$/../Rome-Hackathon/src/main/resources/src/components/players_view/PlayersView.jsx" />
         <option value="$PROJECT_DIR$/../Rome-Hackathon/src/main/resources/views/index.html" />
-        <option value="$PROJECT_DIR$/../Rome-Hackathon/src/main/resources/src/containers/App.jsx" />
-        <option value="$PROJECT_DIR$/../Rome-Hackathon/src/main/resources/package.json" />
-        <option value="$PROJECT_DIR$/../Rome-Hackathon/src/main/java/rome/controllers/PlayerController.java" />
         <option value="$PROJECT_DIR$/../Rome-Hackathon/src/main/resources/configuration/applicationContext.xml" />
         <option value="$PROJECT_DIR$/../Rome-Hackathon/src/main/java/rome/controllers/MatchupsController.java" />
+        <option value="$PROJECT_DIR$/../Rome-Hackathon/src/main/resources/package.json" />
+        <option value="$PROJECT_DIR$/../Rome-Hackathon/src/main/resources/src/mocks/MockData.jsx" />
+        <option value="$PROJECT_DIR$/../Rome-Hackathon/src/main/resources/src/components/games_view/games-view.scss" />
+        <option value="$PROJECT_DIR$/../Rome-Hackathon/src/main/resources/src/components/games_view/GamesView.jsx" />
+        <option value="$PROJECT_DIR$/../Rome-Hackathon/src/main/java/rome/services/PlayerService.java" />
+        <option value="$PROJECT_DIR$/../Rome-Hackathon/src/main/java/rome/controllers/PlayerController.java" />
+        <option value="$PROJECT_DIR$/../Rome-Hackathon/src/main/resources/src/ajax/WebApiClient.jsx" />
+        <option value="$PROJECT_DIR$/../Rome-Hackathon/src/main/resources/src/containers/App.jsx" />
       </list>
     </option>
   </component>
@@ -216,7 +181,7 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="1444" />
     <option name="y" value="23" />
-    <option name="width" value="1333" />
+    <option name="width" value="1860" />
     <option name="height" value="974" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -278,26 +243,16 @@
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-          </PATH>
-          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="CrimsonFoosballTracker" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Rome-Hackathon" />
+              <option name="myItemId" value="test" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
+              <option name="myItemId" value="java" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
+              <option name="myItemId" value="rome" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -316,14 +271,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="configuration" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -380,100 +327,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="rome" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="model" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CrimsonFoosballTracker" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Rome-Hackathon" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rome" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="model" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="base" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CrimsonFoosballTracker" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Rome-Hackathon" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rome" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CrimsonFoosballTracker" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Rome-Hackathon" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rome" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controllers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -999,15 +852,15 @@
       <workItem from="1470068412068" duration="1115000" />
       <workItem from="1470100879348" duration="6542000" />
       <workItem from="1470168608323" duration="173000" />
-      <workItem from="1470237986139" duration="6325000" />
+      <workItem from="1470237986139" duration="18044000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="84860000" />
+    <option name="totallyTimeSpent" value="96579000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1444" y="23" width="1333" height="974" extended-state="0" />
+    <frame x="1444" y="23" width="1860" height="974" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1015,15 +868,15 @@
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32928178" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22541437" sideWeight="0.50262564" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22541437" sideWeight="0.50215054" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22541437" sideWeight="0.49737436" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22541437" sideWeight="0.49784946" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2888222" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20698924" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1097,20 +950,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../Rome-Hackathon/src/main/resources/src/utils/DeepEqual.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Rome-Hackathon/src/main/resources/node_modules/react-bootstrap/lib/NavItem.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../Rome-Hackathon/src/main/resources/src/components/nav_menu/nav-menu.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -1163,13 +1002,6 @@
     <entry file="file://$PROJECT_DIR$/../Rome-Hackathon/src/main/resources/src/components/nav_menu/NavBurgerMenu.jsx" />
     <entry file="file://$PROJECT_DIR$/../Rome-Hackathon/src/main/resources/src/components/update_player_view/UpdatePlayerAlert.jsx" />
     <entry file="file://$PROJECT_DIR$/../Rome-Hackathon/src/main/resources/src/components/delete_player_view/DeletePlayerAlert.jsx" />
-    <entry file="file://$PROJECT_DIR$/../Rome-Hackathon/src/main/resources/src/mocks/MockData.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="82">
-          <caret line="312" column="21" selection-start-line="312" selection-start-column="21" selection-end-line="312" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../Rome-Hackathon/src/main/resources/src/components/create_player_view/create-player-view.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1204,13 +1036,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="495">
           <caret line="33" column="30" selection-start-line="33" selection-start-column="30" selection-end-line="33" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Rome-Hackathon/src/main/resources/src/components/games_view/games-view.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="24" selection-start-line="1" selection-start-column="24" selection-end-line="1" selection-end-column="24" />
         </state>
       </provider>
     </entry>
@@ -1276,27 +1101,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../Rome-Hackathon/src/main/resources/src/components/player_form/PlayerForm.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="26" selection-start-line="21" selection-start-column="26" selection-end-line="21" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../Rome-Hackathon/src/main/resources/src/components/players_at_the_table/players-at-the-table.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Rome-Hackathon/src/main/resources/src/components/players_at_the_table/PlayersAtTheTable.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="24" column="47" selection-start-line="24" selection-start-column="47" selection-end-line="24" selection-end-column="47" />
-          <folding>
-            <element signature="e#0#26#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1371,60 +1179,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../Rome-Hackathon/src/main/resources/src/ajax/WebApiClient.jsx">
+    <entry file="file://$PROJECT_DIR$/../Rome-Hackathon/src/main/java/rome/model/base/Matchup.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="28" column="24" selection-start-line="28" selection-start-column="24" selection-end-line="28" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Rome-Hackathon/src/main/resources/src/containers/App.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="49" selection-start-line="17" selection-start-column="49" selection-end-line="17" selection-end-column="49" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Rome-Hackathon/src/main/resources/src/components/games_view/GamesView.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="31" column="40" selection-start-line="31" selection-start-column="40" selection-end-line="31" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Rome-Hackathon/src/main/resources/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="29" column="30" selection-start-line="29" selection-start-column="30" selection-end-line="29" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Rome-Hackathon/src/main/java/rome/controllers/PlayerController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="48" column="39" selection-start-line="0" selection-start-column="0" selection-end-line="126" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Rome-Hackathon/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-107">
-          <caret line="209" column="42" selection-start-line="209" selection-start-column="42" selection-end-line="209" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Rome-Hackathon/src/main/resources/configuration/applicationContext.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="424">
-          <caret line="51" column="24" selection-start-line="51" selection-start-column="24" selection-end-line="51" selection-end-column="24" />
+        <state relative-caret-position="60">
+          <caret line="4" column="3" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
           <folding />
         </state>
       </provider>
@@ -1437,20 +1195,120 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../Rome-Hackathon/src/main/java/rome/model/base/Matchup.java">
+    <entry file="file://$PROJECT_DIR$/../Rome-Hackathon/src/main/java/rome/controllers/MatchupsController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="3" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
+        <state relative-caret-position="289">
+          <caret line="21" column="3" selection-start-line="21" selection-start-column="3" selection-end-line="21" selection-end-column="3" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Rome-Hackathon/src/main/resources/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="15" column="38" selection-start-line="15" selection-start-column="38" selection-end-line="15" selection-end-column="38" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../Rome-Hackathon/src/main/java/rome/controllers/MatchupsController.java">
+    <entry file="file://$PROJECT_DIR$/../Rome-Hackathon/src/main/resources/src/mocks/MockData.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="589">
-          <caret line="41" column="57" selection-start-line="41" selection-start-column="57" selection-end-line="41" selection-end-column="57" />
+        <state relative-caret-position="105">
+          <caret line="81" column="17" selection-start-line="81" selection-start-column="17" selection-end-line="81" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Rome-Hackathon/src/main/resources/src/components/players_at_the_table/PlayersAtTheTable.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-557">
+          <caret line="24" column="47" selection-start-line="24" selection-start-column="47" selection-end-line="24" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Rome-Hackathon/src/main/resources/src/components/player_form/PlayerForm.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-480">
+          <caret line="21" column="26" selection-start-line="21" selection-start-column="26" selection-end-line="21" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Rome-Hackathon/src/main/resources/src/components/games_view/games-view.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="454">
+          <caret line="41" column="24" selection-start-line="41" selection-start-column="24" selection-end-line="41" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Rome-Hackathon/src/main/resources/src/components/games_view/GamesView.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="75" column="54" selection-start-line="75" selection-start-column="54" selection-end-line="75" selection-end-column="54" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Rome-Hackathon/src/main/resources/configuration/applicationContext.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="409">
+          <caret line="51" column="24" selection-start-line="51" selection-start-column="24" selection-end-line="51" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Rome-Hackathon/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1695">
+          <caret line="209" column="42" selection-start-line="209" selection-start-column="42" selection-end-line="209" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Rome-Hackathon/src/main/java/rome/main/Application.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="37" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Rome-Hackathon/src/main/java/rome/services/PlayerService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="23" column="7" selection-start-line="23" selection-start-column="7" selection-end-line="23" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Rome-Hackathon/src/main/java/rome/controllers/PlayerController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Rome-Hackathon/src/main/resources/src/ajax/WebApiClient.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="630">
+          <caret line="42" column="8" selection-start-line="42" selection-start-column="8" selection-end-line="44" selection-end-column="69" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Rome-Hackathon/src/main/resources/src/containers/App.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="14" selection-start-line="23" selection-start-column="14" selection-end-line="23" selection-end-column="14" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
           </folding>
         </state>
       </provider>

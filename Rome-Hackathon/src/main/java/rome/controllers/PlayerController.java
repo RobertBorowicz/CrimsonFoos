@@ -35,8 +35,10 @@ public class PlayerController {
      * Retrieve all players.
      * @return a list of all players and the status code
      */
-    @RequestMapping(value = "/api/player/", method = RequestMethod.GET)
+    @RequestMapping(value = "/api/player/", method = RequestMethod.GET,
+                    produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<List<Player>> getAllPlayers() {
+        System.out.println("I'm at the players controller");
         List<Player> players = playerService.getAllPlayers();
         if (players.isEmpty()) {
             return new ResponseEntity<List<Player>>(HttpStatus.NO_CONTENT);
@@ -52,7 +54,12 @@ public class PlayerController {
     @RequestMapping(value = "/api/player/{id}", method = RequestMethod.GET,
                     produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Player> getPlayerById(@PathVariable("id") long id) {
-        Player player = playerService.getPlayerById(id);
+        //Player player = playerService.getPlayerById(id);
+        Player player = new Player();
+        player.setId(1);
+        player.setFirstName("Craig");
+        player.setLastName("Walker");
+        player.setNickname("cw");
         if (player == null) {
             return new ResponseEntity<Player>(HttpStatus.NOT_FOUND);
         }

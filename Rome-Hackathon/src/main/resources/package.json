@@ -8,6 +8,7 @@
     "build": "webpack -p --display-error-details"
   },
   "keywords": [
+    "crimson",
     "foosball",
     "tracker"
   ],
