@@ -32,4 +32,12 @@ public class Team
       this.color = newColor.toUpperCase();
     }
   }
+
+  public boolean hasPlayer(Player player)
+  {
+    if(player1.equals(player) || player2.equals(player))
+    {
+      return true;
+    }
+  }
 }

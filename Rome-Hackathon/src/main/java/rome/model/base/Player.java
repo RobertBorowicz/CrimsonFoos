@@ -13,6 +13,7 @@ public class Player {
     private String firstName;
     private String lastName;
     private String nickname;
+    public List<Matchup> matchupList;
 
     public Player() {}
 
@@ -21,6 +22,7 @@ public class Player {
         this.firstName = firstName;
         this.lastName = lastName;
         this.nickname = nickname;
+        matchupList = new ArrayList<>();
     }
 
     public long getId() {
@@ -64,5 +66,23 @@ public class Player {
                 + "\nFirst Name: " + firstName
                 + "\nLast Name: " + lastName
                 + "\nNickname: " + nickname;
+    }
+
+    public int getGamesPlayed()
+    {
+        return matchupList.size();
+    }
+
+    public int getGamesPlayedWith(Player player)
+    {
+        int games = 0;
+        for (Matchup match : matchupList)
+        {
+            if (match.hasPlayer(player))
+            {
+                games++;
+            }
+        }
+        return games;
     }
 }
