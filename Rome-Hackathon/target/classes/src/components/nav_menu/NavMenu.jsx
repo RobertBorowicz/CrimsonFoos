@@ -5,13 +5,11 @@ import './nav-menu.scss';
 export default class NavMenu extends React.Component {
 
     static propTypes = {
-        onPlayersAtTheTableView: React.PropTypes.func.isRequired,
-        onGamesView: React.PropTypes.func.isRequired,
-        onPlayersView: React.PropTypes.func.isRequired,
-        onCreatePlayerView: React.PropTypes.func.isRequired,
-        onUpdatePlayerView: React.PropTypes.func.isRequired,
-        onDeletePlayerView: React.PropTypes.func.isRequired
-    }
+        onNewGameView: React.PropTypes.func.isRequired,
+        onScoresView: React.PropTypes.func.isRequired,
+        onStatsView: React.PropTypes.func.isRequired,
+        onPlayersView: React.PropTypes.func.isRequired
+    };
 
     state = {show: false};
 
@@ -24,9 +22,12 @@ export default class NavMenu extends React.Component {
         callback();
     }
 
+    /* Nav menu will change according to UX design */
+
     render() {
         return (
-            <Navbar fluid inverse className="nav-menu" expanded={this.state.show} onToggle={this.handleToggle.bind(this)}>
+            <Navbar fluid inverse className="nav-menu" expanded={this.state.show}
+                    onToggle={this.handleToggle.bind(this)}>
                 <Navbar.Header>
                     <Navbar.Brand>
                         <a href="#"><em>CRIMSON <small>Foosball Tracker</small></em></a>
@@ -35,29 +36,17 @@ export default class NavMenu extends React.Component {
                 </Navbar.Header>
                 <Navbar.Collapse>
                     <Nav pullRight key={1}>
-                        <NavItem
-                            onClick={() => this.handleSelection(this.props.onPlayersAtTheTableView)}>
-                            Players At The Table
+                        <NavItem onClick={() => this.handleSelection(this.props.onNewGameView)}>
+                            New Game
                         </NavItem>
-                        <NavItem
-                            onClick={() => this.handleSelection(this.props.onGamesView)}>
-                            View Games
+                        <NavItem onClick={() => this.handleSelection(this.props.onScoresView)}>
+                            Scores
                         </NavItem>
-                        <NavItem
-                            onClick={() => this.handleSelection(this.props.onPlayersView)}>
-                            View Players
+                        <NavItem onClick={() => this.handleSelection(this.props.onStatsView)}>
+                            Stats
                         </NavItem>
-                        <NavItem
-                            onClick={() => this.handleSelection(this.props.onCreatePlayerView)}>
-                            Create Player
-                        </NavItem>
-                        <NavItem
-                            onClick={() => this.handleSelection(this.props.onUpdatePlayerView)}>
-                            Update Player
-                        </NavItem>
-                        <NavItem
-                            onClick={() => this.handleSelection(this.props.onDeletePlayerView)}>
-                            Delete Player
+                        <NavItem onClick={() => this.handleSelection(this.props.onPlayersView)}>
+                            Players
                         </NavItem>
                     </Nav>
                 </Navbar.Collapse>

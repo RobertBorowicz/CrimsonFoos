@@ -1,11 +1,6 @@
 package rome.model.base;
 
 /**
-<<<<<<< HEAD
- * Created by walkercr on 8/3/16.
- */
-public class Game {
-=======
  * Created by borowicr on 8/4/16.
  */
 public class Game {
@@ -66,5 +61,4 @@ public class Game {
     public void setGameID(int gameID) {
         this.gameID = gameID;
     }
->>>>>>> Database-Setup
 }

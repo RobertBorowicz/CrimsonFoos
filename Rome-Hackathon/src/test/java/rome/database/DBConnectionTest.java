@@ -26,9 +26,7 @@ public class DBConnectionTest {
     @Test
     public void createTeam() throws Exception {
         DBConnection db = new DBConnection();
-
-        Stats stats = db.getPlayerStats(1);
-        System.out.println(stats.getGamesPlayed() + " " + stats.getWins() + " " + stats.getLosses());
+        db.recordGame(300, "blue", 300, 10, 310, 9);
     }
 
 }
