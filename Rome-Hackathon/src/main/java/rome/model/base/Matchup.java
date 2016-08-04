@@ -1,10 +1,12 @@
-public class Matchup implements Comparable
+package rome.model.base;
+
+public class Matchup implements Comparable<Matchup>
 {
   private Team team1;
   private Team team2;
   private double avgCI;
 
-  public Matchup(Team team1, Team team2, double calcedCI;
+  public Matchup(Team team1, Team team2, double calcedCI)
   {
     this.team1 = team1;
     this.team2 = team2;
@@ -44,6 +46,7 @@ public class Matchup implements Comparable
     return hasFirstTeam && hasSecondTeam;
   }
 
+  @Override
   public int compareTo(Matchup otherMatchup)
   {
     if (avgCI > otherMatchup.getCI())
@@ -55,5 +58,9 @@ public class Matchup implements Comparable
       return -1;
     }
     else return 0;
+  }
+
+  public double getCI() {
+    return this.avgCI;
   }
 }

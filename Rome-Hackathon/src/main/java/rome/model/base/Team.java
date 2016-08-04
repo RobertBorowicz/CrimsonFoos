@@ -1,3 +1,5 @@
+package rome.model.base;
+
 public class Team
 {
   private String color;
@@ -38,7 +40,7 @@ public class Team
   {
     this.player2 = player2;
   }
-  public void setColor(String newColor);
+  public void setColor(String newColor)
   {
     if (newColor.equalsIgnoreCase("RED") || newColor.equalsIgnoreCase("BLUE"))
     {
@@ -48,16 +50,13 @@ public class Team
 
   public boolean hasPlayer(Player player)
   {
-    if(player1.equals(player) || player2.equals(player))
-    {
-      return true;
-    }
+    return player1.equals(player) || player2.equals(player);
   }
 
   public boolean equals(Team otherTeam)
   {
-    boolean hasPlayer1 = player1.equals(otherTeam.getPlayer1()) || player1.equals(otherTeam.getPlayer2();
-    boolean hasPlayer2 = player2.equals(otherTeam.getPlayer1()) || player2.equals(otherTeam.getPlayer2();
+    boolean hasPlayer1 = player1.equals(otherTeam.getPlayer1()) || player1.equals(otherTeam.getPlayer2());
+    boolean hasPlayer2 = player2.equals(otherTeam.getPlayer1()) || player2.equals(otherTeam.getPlayer2());
     return hasPlayer1 && hasPlayer2;
   }
 }
