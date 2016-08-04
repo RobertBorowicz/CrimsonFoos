@@ -18,12 +18,11 @@ public class ReccommendedMatchupService
       {
         if (i == j)
         {
-          int[i][j] = Math.MIN_INT;
+          int[i][j] = Integer.MIN_VALUE;
         }
         else
         {
           int ci = 0;
-
 
           g = players.get(i).getGamesPlayed();
           p = players.get(j).getGamesPlayed();
