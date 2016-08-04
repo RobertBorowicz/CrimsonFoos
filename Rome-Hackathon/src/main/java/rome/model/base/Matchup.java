@@ -1,4 +1,4 @@
-public class Matchup
+public class Matchup implements Comparable
 {
   private Team team1;
   private Team team2;
@@ -42,5 +42,18 @@ public class Matchup
     boolean hasFirstTeam = otherMatchup.getTeam1().equals(team1) || otherMatchup.getTeam1().equals(team2);
     boolean hasSecondTeam = otherMatchup.getTeam2().equals(team1) || otherMatchup.getTeam2().equals(team2);
     return hasFirstTeam && hasSecondTeam;
+  }
+
+  public int compareTo(Matchup otherMatchup)
+  {
+    if (avgCI > otherMatchup.getCI())
+    {
+      return 1;
+    }
+    else if (avgCI < otherMatchup.getCI())
+    {
+      return -1;
+    }
+    else return 0;
   }
 }
