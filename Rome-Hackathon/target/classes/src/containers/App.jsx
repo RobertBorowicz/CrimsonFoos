@@ -1,25 +1,25 @@
 import React from 'react';
 import './app.scss';
+import {Circle} from 'better-react-spinkit';
 import MockData from '../mocks/MockData.jsx';
 import WebApiClient from '../ajax/WebApiClient.jsx';
 import NavMenu from '../components/nav_menu/NavMenu.jsx';
-import PlayersAtTheTable from '../components/players_at_the_table/PlayersAtTheTable.jsx';
-import GamesView from '../components/games_view/GamesView.jsx';
+import NewGame from '../components/new_game/NewGame.jsx';
+import ScoresView from '../components/scores_view/ScoresView.jsx';
 import PlayersView from '../components/players_view/PlayersView.jsx';
-import CreatePlayerView from '../components/create_player_view/CreatePlayerView.jsx';
-import UpdatePlayerView from '../components/update_player_view/UpdatePlayerView.jsx';
-import DeletePlayerView from '../components/delete_player_view/DeletePlayerView.jsx';
+import MatchupsView from '../components/matchups_view/MatchupsView.jsx';
+import StatsView from '../components/stats_view/StatsView.jsx';
 
 export default class App extends React.Component {
 
-    static playersAtTheTableView = 'playersAtTheTableView';
-    static gamesView = 'gamesView';
+    static newGameView = 'newGameView';
+    static scoresView = 'scoresView';
+    static statsView = 'statsView';
     static playersView = 'playersView';
-    static createPlayerView = 'createPlayerView';
-    static updatePlayerView = 'updatePlayerView';
-    static deletePlayerView = 'deletePlayerView';
+    static matchupsView = 'matchupsView';
+    static loading = 'loading';
 
-    state = {view: null, viewName: null, players: null, games_view: null};
+    state = {view: null, viewName: null, players: null, games: null};
 
     // test state -- remove for production
     constructor(props) {
@@ -28,75 +28,98 @@ export default class App extends React.Component {
         let games = MockData.getGames();
         this.state = {
             view: (
-                <PlayersAtTheTable
-                    players={JSON.parse(JSON.stringify(this.players))}
-                    onSubmit={this.handlePlayersAtTheTable.bind(this)}
+                <NewGame
+                    players={this.players}
+                    onSubmit={this.handleGetMatchups.bind(this)}
                 />
             ),
-            viewName: App.playersAtTheTableView,
+            viewName: App.newGameView,
             players: this.players,
             games: games
         };
     }
 
     componentDidMount() {
-        //this.fetchAllPlayers();  // production call
+        //this.fetchBulkData();  // production call
     }
 
-    fetchAllPlayers() {
-        // this should actually get all the content we need to start with
-        // i.e. games_view, players, etc...
-        let players = WebApiClient.get('/api/player/');
-        if (players !== null) {
-            this.setState({
-                view: (
-                    <PlayersAtTheTable
-                        players={JSON.parse(JSON.stringify(players))}
-                        onSubmit={this.handlePlayersAtTheTable.bind(this)}
-                    />
-                ),
-                viewName: App.playersAtTheTableView,
-                players: players,
-                games: MockData.getGames()
-            });
-        }
+    fetchBulkData() {
+        let request = new XMLHttpRequest();
+        request.open('GET', '/api/bulk/', true);
+        request.setRequestHeader('Content-Type', 'application/json');
+        request.onload = () => {
+            if (request.status === 200) {
+                let bulk = JSON.parse(request.responseText);
+                if (bulk) {
+                    this.setState({
+                        view: (
+                            <NewGame
+                                players={bulk.players}
+                                onSubmit={this.handleGetMatchups.bind(this)}
+                            />
+                        ),
+                        viewName: App.newGameView,
+                        players: bulk.players,
+                        games: bulk.games
+                    });
+                }
+            }
+        };
+        request.send();
     }
 
     /* Handle requests to toggle view */
 
-    handlePlayersAtTheTableView() {
-        if (this.state.viewName !== App.playersAtTheTableView) {
+    handleNewGameView() {
+        if (this.state.viewName !== App.newGameView) {
             this.setState({
                 view: (
-                    <PlayersAtTheTable
+                    <NewGame
                         players={JSON.parse(JSON.stringify(this.state.players))}
-                        onSubmit={this.handlePlayersAtTheTable.bind(this)}
+                        onSubmit={this.handleGetMatchups.bind(this)}
                     />
                 ),
-                viewName: App.playersAtTheTableView
+                viewName: App.newGameView
             });
         }
     }
 
-    handleShowGamesView() {
-        if (this.state.viewName !== App.gamesView) {
+    handleScoresView() {
+        console.log('handling scores view');
+        if (this.state.viewName !== App.scoresView) {
             this.setState({
-                view: <GamesView games={this.state.games} />,
-                viewName: App.gamesView
+                view: <ScoresView games={this.state.games} />,
+                viewName: App.scoresView
             });
         }
     }
 
-    handleShowPlayersView() {
+    handleStatsView() {
+        if (this.state.viewName !== App.statsView) {
+            this.setState({
+                view: <StatsView />,
+                viewName: App.statsView
+            });
+        }
+    }
+
+    handlePlayersView() {
         if (this.state.viewName !== App.playersView) {
             this.setState({
-                view: <PlayersView players={this.state.players} />,
+                view: (
+                    <PlayersView
+                        players={this.state.players}
+                        onCreate={this.handleCreatePlayer.bind(this)}
+                        onUpdate={this.handleUpdatePlayer.bind(this)}
+                        onDelete={this.handleDeletePlayer.bind(this)}
+                    />
+                ),
                 viewName: App.playersView
             });
         }
     }
 
-    handleShowCreatePlayerView() {
+    /*handleCreatePlayerView() {
         if (this.state.viewName !== App.createPlayerView) {
             this.setState({
                 view: <CreatePlayerView onSubmit={this.handleCreatePlayer} />,
@@ -105,7 +128,7 @@ export default class App extends React.Component {
         }
     }
 
-    handleShowUpdatePlayerView() {
+    handleUpdatePlayerView() {
         if (this.state.viewName !== App.updatePlayerView) {
             this.setState({
                 view: (
@@ -119,7 +142,7 @@ export default class App extends React.Component {
         }
     }
 
-    handleShowDeletePlayerView() {
+    handleDeletePlayerView() {
         if (this.state.viewName !== App.deletePlayerView) {
             this.setState({
                 view: (
@@ -131,54 +154,68 @@ export default class App extends React.Component {
                 viewName: App.deletePlayerView
             });
         }
+    }*/
+
+    handlePlayGame() {
+        console.log('playing game');
     }
 
-    /* Handle requests to modify data */
+    /* Handle server API requests */
 
-    handlePlayersAtTheTable(players) {
-        console.log(players);
+    handleGetMatchups(players) {
+        this.setState({view: <Circle size={50} />, viewName: App.loading});
+        let request = new XMLHttpRequest();
+        request.open('POST', '/api/matchups/', true);
+        request.setRequestHeader('Content-Type', 'application/json');
+        request.onload = () => {
+            if (request.status === 200) {
+                let matchups = JSON.parse(request.responseText);
+                this.setState({
+                    view: (
+                        <MatchupsView
+                            matchups={matchups}
+                            onSubmit={this.handlePlayGame.bind(this)}
+                        />
+                    ),
+                    viewName: App.matchupsView
+                });
+            } else {
+                // display error message
+                // don't change view
+            }
+        };
+        request.send(players);
     }
 
-    handleCreatePlayer(firstName, lastName, nickname) {
-        // validation should occur in PlayerForm - post the created player
-        let body = {firstName: firstName, lastName: lastName, nickname: nickname};
-        WebApiClient.post('/api/player/', body);
+    handleCreatePlayer(player) {
+        WebApiClient.post('/api/player/', player);
     }
 
     handleUpdatePlayer(player) {
         if (player) {
-            console.log('handling update');
+            WebApiClient.put('/api/player/', player);
         }
     }
 
     handleDeletePlayer(player) {
         if (player) {
-            console.log('handling delete');
+            WebApiClient.delete('/api/player/player.id');
         }
     }
 
     render() {
-        this.handleCreatePlayer("Craig", "Walker", "cwalk");
-        if (!this.state.view) {
-            return <div>Loading data...</div>;
-        }
         return (
             <div className='app'>
                 <div id='app-menu'>
                     <NavMenu
-                        onPlayersAtTheTableView={this.handlePlayersAtTheTableView.bind(this)}
-                        onGamesView={this.handleShowGamesView.bind(this)}
-                        onPlayersView={this.handleShowPlayersView.bind(this)}
-                        onCreatePlayerView={this.handleShowCreatePlayerView.bind(this)}
-                        onUpdatePlayerView={this.handleShowUpdatePlayerView.bind(this)}
-                        onDeletePlayerView={this.handleShowDeletePlayerView.bind(this)}
+                        onNewGameView={this.handleNewGameView.bind(this)}
+                        onScoresView={this.handleScoresView.bind(this)}
+                        onStatsView={this.handleStatsView.bind(this)}
+                        onPlayersView={this.handlePlayersView.bind(this)}
                     />
                 </div>
-                <div id='app-content'>
-                    {this.state.view}
-                </div>
+                {this.state.view}
             </div>
         );
     }
-
 }

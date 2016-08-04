@@ -5,16 +5,61 @@ import './players-view.scss';
 
 export default class Players extends React.Component {
 
+    static tableView = 'tableView';
+    static createView = 'creatView';
+    static updateView = 'updateView';
+    static deleteView = 'deleteView';
+
     static propTypes = {
         players: React.PropTypes.arrayOf(React.PropTypes.shape({
             id: React.PropTypes.number,
             firstName: React.PropTypes.string,
             lastName: React.PropTypes.string,
             nickname: React.PropTypes.string
-        })).isRequired
+        })).isRequired,
+        onCreate: React.PropTypes.func.isRequired,
+        onUpdate: React.PropTypes.func.isRequired,
+        onDelete: React.PropTypes
+    };
+
+    state = {
+        players: this.props.players,
+        view: this.getTable(),
+        viewName: Players.tableView
     };
 
     shouldComponentUpdate = DeepEqual.updateIfPropsOrStateChanged;
+
+    handleCreateView() {
+        this.setState({
+            view: <CreatePlayerView onSubmit={this.props.onCreate} />
+        });
+    }
+
+    handleUpdateView() {
+        this.setState({
+            view: <UpdatePlayerView onSubmit={this.props.onUpdate} />
+        });
+    }
+
+    handleDeleteView() {
+        this.setState({
+
+        })
+    }
+
+    getTable() {
+        return(
+            <Table striped bordered condensed>
+                <thead>
+                <tr>
+                    {this.getHeaders()}
+                </tr>
+                </thead>
+                {this.getRows()}
+            </Table>
+        );
+    }
 
     getHeaders() {
         return ['ID', 'First Name', 'Last Name', 'Nickname'].map(header => {
@@ -37,15 +82,6 @@ export default class Players extends React.Component {
     }
 
     render() {
-        return(
-            <Table striped bordered condensed>
-                <thead>
-                    <tr>
-                        {this.getHeaders()}
-                    </tr>
-                </thead>
-                {this.getRows()}
-            </Table>
-        );
+        return this.state.view;
     }
 }

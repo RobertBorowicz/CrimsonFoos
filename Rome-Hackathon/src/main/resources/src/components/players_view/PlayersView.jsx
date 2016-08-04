@@ -30,6 +30,24 @@ export default class Players extends React.Component {
 
     shouldComponentUpdate = DeepEqual.updateIfPropsOrStateChanged;
 
+    handleCreateView() {
+        this.setState({
+            view: <CreatePlayerView onSubmit={this.props.onCreate} />
+        });
+    }
+
+    handleUpdateView() {
+        this.setState({
+            view: <UpdatePlayerView onSubmit={this.props.onUpdate} />
+        });
+    }
+
+    handleDeleteView() {
+        this.setState({
+
+        })
+    }
+
     getTable() {
         return(
             <Table striped bordered condensed>
