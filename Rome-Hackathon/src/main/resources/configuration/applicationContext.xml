@@ -57,5 +57,7 @@
 	<!--  My beans to @Autowire objects                                   -->
 	<!-- **************************************************************** -->
 
-		<bean id="PlayerService" class="rome.services.PlayerService" />
+		<bean id="playerService" class="rome.services.PlayerService" />
+		<bean id="recommendedMatchupService" class="rome.services.RecommendedMatchupService" />
+		<bean id="gameService" class="rome.services.GameService" />
 </beans>

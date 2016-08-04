@@ -3,9 +3,14 @@ export default class WebApiClient {
     static get(uri) {
         let request = WebApiClient.buildRequest('GET', uri);
         request.onload = () => {
-            return request.status === 200
-                    ? JSON.parse(request.responseText)
-                    : null;
+            if (request.status === 200) {
+                return JSON.parse(request.responseText);
+            } else {
+                return "no content";
+            }
+            //return request.status === 200
+            //        ? JSON.parse(request.responseText)
+            //        : null;
         };
         request.send();
     }
