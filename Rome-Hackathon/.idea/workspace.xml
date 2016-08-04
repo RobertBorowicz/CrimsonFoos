@@ -22,39 +22,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="App.jsx" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/src/containers/App.jsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="42" column="38" selection-start-line="42" selection-start-column="38" selection-end-line="42" selection-end-column="38" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Application.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/rome/main/Application.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-              <folding>
-                <element signature="e#549#550#0" expanded="false" />
-                <element signature="e#583#584#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/rome/main/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="25" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="PlayerService.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/rome/services/PlayerService.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -73,35 +40,96 @@
       <file leaf-file-name="PlayerController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/rome/controllers/PlayerController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
+            <state relative-caret-position="210">
               <caret line="37" column="67" selection-start-line="37" selection-start-column="67" selection-end-line="37" selection-end-column="67" />
-              <folding>
-                <element signature="imports" expanded="false" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PlayerServiceTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/rome/services/PlayerServiceTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="14" column="22" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
-              <folding>
-                <element signature="imports" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DBConnection.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="DBConnection.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/rome/database/DBConnection.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="24" column="40" selection-start-line="24" selection-start-column="40" selection-end-line="24" selection-end-column="40" />
+            <state relative-caret-position="437">
+              <caret line="152" column="13" selection-start-line="152" selection-start-column="13" selection-end-line="152" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <marker date="1470340853000" expanded="true" signature="1058:1120" ph="SELECT first... players" />
+                <marker date="1470340853000" expanded="true" signature="1618:1718" ph="INSERT INTO players... " />
+                <marker date="1470340853000" expanded="true" signature="2208:2307" ph="SELECT team_... team_member_bridge" />
+                <marker date="1470340853000" expanded="true" signature="2208:2366" ph="SELECT team_... team_member_bridge" />
+                <marker date="1470340853000" expanded="true" signature="2309:2365" ph="SELECT team_... team_member_bridge" />
+                <marker date="1470340853000" expanded="true" signature="3897:3949" ph="SELECT COUNT... v_all_player_games" />
+                <marker date="1470340853000" expanded="true" signature="3897:3954" ph="SELECT COUNT... v_all_player_games" />
+                <marker date="1470340853000" expanded="true" signature="3983:4049" ph="SELECT COUNT... v_all_player_games" />
+                <marker date="1470340853000" expanded="true" signature="3983:4050" ph="SELECT COUNT... v_all_player_games" />
+                <marker date="1470340853000" expanded="true" signature="5053:5105" ph="SELECT * FRO... v_all_player_games" />
+                <marker date="1470340853000" expanded="true" signature="6786:6818" ph="SELECT * FRO... v_all_player_games" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Game.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/rome/model/base/Game.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="533">
+              <caret line="52" column="0" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
+              <folding>
+                <element signature="e#245#246#0" expanded="true" />
+                <element signature="e#274#275#0" expanded="true" />
+                <element signature="e#316#317#0" expanded="true" />
+                <element signature="e#352#353#0" expanded="true" />
+                <element signature="e#382#383#0" expanded="true" />
+                <element signature="e#410#411#0" expanded="true" />
+                <element signature="e#450#451#0" expanded="true" />
+                <element signature="e#484#485#0" expanded="true" />
+                <element signature="e#515#516#0" expanded="true" />
+                <element signature="e#542#543#0" expanded="true" />
+                <element signature="e#582#583#0" expanded="true" />
+                <element signature="e#614#615#0" expanded="true" />
+                <element signature="e#649#650#0" expanded="true" />
+                <element signature="e#680#681#0" expanded="true" />
+                <element signature="e#728#729#0" expanded="true" />
+                <element signature="e#768#769#0" expanded="true" />
+                <element signature="e#1095#1096#0" expanded="true" />
+                <element signature="e#1124#1125#0" expanded="true" />
+                <element signature="e#1165#1166#0" expanded="true" />
+                <element signature="e#1201#1202#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Team.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/rome/model/base/Team.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="525">
+              <caret line="40" column="18" selection-start-line="40" selection-start-column="18" selection-end-line="40" selection-end-column="18" />
+              <folding>
+                <element signature="e#267#268#0" expanded="true" />
+                <element signature="e#297#298#0" expanded="true" />
+                <element signature="e#341#342#0" expanded="true" />
+                <element signature="e#381#382#0" expanded="true" />
+                <element signature="e#410#411#0" expanded="true" />
+                <element signature="e#438#439#0" expanded="true" />
+                <element signature="e#477#478#0" expanded="true" />
+                <element signature="e#511#512#0" expanded="true" />
+                <element signature="e#541#542#0" expanded="true" />
+                <element signature="e#570#571#0" expanded="true" />
+                <element signature="e#611#612#0" expanded="true" />
+                <element signature="e#647#648#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Player.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/rome/model/base/Player.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-82">
+              <caret line="5" column="15" selection-start-line="5" selection-start-column="15" selection-end-line="5" selection-end-column="15" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -109,9 +137,32 @@
       <file leaf-file-name="DBConnectionTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/rome/database/DBConnectionTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+            <state relative-caret-position="270">
+              <caret line="25" column="9" selection-start-line="25" selection-start-column="9" selection-end-line="25" selection-end-column="9" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Stats.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/rome/model/base/Stats.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="495">
+              <caret line="33" column="5" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
+              <folding>
+                <element signature="e#198#199#0" expanded="true" />
+                <element signature="e#232#233#0" expanded="true" />
+                <element signature="e#283#284#0" expanded="true" />
+                <element signature="e#329#330#0" expanded="true" />
+                <element signature="e#357#358#0" expanded="true" />
+                <element signature="e#384#385#0" expanded="true" />
+                <element signature="e#421#422#0" expanded="true" />
+                <element signature="e#453#454#0" expanded="true" />
+                <element signature="e#483#484#0" expanded="true" />
+                <element signature="e#512#513#0" expanded="true" />
+                <element signature="e#553#554#0" expanded="true" />
+                <element signature="e#589#590#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -129,10 +180,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="281">
+            <state relative-caret-position="1980">
               <caret line="132" column="37" selection-start-line="132" selection-start-column="37" selection-end-line="132" selection-end-column="37" />
               <folding />
             </state>
@@ -144,8 +195,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="JUnit4 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -165,6 +216,9 @@
         <option value="$PROJECT_DIR$/src/main/java/rome/services/PlayerService.java" />
         <option value="$PROJECT_DIR$/src/main/resources/src/containers/App.jsx" />
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/rome/model/base/Team.java" />
+        <option value="$PROJECT_DIR$/src/main/java/rome/model/base/Game.java" />
+        <option value="$PROJECT_DIR$/src/main/java/rome/model/base/Stats.java" />
         <option value="$PROJECT_DIR$/src/test/java/rome/database/DBConnectionTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/rome/database/DBConnection.java" />
       </list>
@@ -221,10 +275,6 @@
               <option name="myItemId" value="template-spring" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -365,6 +415,112 @@
               <option name="myItemId" value="rome" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="model" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test_data" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="template-spring" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Rome-Hackathon" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rome" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="model" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="interfaces" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="template-spring" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Rome-Hackathon" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rome" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="model" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="base" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="template-spring" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Rome-Hackathon" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rome" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -393,6 +549,32 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="template-spring" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Rome-Hackathon" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rome" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -484,7 +666,7 @@
       <recent name="groovy.util.GroovyTestCase" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.DBConnectionTest.close">
+  <component name="RunManager" selected="JUnit.DBConnectionTest.createTeam">
     <configuration default="false" name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -544,6 +726,58 @@
       <option name="PACKAGE_NAME" value="rome.database" />
       <option name="MAIN_CLASS_NAME" value="rome.database.DBConnectionTest" />
       <option name="METHOD_NAME" value="close" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="DBConnectionTest.getTeams" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="rome.database.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="template-spring" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="rome.database" />
+      <option name="MAIN_CLASS_NAME" value="rome.database.DBConnectionTest" />
+      <option name="METHOD_NAME" value="getTeams" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="DBConnectionTest.createTeam" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="rome.database.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="template-spring" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="rome.database" />
+      <option name="MAIN_CLASS_NAME" value="rome.database.DBConnectionTest" />
+      <option name="METHOD_NAME" value="createTeam" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -971,16 +1205,20 @@
     <configuration default="true" type="osgi.bnd.run" factoryName="Test Launcher (JUnit)">
       <method />
     </configuration>
-    <list size="3">
+    <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Application.Main" />
       <item index="1" class="java.lang.String" itemvalue="JUnit.PlayerServiceTest.getAllPlayers" />
       <item index="2" class="java.lang.String" itemvalue="JUnit.DBConnectionTest.close" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.DBConnectionTest.getTeams" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.DBConnectionTest.createTeam" />
     </list>
     <recent_temporary>
-      <list size="3">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.DBConnectionTest.close" />
-        <item index="1" class="java.lang.String" itemvalue="Application.Main" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.PlayerServiceTest.getAllPlayers" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="JUnit.DBConnectionTest.createTeam" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.DBConnectionTest.getTeams" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.DBConnectionTest.close" />
+        <item index="3" class="java.lang.String" itemvalue="Application.Main" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.PlayerServiceTest.getAllPlayers" />
       </list>
     </recent_temporary>
   </component>
@@ -995,42 +1233,48 @@
       <option name="presentableId" value="Default" />
       <updated>1470238125537</updated>
       <workItem from="1470238127346" duration="9857000" />
-      <workItem from="1470320346671" duration="3004000" />
+      <workItem from="1470320346671" duration="13718000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="DBConnectionTest_close - 2016.08.04 at 09h 52m 08s.xml">
-      <configuration name="DBConnectionTest.close" configurationId="JUnit" />
+    <history-entry file="DBConnectionTest_createTeam - 2016.08.04 at 11h 31m 15s.xml">
+      <configuration name="DBConnectionTest.createTeam" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="DBConnectionTest_close - 2016.08.04 at 10h 02m 04s.xml">
-      <configuration name="DBConnectionTest.close" configurationId="JUnit" />
+    <history-entry file="DBConnectionTest_createTeam - 2016.08.04 at 14h 25m 54s.xml">
+      <configuration name="DBConnectionTest.createTeam" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="PlayerServiceTest_getAllPlayers - 2016.08.03 at 17h 02m 38s.xml">
-      <configuration name="PlayerServiceTest.getAllPlayers" configurationId="JUnit" />
+    <history-entry file="DBConnectionTest_createTeam - 2016.08.04 at 14h 28m 29s.xml">
+      <configuration name="DBConnectionTest.createTeam" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="PlayerServiceTest_getAllPlayers - 2016.08.03 at 17h 05m 06s.xml">
-      <configuration name="PlayerServiceTest.getAllPlayers" configurationId="JUnit" />
+    <history-entry file="DBConnectionTest_createTeam - 2016.08.04 at 14h 29m 27s.xml">
+      <configuration name="DBConnectionTest.createTeam" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="PlayerServiceTest_getAllPlayers - 2016.08.03 at 17h 31m 10s.xml">
-      <configuration name="PlayerServiceTest.getAllPlayers" configurationId="JUnit" />
+    <history-entry file="DBConnectionTest_createTeam - 2016.08.04 at 14h 34m 02s.xml">
+      <configuration name="DBConnectionTest.createTeam" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="PlayerServiceTest_getAllPlayers - 2016.08.03 at 17h 33m 59s.xml">
-      <configuration name="PlayerServiceTest.getAllPlayers" configurationId="JUnit" />
+    <history-entry file="DBConnectionTest_createTeam - 2016.08.04 at 14h 56m 40s.xml">
+      <configuration name="DBConnectionTest.createTeam" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="PlayerServiceTest_getAllPlayers - 2016.08.03 at 17h 34m 24s.xml">
-      <configuration name="PlayerServiceTest.getAllPlayers" configurationId="JUnit" />
+    <history-entry file="DBConnectionTest_createTeam - 2016.08.04 at 14h 57m 21s.xml">
+      <configuration name="DBConnectionTest.createTeam" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="PlayerServiceTest_getAllPlayers - 2016.08.03 at 17h 36m 19s.xml">
-      <configuration name="PlayerServiceTest.getAllPlayers" configurationId="JUnit" />
+    <history-entry file="DBConnectionTest_createTeam - 2016.08.04 at 14h 58m 21s.xml">
+      <configuration name="DBConnectionTest.createTeam" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DBConnectionTest_createTeam - 2016.08.04 at 14h 59m 32s.xml">
+      <configuration name="DBConnectionTest.createTeam" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DBConnectionTest_createTeam - 2016.08.04 at 15h 00m 59s.xml">
+      <configuration name="DBConnectionTest.createTeam" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12861000" />
+    <option name="totallyTimeSpent" value="23575000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1920" y="-96" width="1920" height="1080" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1045,7 +1289,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18229167" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18229167" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1125,9 +1369,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
           <caret line="37" column="67" selection-start-line="37" selection-start-column="67" selection-end-line="37" selection-end-column="67" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1135,9 +1377,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="14" column="22" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1147,6 +1387,17 @@
           <caret line="18" column="8" selection-start-line="17" selection-start-column="10" selection-end-line="18" selection-end-column="8" />
           <folding>
             <element signature="imports" expanded="true" />
+            <marker date="1470340853000" expanded="true" signature="1058:1120" ph="SELECT first... players" />
+            <marker date="1470340853000" expanded="true" signature="1618:1718" ph="INSERT INTO players... " />
+            <marker date="1470340853000" expanded="true" signature="2208:2307" ph="SELECT team_... team_member_bridge" />
+            <marker date="1470340853000" expanded="true" signature="2208:2366" ph="SELECT team_... team_member_bridge" />
+            <marker date="1470340853000" expanded="true" signature="2309:2365" ph="SELECT team_... team_member_bridge" />
+            <marker date="1470340853000" expanded="true" signature="3897:3949" ph="SELECT COUNT... v_all_player_games" />
+            <marker date="1470340853000" expanded="true" signature="3897:3954" ph="SELECT COUNT... v_all_player_games" />
+            <marker date="1470340853000" expanded="true" signature="3983:4049" ph="SELECT COUNT... v_all_player_games" />
+            <marker date="1470340853000" expanded="true" signature="3983:4050" ph="SELECT COUNT... v_all_player_games" />
+            <marker date="1470340853000" expanded="true" signature="5053:5105" ph="SELECT * FRO... v_all_player_games" />
+            <marker date="1470340853000" expanded="true" signature="6786:6818" ph="SELECT * FRO... v_all_player_games" />
           </folding>
         </state>
       </provider>
@@ -1174,6 +1425,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="12" column="42" selection-start-line="12" selection-start-column="42" selection-end-line="12" selection-end-column="42" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1233,14 +1485,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/rome/model/base/Player.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="5" column="15" selection-start-line="5" selection-start-column="15" selection-end-line="5" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/log4j2.component.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1272,31 +1516,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/rome/services/PlayerServiceTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="14" column="22" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/rome/controllers/MainController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
           <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/rome/controllers/PlayerController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="37" column="67" selection-start-line="37" selection-start-column="67" selection-end-line="37" selection-end-column="67" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1340,6 +1564,93 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/rome/services/PlayerServiceTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="14" column="22" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/rome/controllers/PlayerController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="37" column="67" selection-start-line="37" selection-start-column="67" selection-end-line="37" selection-end-column="67" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/rome/model/base/Game.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="533">
+          <caret line="52" column="0" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
+          <folding>
+            <element signature="e#245#246#0" expanded="true" />
+            <element signature="e#274#275#0" expanded="true" />
+            <element signature="e#316#317#0" expanded="true" />
+            <element signature="e#352#353#0" expanded="true" />
+            <element signature="e#382#383#0" expanded="true" />
+            <element signature="e#410#411#0" expanded="true" />
+            <element signature="e#450#451#0" expanded="true" />
+            <element signature="e#484#485#0" expanded="true" />
+            <element signature="e#515#516#0" expanded="true" />
+            <element signature="e#542#543#0" expanded="true" />
+            <element signature="e#582#583#0" expanded="true" />
+            <element signature="e#614#615#0" expanded="true" />
+            <element signature="e#649#650#0" expanded="true" />
+            <element signature="e#680#681#0" expanded="true" />
+            <element signature="e#728#729#0" expanded="true" />
+            <element signature="e#768#769#0" expanded="true" />
+            <element signature="e#1095#1096#0" expanded="true" />
+            <element signature="e#1124#1125#0" expanded="true" />
+            <element signature="e#1165#1166#0" expanded="true" />
+            <element signature="e#1201#1202#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/rome/model/base/Team.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="40" column="18" selection-start-line="40" selection-start-column="18" selection-end-line="40" selection-end-column="18" />
+          <folding>
+            <element signature="e#267#268#0" expanded="true" />
+            <element signature="e#297#298#0" expanded="true" />
+            <element signature="e#341#342#0" expanded="true" />
+            <element signature="e#381#382#0" expanded="true" />
+            <element signature="e#410#411#0" expanded="true" />
+            <element signature="e#438#439#0" expanded="true" />
+            <element signature="e#477#478#0" expanded="true" />
+            <element signature="e#511#512#0" expanded="true" />
+            <element signature="e#541#542#0" expanded="true" />
+            <element signature="e#570#571#0" expanded="true" />
+            <element signature="e#611#612#0" expanded="true" />
+            <element signature="e#647#648#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/rome/model/base/Stats.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="33" column="5" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
+          <folding>
+            <element signature="e#198#199#0" expanded="true" />
+            <element signature="e#232#233#0" expanded="true" />
+            <element signature="e#283#284#0" expanded="true" />
+            <element signature="e#329#330#0" expanded="true" />
+            <element signature="e#357#358#0" expanded="true" />
+            <element signature="e#384#385#0" expanded="true" />
+            <element signature="e#421#422#0" expanded="true" />
+            <element signature="e#453#454#0" expanded="true" />
+            <element signature="e#483#484#0" expanded="true" />
+            <element signature="e#512#513#0" expanded="true" />
+            <element signature="e#553#554#0" expanded="true" />
+            <element signature="e#589#590#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/rome/database/PlayersDAOImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="480">
@@ -1351,29 +1662,48 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/rome/model/base/Player.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="281">
-          <caret line="132" column="37" selection-start-line="132" selection-start-column="37" selection-end-line="132" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/rome/database/DBConnectionTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+        <state relative-caret-position="-82">
+          <caret line="5" column="15" selection-start-line="5" selection-start-column="15" selection-end-line="5" selection-end-column="15" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/rome/database/DBConnection.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="40" selection-start-line="24" selection-start-column="40" selection-end-line="24" selection-end-column="40" />
+        <state relative-caret-position="437">
+          <caret line="152" column="13" selection-start-line="152" selection-start-column="13" selection-end-line="152" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
+            <marker date="1470340853000" expanded="true" signature="1058:1120" ph="SELECT first... players" />
+            <marker date="1470340853000" expanded="true" signature="1618:1718" ph="INSERT INTO players... " />
+            <marker date="1470340853000" expanded="true" signature="2208:2307" ph="SELECT team_... team_member_bridge" />
+            <marker date="1470340853000" expanded="true" signature="2208:2366" ph="SELECT team_... team_member_bridge" />
+            <marker date="1470340853000" expanded="true" signature="2309:2365" ph="SELECT team_... team_member_bridge" />
+            <marker date="1470340853000" expanded="true" signature="3897:3949" ph="SELECT COUNT... v_all_player_games" />
+            <marker date="1470340853000" expanded="true" signature="3897:3954" ph="SELECT COUNT... v_all_player_games" />
+            <marker date="1470340853000" expanded="true" signature="3983:4049" ph="SELECT COUNT... v_all_player_games" />
+            <marker date="1470340853000" expanded="true" signature="3983:4050" ph="SELECT COUNT... v_all_player_games" />
+            <marker date="1470340853000" expanded="true" signature="5053:5105" ph="SELECT * FRO... v_all_player_games" />
+            <marker date="1470340853000" expanded="true" signature="6786:6818" ph="SELECT * FRO... v_all_player_games" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/rome/database/DBConnectionTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="25" column="9" selection-start-line="25" selection-start-column="9" selection-end-line="25" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1980">
+          <caret line="132" column="37" selection-start-line="132" selection-start-column="37" selection-end-line="132" selection-end-column="37" />
+          <folding />
         </state>
       </provider>
     </entry>
