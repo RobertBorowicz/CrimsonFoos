@@ -63,17 +63,15 @@ export default class NewGame extends React.Component {
 
     getPlayersList() {
         let players = this.props.players.map(player => {
-            let cName, callback, btnText, selected;
+            let cName, callback, btnText;
             if (this.state.selected.indexOf(player) === -1) {
                 cName = 'unselected-list-item';
                 callback = () => this.handleAddPlayer(player);
                 btnText = '+';
-                selected = false;
             } else {
                 cName = 'selected-list-item';
                 callback = () => this.handleRemovePlayer(player);
                 btnText = 'x';
-                selected = true;
             }
             let btnClass = 'item-selection-button';
             return (

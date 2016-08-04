@@ -7,23 +7,19 @@ import NavMenu from '../components/nav_menu/NavMenu.jsx';
 import NewGame from '../components/new_game/NewGame.jsx';
 import ScoresView from '../components/scores_view/ScoresView.jsx';
 import PlayersView from '../components/players_view/PlayersView.jsx';
-import CreatePlayerView from '../components/create_player_view/CreatePlayerView.jsx';
-import UpdatePlayerView from '../components/update_player_view/UpdatePlayerView.jsx';
-import DeletePlayerView from '../components/delete_player_view/DeletePlayerView.jsx';
 import MatchupsView from '../components/matchups_view/MatchupsView.jsx';
+import StatsView from '../components/stats_view/StatsView.jsx';
 
 export default class App extends React.Component {
 
     static newGameView = 'newGameView';
     static scoresView = 'scoresView';
+    static statsView = 'statsView';
     static playersView = 'playersView';
-    static createPlayerView = 'createPlayerView';
-    static updatePlayerView = 'updatePlayerView';
-    static deletePlayerView = 'deletePlayerView';
     static matchupsView = 'matchupsView';
     static loading = 'loading';
 
-    state = {view: null, viewName: null, players: null, games: null, matchups: null};
+    state = {view: null, viewName: null, players: null, games: null};
 
     // test state -- remove for production
     constructor(props) {
@@ -89,6 +85,7 @@ export default class App extends React.Component {
     }
 
     handleScoresView() {
+        console.log('handling scores view');
         if (this.state.viewName !== App.scoresView) {
             this.setState({
                 view: <ScoresView games={this.state.games} />,
@@ -97,16 +94,32 @@ export default class App extends React.Component {
         }
     }
 
+    handleStatsView() {
+        if (this.state.viewName !== App.statsView) {
+            this.setState({
+                view: <StatsView />,
+                viewName: App.statsView
+            });
+        }
+    }
+
     handlePlayersView() {
         if (this.state.viewName !== App.playersView) {
             this.setState({
-                view: <PlayersView players={this.state.players} />,
+                view: (
+                    <PlayersView
+                        players={this.state.players}
+                        onCreate={this.handleCreatePlayer.bind(this)}
+                        onUpdate={this.handleUpdatePlayer.bind(this)}
+                        onDelete={this.handleDeletePlayer.bind(this)}
+                    />
+                ),
                 viewName: App.playersView
             });
         }
     }
 
-    handleCreatePlayerView() {
+    /*handleCreatePlayerView() {
         if (this.state.viewName !== App.createPlayerView) {
             this.setState({
                 view: <CreatePlayerView onSubmit={this.handleCreatePlayer} />,
@@ -141,6 +154,10 @@ export default class App extends React.Component {
                 viewName: App.deletePlayerView
             });
         }
+    }*/
+
+    handlePlayGame() {
+        console.log('playing game');
     }
 
     /* Handle server API requests */
@@ -154,13 +171,14 @@ export default class App extends React.Component {
             if (request.status === 200) {
                 let matchups = JSON.parse(request.responseText);
                 this.setState({
-                    view: <MatchupsView
-                        matchups={matchups}
-                        onSubmit={this.handlePlayGame.bind(this)}
-                    />,
+                    view: (
+                        <MatchupsView
+                            matchups={matchups}
+                            onSubmit={this.handlePlayGame.bind(this)}
+                        />
+                    ),
                     viewName: App.matchupsView
                 });
-
             } else {
                 // display error message
                 // don't change view
@@ -185,48 +203,18 @@ export default class App extends React.Component {
         }
     }
 
-    /*render() {
-        if (!this.state.view) {
-            return <div>Loading data...</div>;
-        }
-        return (
-            <div className='app'>
-                <div id='app-menu'>
-                    <NavMenu
-                        onNewGameView={this.handleNewGameView.bind(this)}
-                        onScoresView={this.handleScoresView.bind(this)}
-                        onPlayersView={this.handlePlayersView.bind(this)}
-                        onCreatePlayerView={this.handleCreatePlayerView.bind(this)}
-                        onUpdatePlayerView={this.handleUpdatePlayerView.bind(this)}
-                        onDeletePlayerView={this.handleDeletePlayerView.bind(this)}
-                    />
-                </div>
-                <div id='app-content'>
-                    {this.state.view}
-                </div>
-            </div>
-        );
-    }*/
-
     render() {
-        if (!this.state.view) {
-            return <div>Loading data...</div>;
-        }
         return (
             <div className='app'>
                 <div id='app-menu'>
                     <NavMenu
                         onNewGameView={this.handleNewGameView.bind(this)}
                         onScoresView={this.handleScoresView.bind(this)}
+                        onStatsView={this.handleStatsView.bind(this)}
                         onPlayersView={this.handlePlayersView.bind(this)}
-                        onCreatePlayerView={this.handleCreatePlayerView.bind(this)}
-                        onUpdatePlayerView={this.handleUpdatePlayerView.bind(this)}
-                        onDeletePlayerView={this.handleDeletePlayerView.bind(this)}
                     />
                 </div>
-                <div id='app-content'>
-                    <MatchupsView matchups={this.state.players} onSubmit={this.handleNewGameView()}/>
-                </div>
+                {this.state.view}
             </div>
         );
     }

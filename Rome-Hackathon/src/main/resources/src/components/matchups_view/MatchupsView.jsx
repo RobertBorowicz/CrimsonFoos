@@ -1,11 +1,11 @@
 import React from 'react';
-import {Panel, ListGroup, ListGroupItem, Button} from 'react-bootstrap';
+import {ListGroup, ListGroupItem, Button} from 'react-bootstrap';
 import './matchups-view.scss';
 
 export default class MatchupsView extends React.Component {
 
     static propTypes = {
-        matchups: React.PropTypes.object.isRequired,
+        matchups: React.PropTypes.array.isRequired,
         onSubmit: React.PropTypes.func.isRequired
     };
 
@@ -49,7 +49,7 @@ export default class MatchupsView extends React.Component {
                     <div className='group-element'>
                         <Button
                             className='toggle'
-                            disabled={this.state.index == this.props.matchups.length}
+                            disabled={this.state.index === this.props.matchups.length}
                             onClick={() => this.handleToggle(1)}>
                             {'>'}
                         </Button>
