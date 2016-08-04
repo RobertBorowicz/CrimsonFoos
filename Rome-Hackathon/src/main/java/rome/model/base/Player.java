@@ -71,6 +71,11 @@ public class Player {
                 + "\nNickname: " + nickname;
     }
 
+    public void addGame(Matchup match)
+    {
+        matchupList.add(match);
+    }
+
     public int getGamesPlayed()
     {
         return matchupList.size();

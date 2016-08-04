@@ -7,7 +7,7 @@ import rome.model.base.Matchup;
 import rome.model.base.Player;
 import rome.model.base.Team;
 
-public class RecommendedMatchupService
+public static class RecommendedMatchupService
 {
     public List<Matchup> getRecommendedMatchups(List<Player> players)
     {
