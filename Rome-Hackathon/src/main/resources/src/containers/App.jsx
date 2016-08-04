@@ -119,72 +119,39 @@ export default class App extends React.Component {
         }
     }
 
-    /*handleCreatePlayerView() {
-        if (this.state.viewName !== App.createPlayerView) {
-            this.setState({
-                view: <CreatePlayerView onSubmit={this.handleCreatePlayer} />,
-                viewName: App.createPlayerView
-            });
-        }
-    }
-
-    handleUpdatePlayerView() {
-        if (this.state.viewName !== App.updatePlayerView) {
-            this.setState({
-                view: (
-                    <UpdatePlayerView
-                        players={this.state.players}
-                        onSubmit={this.handleUpdatePlayer.bind(this)}
-                    />
-                ),
-                viewName: App.updatePlayerView
-            });
-        }
-    }
-
-    handleDeletePlayerView() {
-        if (this.state.viewName !== App.deletePlayerView) {
-            this.setState({
-                view: (
-                    <DeletePlayerView
-                        players={this.state.players}
-                        onSubmit={this.handleDeletePlayer.bind(this)}
-                    />
-                ),
-                viewName: App.deletePlayerView
-            });
-        }
-    }*/
-
     handlePlayGame() {
-        console.log('playing game');
+        // actually the game, not the matchup view
+        this.setState({
+            view: <MatchupsView matchups={this.state.players} onSubmit={this.handleSubmitScore.bind(this)} />,
+            viewName: App.matchupsView
+        });
     }
 
     /* Handle server API requests */
 
     handleGetMatchups(players) {
-        this.setState({view: <Circle size={50} />, viewName: App.loading});
+        /*this.setState({view: <Circle size={50} />, viewName: App.loading});
         let request = new XMLHttpRequest();
         request.open('POST', '/api/matchups/', true);
         request.setRequestHeader('Content-Type', 'application/json');
         request.onload = () => {
             if (request.status === 200) {
-                let matchups = JSON.parse(request.responseText);
+                let matchups = JSON.parse(request.responseText);*/
                 this.setState({
                     view: (
                         <MatchupsView
-                            matchups={matchups}
+                            matchups={this.state.players}
                             onSubmit={this.handlePlayGame.bind(this)}
                         />
                     ),
                     viewName: App.matchupsView
                 });
-            } else {
+           /* } else {
                 // display error message
                 // don't change view
             }
         };
-        request.send(players);
+        request.send(players);*/
     }
 
     handleCreatePlayer(player) {

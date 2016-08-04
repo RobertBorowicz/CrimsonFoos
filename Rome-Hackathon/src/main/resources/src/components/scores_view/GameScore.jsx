@@ -3,7 +3,7 @@ import DeepEqual from '../../utils/DeepEqual.jsx';
 import {Grid, Row, Col} from 'react-bootstrap';
 import './scores-view.scss';
 
-export default class Game extends React.Component {
+export default class GameScore extends React.Component {
 
     static propTypes = {
         game: React.PropTypes.shape({
@@ -21,24 +21,24 @@ export default class Game extends React.Component {
     shouldComponentUpdate = DeepEqual.updateIfPropsOrStateChanged;
 
     render() {
-        let winner = (this.props.game.red.goals > this.props.game.blue.goals
-                     ? 'winner-red-team' : 'winner-blue-team');
+        let winner = (this.props.game.red.goals > this.props.game.blue.goals)
+                     ? 'red' : 'blue';
+        let game = this.props.game;
         return (
-            <Grid className={'single-game ' + winner}>
-                <Row>
-                    <Col xs={4} md={4} className='team left'>
-                        <p>{this.props.game.red.players[0]}</p>
-                        <p>{this.props.game.red.players[1]}</p>
-                        <p>{this.props.game.red.goals}</p>
-                    </Col>
-                    <Col xs={3} md={3} className='center'>VS.</Col>
-                    <Col xs={4} md={4} className='team right'>
-                        <p>{this.props.game.blue.players[0]}</p>
-                        <p>{this.props.game.blue.players[1]}</p>
-                        <p>{this.props.game.blue.goals}</p>
-                    </Col>
-                </Row>
-            </Grid>
+            <div className='game-group'>
+                <div className='group-pair'>
+                    <div>
+                        <div>{game.red.players[0] + ' & ' + game.red.players[1]}</div>
+                        <div>{game.red.goals}</div>
+                    </div>
+                    <div>
+                        <div>{game.blue.players[0] + ' & ' + game.blue.players[1]}</div>
+                        <div>{game.blue.goals}</div>
+                    </div>
+                </div>
+                <div className={'group-element group-element-sep-' + winner}>{'<'}</div>
+                <div className='group-element'></div>
+            </div>
         );
     }
 }

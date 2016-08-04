@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactSwipe from 'react-swipe';
 import {ListGroup, ListGroupItem, Button} from 'react-bootstrap';
 import './matchups-view.scss';
 
@@ -36,9 +35,9 @@ export default class MatchupsView extends React.Component {
                 </div>
                 <div className='group-element'>
                     <ListGroup className='table-panel'>
-                        <ListGroupItem className='blue-team'>Blue Team {i}</ListGroupItem>
+                        <ListGroupItem className='blue-team'>Blue Team</ListGroupItem>
                         <ListGroupItem>Table Image Here</ListGroupItem>
-                        <ListGroupItem className='red-team'>Red Team {i}</ListGroupItem>
+                        <ListGroupItem className='red-team'>Red Team</ListGroupItem>
                     </ListGroup>
                 </div>
                 <div className='group-element'>
@@ -56,7 +55,6 @@ export default class MatchupsView extends React.Component {
     render() {
         return (
             <div>
-                <ReactSwipe key={this.props.matchups.length}>{this.getItems()}</ReactSwipe>
                 <div className='matchup-text'>
                     <h1 className='matchup-label'>Matchup {this.state.index}</h1>
                     <p>NameA {this.state.index}</p>
