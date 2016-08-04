@@ -35,8 +35,10 @@ public class PlayerController {
      * Retrieve all players.
      * @return a list of all players and the status code
      */
-    @RequestMapping(value = "/api/player/", method = RequestMethod.GET)
+    @RequestMapping(value = "/api/player/", method = RequestMethod.GET,
+                    produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<List<Player>> getAllPlayers() {
+        System.out.println("I'm at the players controller");
         List<Player> players = playerService.getAllPlayers();
         if (players.isEmpty()) {
             return new ResponseEntity<List<Player>>(HttpStatus.NO_CONTENT);
@@ -45,8 +47,8 @@ public class PlayerController {
     }
 
     /**
-     * Retrieve a single player.
-     * @param id the id of the player to be retrieved
+     * Retrieve a single player.o
+     * @param id the id of the player t be retrieved
      * @return the player with the given id and the status code
      */
     @RequestMapping(value = "/api/player/{id}", method = RequestMethod.GET,
@@ -71,7 +73,7 @@ public class PlayerController {
         if (playerService.exists(player)) {
             return new ResponseEntity<Void>(HttpStatus.CONFLICT);
         }
-
+        System.out.println(player.getFirstName() + " " + player.getLastName() + " : " + player.getNickname());
         playerService.createPlayer(player);
 
         HttpHeaders headers = new HttpHeaders();

@@ -5,13 +5,13 @@ import './nav-menu.scss';
 export default class NavMenu extends React.Component {
 
     static propTypes = {
-        onPlayersAtTheTableView: React.PropTypes.func.isRequired,
-        onGamesView: React.PropTypes.func.isRequired,
+        onNewGameView: React.PropTypes.func.isRequired,
+        onScoresView: React.PropTypes.func.isRequired,
         onPlayersView: React.PropTypes.func.isRequired,
         onCreatePlayerView: React.PropTypes.func.isRequired,
         onUpdatePlayerView: React.PropTypes.func.isRequired,
         onDeletePlayerView: React.PropTypes.func.isRequired
-    }
+    };
 
     state = {show: false};
 
@@ -24,9 +24,12 @@ export default class NavMenu extends React.Component {
         callback();
     }
 
+    /* Nav menu will change according to UX design */
+
     render() {
         return (
-            <Navbar fluid inverse className="nav-menu" expanded={this.state.show} onToggle={this.handleToggle.bind(this)}>
+            <Navbar fluid inverse className="nav-menu" expanded={this.state.show}
+                    onToggle={this.handleToggle.bind(this)}>
                 <Navbar.Header>
                     <Navbar.Brand>
                         <a href="#"><em>CRIMSON <small>Foosball Tracker</small></em></a>
@@ -36,11 +39,11 @@ export default class NavMenu extends React.Component {
                 <Navbar.Collapse>
                     <Nav pullRight key={1}>
                         <NavItem
-                            onClick={() => this.handleSelection(this.props.onPlayersAtTheTableView)}>
+                            onClick={() => this.handleSelection(this.props.onNewGameView)}>
                             Players At The Table
                         </NavItem>
                         <NavItem
-                            onClick={() => this.handleSelection(this.props.onGamesView)}>
+                            onClick={() => this.handleSelection(this.props.onScoresView)}>
                             View Games
                         </NavItem>
                         <NavItem
