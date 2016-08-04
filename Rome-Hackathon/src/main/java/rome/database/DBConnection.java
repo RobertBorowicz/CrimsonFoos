@@ -12,15 +12,30 @@ import java.util.ArrayList;
  */
 public class DBConnection {
 
-    public JdbcTemplate getConnection() throws SQLException {
-        //Driver myDriver = new oracle.jdbc.driver.OracleDriver();
-        //DriverManager.registerDriver( myDriver );
-        //Connection conn =  DriverManager.getConnection("jdbc:mysql://localhost:3306/CrimsonFoosball?autoReconnect=true&useSSL=false", "root", "crimsonFoos");
-        //System.out.println("Connected to database");
-        //return conn;
-        JdbcTemplate conn = new JdbcTemplate();
-        return conn;
+    private Connection conn = null;
+    private Statement st = null;
+    private ResultSet rs = null;
 
+    public DBConnection() {
+        String url = "jdbc:mysql://localhost:3306/CrimsonFoosball?useSSL=false";
+        String user = "root";
+        String pass = "crimsonFoos";
+        try {
+            conn = DriverManager.getConnection(url, user, pass);
+            st = conn.createStatement();
+        } catch (SQLException s) {
+            s.printStackTrace();
+        }
+    }
+
+    public void close() {
+        try {
+            conn.close();
+            st.close();
+            rs.close();
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+        }
     }
 
 
