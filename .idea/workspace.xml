@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6a6bf409-1036-48f4-ace1-e03faa0738b8" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Rome-Hackathon/src/main/java/rome/services/ReccommendedMatchupService.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Rome-Hackathon/src/main/java/rome/model/base/Player.java" afterPath="$PROJECT_DIR$/Rome-Hackathon/src/main/java/rome/model/base/Player.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Rome-Hackathon/src/main/java/rome/model/base/Matchup.java" afterPath="$PROJECT_DIR$/Rome-Hackathon/src/main/java/rome/model/base/Matchup.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Rome-Hackathon/src/main/java/rome/model/base/Team.java" afterPath="$PROJECT_DIR$/Rome-Hackathon/src/main/java/rome/model/base/Team.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Rome-Hackathon/src/main/java/rome/services/RecommendedMatchupService.java" afterPath="$PROJECT_DIR$/Rome-Hackathon/src/main/java/rome/services/RecommendedMatchupService.java" />
     </list>
@@ -28,8 +27,8 @@
       <file leaf-file-name="RecommendedMatchupService.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Rome-Hackathon/src/main/java/rome/services/RecommendedMatchupService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="28" column="39" selection-start-line="28" selection-start-column="39" selection-end-line="28" selection-end-column="39" />
+            <state relative-caret-position="645">
+              <caret line="71" column="25" selection-start-line="71" selection-start-column="25" selection-end-line="71" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -40,11 +39,7 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="360">
               <caret line="29" column="48" selection-start-line="29" selection-start-column="48" selection-end-line="29" selection-end-column="48" />
-              <folding>
-                <element signature="imports" expanded="false" />
-                <element signature="e#403#404#0" expanded="false" />
-                <element signature="e#433#434#0" expanded="false" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -70,8 +65,8 @@
       <file leaf-file-name="Matchup.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Rome-Hackathon/src/main/java/rome/model/base/Matchup.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="18" column="3" selection-start-line="18" selection-start-column="3" selection-end-line="18" selection-end-column="3" />
+            <state relative-caret-position="465">
+              <caret line="43" column="41" selection-start-line="43" selection-start-column="41" selection-end-line="43" selection-end-column="41" />
               <folding />
             </state>
           </provider>
@@ -112,9 +107,7 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="false" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -122,8 +115,8 @@
       <file leaf-file-name="Team.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Rome-Hackathon/src/main/java/rome/model/base/Team.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="49" column="1" selection-start-line="49" selection-start-column="1" selection-end-line="49" selection-end-column="1" />
+            <state relative-caret-position="405">
+              <caret line="45" column="5" selection-start-line="45" selection-start-column="5" selection-end-line="45" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -143,10 +136,10 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Rome-Hackathon/src/main/java/rome/services/MatchupService.java" />
-        <option value="$PROJECT_DIR$/Rome-Hackathon/src/main/java/rome/model/base/Matchup.java" />
-        <option value="$PROJECT_DIR$/Rome-Hackathon/src/main/java/rome/model/base/Team.java" />
         <option value="$PROJECT_DIR$/Rome-Hackathon/src/main/java/rome/model/base/Player.java" />
         <option value="$PROJECT_DIR$/Rome-Hackathon/src/main/java/rome/services/ReccommendedMatchupService.java" />
+        <option value="$PROJECT_DIR$/Rome-Hackathon/src/main/java/rome/model/base/Team.java" />
+        <option value="$PROJECT_DIR$/Rome-Hackathon/src/main/java/rome/model/base/Matchup.java" />
         <option value="$PROJECT_DIR$/Rome-Hackathon/src/main/java/rome/services/RecommendedMatchupService.java" />
       </list>
     </option>
@@ -798,11 +791,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
           <caret line="29" column="48" selection-start-line="29" selection-start-column="48" selection-end-line="29" selection-end-column="48" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#403#404#0" expanded="false" />
-            <element signature="e#433#434#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -868,11 +857,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
           <caret line="29" column="48" selection-start-line="29" selection-start-column="48" selection-end-line="29" selection-end-column="48" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#403#404#0" expanded="false" />
-            <element signature="e#433#434#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -976,18 +961,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Rome-Hackathon/src/main/java/rome/model/test_data/TestPlayers.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="29" column="48" selection-start-line="29" selection-start-column="48" selection-end-line="29" selection-end-column="48" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#403#404#0" expanded="false" />
-            <element signature="e#433#434#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Rome-Hackathon/src/main/java/rome/services/PlayerService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="585">
@@ -1005,36 +978,10 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Rome-Hackathon/src/main/java/rome/model/base/Game" />
-    <entry file="file://$PROJECT_DIR$/Rome-Hackathon/src/main/java/rome/controllers/MatchupsController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Rome-Hackathon/src/main/java/rome/model/base/Bulk.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Rome-Hackathon/src/main/java/rome/model/base/Game.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Rome-Hackathon/src/main/java/rome/model/base/Matchup.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="18" column="3" selection-start-line="18" selection-start-column="3" selection-end-line="18" selection-end-column="3" />
           <folding />
         </state>
       </provider>
@@ -1047,14 +994,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Rome-Hackathon/src/main/java/rome/model/base/Team.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="49" column="1" selection-start-line="49" selection-start-column="1" selection-end-line="49" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Rome-Hackathon/src/main/java/rome/services/ReccommendedMatchupService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1063,10 +1002,50 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Rome-Hackathon/src/main/java/rome/model/test_data/TestPlayers.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="29" column="48" selection-start-line="29" selection-start-column="48" selection-end-line="29" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Rome-Hackathon/src/main/java/rome/model/base/Game.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Rome-Hackathon/src/main/java/rome/controllers/MatchupsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Rome-Hackathon/src/main/java/rome/model/base/Team.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="45" column="5" selection-start-line="45" selection-start-column="5" selection-end-line="45" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Rome-Hackathon/src/main/java/rome/model/base/Matchup.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="43" column="41" selection-start-line="43" selection-start-column="41" selection-end-line="43" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Rome-Hackathon/src/main/java/rome/services/RecommendedMatchupService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="28" column="39" selection-start-line="28" selection-start-column="39" selection-end-line="28" selection-end-column="39" />
+        <state relative-caret-position="645">
+          <caret line="71" column="25" selection-start-line="71" selection-start-column="25" selection-end-line="71" selection-end-column="25" />
           <folding />
         </state>
       </provider>

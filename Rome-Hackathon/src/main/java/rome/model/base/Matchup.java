@@ -2,8 +2,9 @@ public class Matchup
 {
   private Team team1;
   private Team team2;
+  private double avgCI;
 
-  public Matchup(Team team1, Team team2);
+  public Matchup(Team team1, Team team2, double calcedCI;
   {
     this.team1 = team1;
     this.team2 = team2;
@@ -34,5 +35,12 @@ public class Matchup
       return true;
     }
     return false;
+  }
+
+  public boolean equals(Matchup otherMatchup)
+  {
+    boolean hasFirstTeam = otherMatchup.getTeam1().equals(team1) || otherMatchup.getTeam1().equals(team2);
+    boolean hasSecondTeam = otherMatchup.getTeam2().equals(team1) || otherMatchup.getTeam2().equals(team2);
+    return hasFirstTeam && hasSecondTeam;
   }
 }

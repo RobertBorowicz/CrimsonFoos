@@ -3,6 +3,15 @@ public class Team
   private String color;
   private Player player1;
   private Player player2;
+  private double avgCI;
+
+  public Team(){}
+  public Team(Player p1, Player p2, double calcedCI)
+  {
+    player1 = p1;
+    player2 = p2;
+    avgCI = avgCI;
+  }
 
   public Player getPlayer1()
   {
@@ -16,6 +25,10 @@ public class Team
   {
     return this.color;
   }
+  public double getCI()
+  {
+    return avgCI;
+  }
 
   public void setPlayer1(Player player1)
   {
@@ -25,7 +38,7 @@ public class Team
   {
     this.player2 = player2;
   }
-  public void setColor(String newColor)
+  public void setColor(String newColor);
   {
     if (newColor.equalsIgnoreCase("RED") || newColor.equalsIgnoreCase("BLUE"))
     {
