@@ -58,6 +58,8 @@ public class DBConnection {
             pst.setString(1, newPlayer.getFirstName());
             pst.setString(2, newPlayer.getLastName());
             pst.setString(3, newPlayer.getNickname());
+            pst.execute();
+            pst.close();
         } catch (SQLException s) {
             s.printStackTrace();
         }
@@ -78,7 +80,7 @@ public class DBConnection {
             if (rs.next()) {
                 teamID = rs.getInt("team_id");
             }
-
+            pst.close();
         } catch (SQLException s) {
             s.printStackTrace();
         }
@@ -95,6 +97,26 @@ public class DBConnection {
             pst.setInt(2, pid1);
             pst.setInt(3, pid2);
             pst.execute();
+            pst.close();
+        } catch (SQLException s) {
+            s.printStackTrace();
+        }
+    }
+
+    public void recordGame(int teamID, String winColor, int tid1, int score1, int tid2, int score2, int datePlayed) {
+        String insertTeam = "CALL recordGame(?,?,?,?,?,?,?)";
+
+        try {
+            PreparedStatement pst = conn.prepareStatement(insertTeam);
+            pst.setInt(1, teamID);
+            pst.setString(2, winColor);
+            pst.setInt(3, tid1);
+            pst.setInt(4, score1);
+            pst.setInt(5, tid2);
+            pst.setInt(6, score2);
+            pst.setInt(7, datePlayed);
+            pst.execute();
+            pst.close();
         } catch (SQLException s) {
             s.printStackTrace();
         }
