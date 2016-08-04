@@ -85,4 +85,10 @@ public class Player {
         }
         return games;
     }
+
+    public boolean equals(Player otherPlayer)
+    {
+            return (id.equals(otherPlayer.getId()) firstname.equals(otherPlayer.getFirstName()) && lastName.equals(otherPlayer.getLastName()));
+    }
+
 }

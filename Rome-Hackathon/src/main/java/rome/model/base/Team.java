@@ -40,4 +40,11 @@ public class Team
       return true;
     }
   }
+
+  public boolean equals(Team otherTeam)
+  {
+    boolean hasPlayer1 = player1.equals(otherTeam.getPlayer1()) || player1.equals(otherTeam.getPlayer2();
+    boolean hasPlayer2 = player2.equals(otherTeam.getPlayer1()) || player2.equals(otherTeam.getPlayer2();
+    return hasPlayer1 && hasPlayer2;
+  }
 }
