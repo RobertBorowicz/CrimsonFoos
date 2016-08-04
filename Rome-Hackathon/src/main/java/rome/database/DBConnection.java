@@ -4,7 +4,10 @@ import javax.sql.DataSource;
 import java.sql.*;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.PreparedStatementCallback;
+import rome.model.base.Game;
 import rome.model.base.Player;
+import rome.model.base.Team;
+
 import java.util.List;
 import java.util.ArrayList;
 
@@ -103,7 +106,7 @@ public class DBConnection {
         }
     }
 
-    public void recordGame(int teamID, String winColor, int tid1, int score1, int tid2, int score2, int datePlayed) {
+    public void recordGame(int teamID, String winColor, int tid1, int score1, int tid2, int score2) {
         String insertTeam = "CALL recordGame(?,?,?,?,?,?,?)";
 
         try {
@@ -114,13 +117,117 @@ public class DBConnection {
             pst.setInt(4, score1);
             pst.setInt(5, tid2);
             pst.setInt(6, score2);
-            pst.setInt(7, datePlayed);
             pst.execute();
             pst.close();
         } catch (SQLException s) {
             s.printStackTrace();
         }
     }
+
+    public List<Game> getGamesForDate(String datePlayed) {
+        List<Game> games = new ArrayList<>();
+
+        String getGames = "SELECT * FROM v_all_player_games WHERE date_played=?";
+
+        try {
+            PreparedStatement pst = conn.prepareStatement(getGames);
+            pst.setString(1, datePlayed);
+            rs = pst.executeQuery();
+            Game currGame = new Game();
+            Team win = new Team();
+            Team lose = new Team();
+            int index = 0;
+            System.out.println("Query success");
+            while (rs.next()) {
+                index %= 4;
+                if (index == 0) {
+                    currGame = new Game();
+                    win = new Team();
+                    lose = new Team();
+                }
+                Player p = new Player();
+                p.setId(rs.getInt(6));
+                p.setFirstName(rs.getString(7));
+                p.setLastName(rs.getString(8));
+                p.setNickname(rs.getString(9));
+
+                if (rs.getInt(5) == 1) {
+                    win.addPlayer(p);
+                    win.setScore(rs.getInt(4));
+                    currGame.setWinColor(rs.getString(3));
+                } else {
+                    lose.addPlayer(p);
+                    lose.setScore(rs.getInt(4));
+                }
+
+                if (index == 3) {
+                    currGame.setWinner(win);
+                    currGame.setLoser(lose);
+                    currGame.setDate(rs.getString(2));
+                    currGame.setGameID(rs.getInt(1));
+                    games.add(currGame);
+                }
+
+                index++;
+            }
+        } catch (SQLException s) {
+            s.printStackTrace();
+        }
+
+        return games;
+    }
+
+    public List<Game> getAllGames() {
+        List<Game> games = new ArrayList<>();
+
+        String getGames = "SELECT * FROM v_all_player_games";
+
+        try {
+            PreparedStatement pst = conn.prepareStatement(getGames);
+            rs = pst.executeQuery();
+            Game currGame = new Game();
+            Team win = new Team();
+            Team lose = new Team();
+            int index = 0;
+
+            while (rs.next()) {
+                index %= 4;
+                if (index == 0) {
+                    currGame = new Game();
+                    win = new Team();
+                    lose = new Team();
+                }
+                Player p = new Player();
+                p.setId(rs.getInt(5));
+                p.setFirstName(rs.getString(6));
+                p.setLastName(rs.getString(7));
+                p.setNickname(rs.getString(8));
+
+                if (rs.getInt(4) == 1) {
+                    win.addPlayer(p);
+                    currGame.setWinColor(rs.getString(3));
+                } else {
+                    lose.addPlayer(p);
+                }
+
+                if (index == 3) {
+                    currGame.setWinner(win);
+                    currGame.setLoser(lose);
+                    currGame.setDate(rs.getString(2));
+                    currGame.setGameID(rs.getInt(1));
+                    games.add(currGame);
+                }
+
+            }
+
+        } catch (SQLException s) {
+            s.printStackTrace();
+        }
+
+        return games;
+    }
+
+
 
 
     /**
