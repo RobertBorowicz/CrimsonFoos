@@ -1,32 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="185a2e6c-e3b5-4e9b-99fc-5be3fad3aadf" name="Default" comment="Added multiple controllers/services/model classes and refactored/added FE code">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Rome-Hackathon/src/main/java/rome/controllers/BulkController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Rome-Hackathon/src/main/java/rome/model/base/Bulk.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Rome-Hackathon/src/main/java/rome/model/base/Game.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Rome-Hackathon/src/main/java/rome/services/GameService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Rome-Hackathon/src/main/resources/src/components/matchups_view/matchups-view.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Rome-Hackathon/src/main/resources/src/components/new_game/NewGame.jsx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Rome-Hackathon/src/main/resources/src/components/new_game/new-game.scss" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Rome-Hackathon/src/main/resources/src/components/players_at_the_table/PlayersAtTheTable.jsx" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../Rome-Hackathon/src/main/resources/src/components/games_view/Game.jsx" afterPath="$PROJECT_DIR$/../Rome-Hackathon/src/main/resources/src/components/scores_view/GameScore.jsx" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../Rome-Hackathon/src/main/resources/src/components/games_view/GamesView.jsx" afterPath="$PROJECT_DIR$/../Rome-Hackathon/src/main/resources/src/components/scores_view/ScoresView.jsx" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../Rome-Hackathon/src/main/resources/src/components/games_view/games-view.scss" afterPath="$PROJECT_DIR$/../Rome-Hackathon/src/main/resources/src/components/scores_view/scores-view.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../Rome-Hackathon/src/main/resources/src/components/players_at_the_table/players-at-the-table.scss" afterPath="$PROJECT_DIR$/../Rome-Hackathon/src/main/resources/src/components/matchups_view/MatchupsView.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Rome-Hackathon/target/classes/rome/controllers/PlayerController.class" afterPath="$PROJECT_DIR$/../Rome-Hackathon/target/classes/rome/controllers/PlayerController.class" />
+    <list default="true" id="185a2e6c-e3b5-4e9b-99fc-5be3fad3aadf" name="Default" comment="Initial mock of basic matchup view">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Rome-Hackathon/src/main/java/rome/controllers/MatchupsController.java" afterPath="$PROJECT_DIR$/../Rome-Hackathon/src/main/java/rome/controllers/MatchupsController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Rome-Hackathon/src/main/java/rome/controllers/PlayerController.java" afterPath="$PROJECT_DIR$/../Rome-Hackathon/src/main/java/rome/controllers/PlayerController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Rome-Hackathon/src/main/resources/configuration/applicationContext.xml" afterPath="$PROJECT_DIR$/../Rome-Hackathon/src/main/resources/configuration/applicationContext.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Rome-Hackathon/src/main/resources/package.json" afterPath="$PROJECT_DIR$/../Rome-Hackathon/src/main/resources/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Rome-Hackathon/src/main/resources/resources/dist/bundle.js" afterPath="$PROJECT_DIR$/../Rome-Hackathon/src/main/resources/resources/dist/bundle.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Rome-Hackathon/src/main/resources/src/components/nav_menu/NavMenu.jsx" afterPath="$PROJECT_DIR$/../Rome-Hackathon/src/main/resources/src/components/nav_menu/NavMenu.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Rome-Hackathon/src/main/resources/src/components/nav_menu/nav-menu.scss" afterPath="$PROJECT_DIR$/../Rome-Hackathon/src/main/resources/src/components/nav_menu/nav-menu.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Rome-Hackathon/src/main/resources/src/components/matchups_view/MatchupsView.jsx" afterPath="$PROJECT_DIR$/../Rome-Hackathon/src/main/resources/src/components/matchups_view/MatchupsView.jsx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Rome-Hackathon/src/main/resources/src/components/matchups_view/matchups-view.scss" afterPath="$PROJECT_DIR$/../Rome-Hackathon/src/main/resources/src/components/matchups_view/matchups-view.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Rome-Hackathon/src/main/resources/src/containers/App.jsx" afterPath="$PROJECT_DIR$/../Rome-Hackathon/src/main/resources/src/containers/App.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Rome-Hackathon/src/main/resources/src/containers/app.scss" afterPath="$PROJECT_DIR$/../Rome-Hackathon/src/main/resources/src/containers/app.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Rome-Hackathon/target/classes/resources/dist/bundle.js" afterPath="$PROJECT_DIR$/../Rome-Hackathon/target/classes/resources/dist/bundle.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Rome-Hackathon/target/classes/src/containers/App.jsx" afterPath="$PROJECT_DIR$/../Rome-Hackathon/target/classes/src/containers/App.jsx" />
     </list>
     <ignored path="CrimsonFoosballTracker.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -48,11 +27,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="App.jsx" pinned="false" current-in-tab="true">
+      <file leaf-file-name="App.jsx" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../Rome-Hackathon/src/main/resources/src/containers/App.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="279">
-              <caret line="195" column="38" selection-start-line="195" selection-start-column="38" selection-end-line="195" selection-end-column="38" />
+            <state relative-caret-position="-561">
+              <caret line="162" column="0" selection-start-line="162" selection-start-column="0" selection-end-line="162" selection-end-column="0" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -60,65 +39,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NewGame.jsx" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../Rome-Hackathon/src/main/resources/src/components/new_game/NewGame.jsx">
+      <file leaf-file-name="MatchupsView.jsx" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../Rome-Hackathon/src/main/resources/src/components/matchups_view/MatchupsView.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="18" column="30" selection-start-line="18" selection-start-column="30" selection-end-line="18" selection-end-column="30" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PlayerController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../Rome-Hackathon/src/main/java/rome/controllers/PlayerController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="58" column="47" selection-start-line="58" selection-start-column="47" selection-end-line="58" selection-end-column="47" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Game.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../Rome-Hackathon/src/main/java/rome/model/base/Game.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GameService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../Rome-Hackathon/src/main/java/rome/services/GameService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="33" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
+            <state relative-caret-position="405">
+              <caret line="27" column="16" selection-start-line="27" selection-start-column="16" selection-end-line="31" selection-end-column="28" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#255#256#0" expanded="true" />
-                <element signature="e#295#296#0" expanded="true" />
+                <element signature="e#0#26#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="applicationContext.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../Rome-Hackathon/src/main/resources/configuration/applicationContext.xml">
+      <file leaf-file-name="matchups-view.scss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../Rome-Hackathon/src/main/resources/src/components/matchups_view/matchups-view.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="436">
-              <caret line="61" column="61" selection-start-line="61" selection-start-column="61" selection-end-line="61" selection-end-column="61" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="NavMenu.jsx" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../Rome-Hackathon/src/main/resources/src/components/nav_menu/NavMenu.jsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="13" column="6" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
+            <state relative-caret-position="345">
+              <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -142,6 +79,11 @@
       </list>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$/.." value="mathups-view" />
+      </map>
+    </option>
   </component>
   <component name="GradleLocalSettings">
     <option name="externalProjectsViewState">
@@ -151,7 +93,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/../Rome-Hackathon/src/main/resources/src/utils/DeepEqual.jsx" />
         <option value="$PROJECT_DIR$/../Rome-Hackathon/src/main/resources/src/index.jsx" />
         <option value="$PROJECT_DIR$/../Rome-Hackathon/src/main/resources/src/components/menu/MenuItem.jsx" />
         <option value="$PROJECT_DIR$/../Rome-Hackathon/src/main/resources/src/components/games/Games.jsx" />
@@ -196,12 +137,13 @@
         <option value="$PROJECT_DIR$/../Rome-Hackathon/src/main/java/rome/services/GameService.java" />
         <option value="$PROJECT_DIR$/../Rome-Hackathon/src/main/java/rome/controllers/BulkController.java" />
         <option value="$PROJECT_DIR$/../Rome-Hackathon/src/main/resources/package.json" />
-        <option value="$PROJECT_DIR$/../Rome-Hackathon/src/main/resources/src/components/matchups_view/MatchupsView.jsx" />
         <option value="$PROJECT_DIR$/../Rome-Hackathon/src/main/resources/configuration/applicationContext.xml" />
         <option value="$PROJECT_DIR$/../Rome-Hackathon/src/main/resources/src/components/nav_menu/NavMenu.jsx" />
         <option value="$PROJECT_DIR$/../Rome-Hackathon/src/main/resources/src/components/new_game/NewGame.jsx" />
         <option value="$PROJECT_DIR$/../Rome-Hackathon/src/main/java/rome/controllers/PlayerController.java" />
         <option value="$PROJECT_DIR$/../Rome-Hackathon/src/main/resources/src/containers/App.jsx" />
+        <option value="$PROJECT_DIR$/../Rome-Hackathon/src/main/resources/src/components/matchups_view/MatchupsView.jsx" />
+        <option value="$PROJECT_DIR$/../Rome-Hackathon/src/main/resources/src/components/matchups_view/matchups-view.scss" />
       </list>
     </option>
   </component>
@@ -225,7 +167,7 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="218" />
+    <option name="x" value="-4" />
     <option name="y" value="23" />
     <option name="width" value="1487" />
     <option name="height" value="974" />
@@ -453,108 +395,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="scores_view" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CrimsonFoosballTracker" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Rome-Hackathon" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="components" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="new_game" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CrimsonFoosballTracker" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Rome-Hackathon" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="components" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="nav_menu" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CrimsonFoosballTracker" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Rome-Hackathon" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="components" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="matchups_view" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -574,138 +414,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="components" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="create_player_view" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CrimsonFoosballTracker" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Rome-Hackathon" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ajax" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CrimsonFoosballTracker" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Rome-Hackathon" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rome" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CrimsonFoosballTracker" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Rome-Hackathon" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rome" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="model" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CrimsonFoosballTracker" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Rome-Hackathon" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rome" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controllers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1231,16 +939,24 @@
       <workItem from="1470068412068" duration="1115000" />
       <workItem from="1470100879348" duration="6542000" />
       <workItem from="1470168608323" duration="173000" />
-      <workItem from="1470237986139" duration="29561000" />
+      <workItem from="1470237986139" duration="34855000" />
     </task>
+    <task id="LOCAL-00001" summary="Added multiple controllers/services/model classes and refactored/added FE code">
+      <created>1470286239792</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1470286239793</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="108096000" />
+    <option name="totallyTimeSpent" value="113390000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="218" y="23" width="1487" height="974" extended-state="0" />
-    <editor active="false" />
+    <frame x="-4" y="23" width="1487" height="974" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1249,7 +965,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22541437" sideWeight="0.50215054" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32928178" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22541437" sideWeight="0.49784946" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1314,7 +1030,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added multiple controllers/services/model classes and refactored/added FE code" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added multiple controllers/services/model classes and refactored/added FE code" />
+    <MESSAGE value="Initial mock of basic matchup view" />
+    <option name="LAST_COMMIT_MESSAGE" value="Initial mock of basic matchup view" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1618,18 +1335,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../Rome-Hackathon/src/main/java/rome/services/GameService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="33" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#255#256#0" expanded="true" />
-            <element signature="e#295#296#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../Rome-Hackathon/src/main/java/rome/controllers/BulkController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="750">
@@ -1648,26 +1353,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../Rome-Hackathon/src/main/resources/src/components/matchups_view/matchups-view.scss">
+    <entry file="file://$PROJECT_DIR$/../Rome-Hackathon/src/main/resources/src/components/nav_menu/NavMenu.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Rome-Hackathon/src/main/resources/src/components/matchups_view/MatchupsView.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Rome-Hackathon/src/main/java/rome/model/base/Game.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+        <state relative-caret-position="165">
+          <caret line="13" column="6" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
           <folding />
         </state>
       </provider>
@@ -1680,10 +1369,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../Rome-Hackathon/src/main/resources/src/components/new_game/NewGame.jsx">
+    <entry file="file://$PROJECT_DIR$/../Rome-Hackathon/src/main/java/rome/services/GameService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="18" column="30" selection-start-line="18" selection-start-column="30" selection-end-line="18" selection-end-column="30" />
+        <state relative-caret-position="255">
+          <caret line="17" column="33" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#255#256#0" expanded="false" />
+            <element signature="e#295#296#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Rome-Hackathon/src/main/java/rome/model/base/Game.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
           <folding />
         </state>
       </provider>
@@ -1696,18 +1397,36 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../Rome-Hackathon/src/main/resources/src/components/nav_menu/NavMenu.jsx">
+    <entry file="file://$PROJECT_DIR$/../Rome-Hackathon/src/main/resources/src/components/new_game/NewGame.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="13" column="6" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
+        <state relative-caret-position="150">
+          <caret line="18" column="30" selection-start-line="18" selection-start-column="30" selection-end-line="18" selection-end-column="30" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../Rome-Hackathon/src/main/resources/src/containers/App.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="195" column="38" selection-start-line="195" selection-start-column="38" selection-end-line="195" selection-end-column="38" />
+        <state relative-caret-position="-561">
+          <caret line="162" column="0" selection-start-line="162" selection-start-column="0" selection-end-line="162" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Rome-Hackathon/src/main/resources/src/components/matchups_view/matchups-view.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Rome-Hackathon/src/main/resources/src/components/matchups_view/MatchupsView.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="27" column="16" selection-start-line="27" selection-start-column="16" selection-end-line="31" selection-end-column="28" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>

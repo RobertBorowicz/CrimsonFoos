@@ -10,6 +10,7 @@ import PlayersView from '../components/players_view/PlayersView.jsx';
 import CreatePlayerView from '../components/create_player_view/CreatePlayerView.jsx';
 import UpdatePlayerView from '../components/update_player_view/UpdatePlayerView.jsx';
 import DeletePlayerView from '../components/delete_player_view/DeletePlayerView.jsx';
+import MatchupsView from '../components/matchups_view/MatchupsView.jsx';
 
 export default class App extends React.Component {
 
@@ -153,7 +154,7 @@ export default class App extends React.Component {
             if (request.status === 200) {
                 let matchups = JSON.parse(request.responseText);
                 this.setState({
-                    view: <Matchups
+                    view: <MatchupsView
                         matchups={matchups}
                         onSubmit={this.handlePlayGame.bind(this)}
                     />,
@@ -184,7 +185,7 @@ export default class App extends React.Component {
         }
     }
 
-    render() {
+    /*render() {
         if (!this.state.view) {
             return <div>Loading data...</div>;
         }
@@ -205,6 +206,28 @@ export default class App extends React.Component {
                 </div>
             </div>
         );
-    }
+    }*/
 
+    render() {
+        if (!this.state.view) {
+            return <div>Loading data...</div>;
+        }
+        return (
+            <div className='app'>
+                <div id='app-menu'>
+                    <NavMenu
+                        onNewGameView={this.handleNewGameView.bind(this)}
+                        onScoresView={this.handleScoresView.bind(this)}
+                        onPlayersView={this.handlePlayersView.bind(this)}
+                        onCreatePlayerView={this.handleCreatePlayerView.bind(this)}
+                        onUpdatePlayerView={this.handleUpdatePlayerView.bind(this)}
+                        onDeletePlayerView={this.handleDeletePlayerView.bind(this)}
+                    />
+                </div>
+                <div id='app-content'>
+                    <MatchupsView matchups={this.state.players} onSubmit={this.handleNewGameView()}/>
+                </div>
+            </div>
+        );
+    }
 }
