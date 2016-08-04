@@ -1,0 +1,54 @@
+.player-selection-outer-container {
+  margin-bottom: 0;
+}
+
+.selected-panel {
+  background-color: rgb(151, 151, 151);
+  margin-bottom: 16px;
+  padding-bottom: 0;
+}
+
+.selected-player {
+  background-color: rgb(151, 151, 151);
+  color: white;
+  border: none;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.matchups-button {
+  margin-top: 10px;
+}
+
+.selected-players-container {
+  margin-bottom: 0;
+}
+
+div.selected-players-container.list-group {
+  margin-top: -10px;
+  margin-bottom: -5px;
+}
+
+.selected-list-item {
+  background-color: rgb(151, 151, 151);
+}
+
+.unselected-list-item {
+
+}
+
+.item-selection-button {
+  background-color: inherit;
+  border-color: black;
+  float: right;
+}
+
+.item-selection-button-selected-list-item {
+  color: red;
+  border-color: red;
+}
+
+.item-selection-button-unselected-list-item {
+  color: rgb(36, 129, 255);
+  border-color: rgb(36, 129, 255);
+}

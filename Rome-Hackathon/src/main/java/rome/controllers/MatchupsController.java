@@ -30,14 +30,16 @@ import rome.services.RecommendedMatchupService;
 @RestController
 public class MatchupsController {
 
-    //@Autowired                                 // Configure PlayerService bean in applicationContext.xml
-    RecommendedMatchupService matchupService;  // Service which will do all data retrieval/manipulation work
+    //@Autowired
+    RecommendedMatchupService matchupService;
 
     /**
      * Retrieve all players.
-     * @return a list of all players and the status code
+     * @param players the list of players to find the best matchups for
+     * @return a sorted list of the best matchups for the given players
      */
-    @RequestMapping(value = "/api/matchups/", method = RequestMethod.GET)
+    @RequestMapping(value = "/api/matchups/", method = RequestMethod.POST,
+                    produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<List<Matchup>> getMatchups(List<Player> players) {
         // matchupService.getRecommendedMatchups(players)
         return null;

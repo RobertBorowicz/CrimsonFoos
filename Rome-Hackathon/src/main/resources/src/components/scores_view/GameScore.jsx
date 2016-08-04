@@ -1,7 +1,7 @@
 import React from 'react';
 import DeepEqual from '../../utils/DeepEqual.jsx';
 import {Grid, Row, Col} from 'react-bootstrap';
-import './games-view.scss';
+import './scores-view.scss';
 
 export default class Game extends React.Component {
 

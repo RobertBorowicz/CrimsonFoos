@@ -21,25 +21,8 @@ export default class App extends React.Component {
 
     state = {view: null, viewName: null, players: null, games_view: null};
 
-    componentDidMount() {
-        let request = new XMLHttpRequest();
-        request.open('GET', '/api/player/', true);
-        request.setRequestHeader('Content-Type', 'application/json');
-        request.onload = () => {
-            if (request.status === 200) {
-                console.log(JSON.parse(request.responseText));
-            }
-        };
-        request.send();
-    }
-
-    render() {
-        //let player = WebApiClient.get('/api/player/1');
-        //console.log(player.id);
-        return <div>Getting player...</div>;
-    }
     // test state -- remove for production
-    /*constructor(props) {
+    constructor(props) {
         super(props);
         this.players = MockData.getPlayers();
         let games = MockData.getGames();
@@ -54,10 +37,10 @@ export default class App extends React.Component {
             players: this.players,
             games: games
         };
-    }*/
-/*
+    }
+
     componentDidMount() {
-        this.fetchAllPlayers();  // production call
+        //this.fetchAllPlayers();  // production call
     }
 
     fetchAllPlayers() {
@@ -77,10 +60,10 @@ export default class App extends React.Component {
                 games: MockData.getGames()
             });
         }
-    }*/
+    }
 
     /* Handle requests to toggle view */
-/*
+
     handlePlayersAtTheTableView() {
         if (this.state.viewName !== App.playersAtTheTableView) {
             this.setState({
@@ -149,9 +132,9 @@ export default class App extends React.Component {
             });
         }
     }
-*/
+
     /* Handle requests to modify data */
-/*
+
     handlePlayersAtTheTable(players) {
         console.log(players);
     }
@@ -175,6 +158,7 @@ export default class App extends React.Component {
     }
 
     render() {
+        this.handleCreatePlayer("Craig", "Walker", "cwalk");
         if (!this.state.view) {
             return <div>Loading data...</div>;
         }
@@ -196,5 +180,5 @@ export default class App extends React.Component {
             </div>
         );
     }
-*/
+
 }

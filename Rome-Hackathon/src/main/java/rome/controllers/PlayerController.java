@@ -54,12 +54,7 @@ public class PlayerController {
     @RequestMapping(value = "/api/player/{id}", method = RequestMethod.GET,
                     produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Player> getPlayerById(@PathVariable("id") long id) {
-        //Player player = playerService.getPlayerById(id);
-        Player player = new Player();
-        player.setId(1);
-        player.setFirstName("Craig");
-        player.setLastName("Walker");
-        player.setNickname("cw");
+        Player player = playerService.getPlayerById(id);
         if (player == null) {
             return new ResponseEntity<Player>(HttpStatus.NOT_FOUND);
         }
@@ -78,7 +73,7 @@ public class PlayerController {
         if (playerService.exists(player)) {
             return new ResponseEntity<Void>(HttpStatus.CONFLICT);
         }
-
+        System.out.println(player.getFirstName() + " " + player.getLastName() + " : " + player.getNickname());
         playerService.createPlayer(player);
 
         HttpHeaders headers = new HttpHeaders();

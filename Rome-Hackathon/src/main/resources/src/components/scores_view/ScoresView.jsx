@@ -3,8 +3,8 @@ import moment from 'moment';
 import ReactDatePicker from 'react-datepicker';
 import DeepEqual from '../../utils/DeepEqual.jsx';
 import {Panel, Button} from 'react-bootstrap';
-import Game from './Game.jsx';
-import './games-view.scss';
+import Game from './GameScore.jsx';
+import './scores-view.scss';
 import 'react-datepicker/dist/react-datepicker.css';
 
 export default class Games extends React.Component {
