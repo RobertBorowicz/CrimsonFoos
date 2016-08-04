@@ -5,7 +5,7 @@ import java.util.List;
 import rome.model.base.Game;
 
 /**
- * The Game service.
+ * The GameScore service.
  *
  * @author Rome
  * @version 1.0

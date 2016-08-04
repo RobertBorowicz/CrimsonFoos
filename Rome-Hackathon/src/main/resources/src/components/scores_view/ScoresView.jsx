@@ -3,7 +3,7 @@ import moment from 'moment';
 import ReactDatePicker from 'react-datepicker';
 import DeepEqual from '../../utils/DeepEqual.jsx';
 import {Panel, Button} from 'react-bootstrap';
-import Game from './GameScore.jsx';
+//import GameScore from './GameScore.jsx';
 import './scores-view.scss';
 import 'react-datepicker/dist/react-datepicker.css';
 
@@ -74,7 +74,7 @@ export default class Games extends React.Component {
         var games = null;
         if (this.props.games) {
             games = this.props.games.map((game, i) => {
-                return <Game game={game} key={i}/>;
+                return <GameScore game={game} key={i}/>;
             });
         }
         return <div className='games-list'>{games}</div>;
