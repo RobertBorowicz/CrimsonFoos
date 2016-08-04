@@ -39,6 +39,11 @@ export default class App extends React.Component {
         };
     }
 
+    render() {
+        WebApiClient.get('/api/player/');
+        return <div>Testing</div>;
+    }
+/*
     componentDidMount() {
         //this.fetchBulkData();  // production call
     }
@@ -67,11 +72,17 @@ export default class App extends React.Component {
         };
         request.send();
     }
-
+*/
     /* Handle requests to toggle view */
+<<<<<<< HEAD
 
     handleNewGameView() {
         if (this.state.viewName !== App.newGameView) {
+=======
+/*
+    handlePlayersAtTheTableView() {
+        if (this.state.viewName !== App.playersAtTheTableView) {
+>>>>>>> Database-Setup
             this.setState({
                 view: (
                     <NewGame
@@ -154,6 +165,7 @@ export default class App extends React.Component {
                 viewName: App.deletePlayerView
             });
         }
+<<<<<<< HEAD
     }*/
 
     handlePlayGame() {
@@ -185,6 +197,14 @@ export default class App extends React.Component {
             }
         };
         request.send(players);
+=======
+    }
+*/
+    /* Handle requests to modify data */
+/*
+    handlePlayersAtTheTable(players) {
+        console.log(players);
+>>>>>>> Database-Setup
     }
 
     handleCreatePlayer(player) {
@@ -218,4 +238,8 @@ export default class App extends React.Component {
             </div>
         );
     }
+<<<<<<< HEAD
+=======
+*/
+>>>>>>> Database-Setup
 }

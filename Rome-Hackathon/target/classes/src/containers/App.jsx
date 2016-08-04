@@ -39,6 +39,11 @@ export default class App extends React.Component {
         };
     }
 
+    render() {
+        WebApiClient.get('/api/player/');
+        return <div>Testing</div>;
+    }
+/*
     componentDidMount() {
         //this.fetchAllPlayers();  // production call
     }
@@ -61,9 +66,9 @@ export default class App extends React.Component {
             });
         }
     }
-
+*/
     /* Handle requests to toggle view */
-
+/*
     handlePlayersAtTheTableView() {
         if (this.state.viewName !== App.playersAtTheTableView) {
             this.setState({
@@ -132,9 +137,9 @@ export default class App extends React.Component {
             });
         }
     }
-
+*/
     /* Handle requests to modify data */
-
+/*
     handlePlayersAtTheTable(players) {
         console.log(players);
     }
@@ -180,5 +185,5 @@ export default class App extends React.Component {
             </div>
         );
     }
-
+*/
 }
