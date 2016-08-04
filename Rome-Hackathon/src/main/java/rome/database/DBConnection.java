@@ -6,6 +6,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.PreparedStatementCallback;
 import rome.model.base.Game;
 import rome.model.base.Player;
+import rome.model.base.Stats;
 import rome.model.base.Team;
 
 import java.util.List;
@@ -123,6 +124,41 @@ public class DBConnection {
             s.printStackTrace();
         }
     }
+
+    public Stats getPlayerStats(int pid) {
+        String getTotal = "SELECT COUNT(*) FROM v_all_player_games WHERE player_id=?";
+        String getWins = "SELECT COUNT(*) FROM v_all_player_games WHERE player_id=? AND won=?";
+
+        Stats stats = null;
+
+        try {
+            PreparedStatement pst = conn.prepareStatement(getTotal);
+            PreparedStatement pstwin = conn.prepareStatement(getWins);
+            pst.setInt(1, pid);
+            rs = pst.executeQuery();
+            int total = 0;
+            if (rs.next()) {
+                stats = new Stats();
+                total = rs.getInt(1);
+                stats.setGamesPlayed(total);
+            }
+
+            pstwin.setInt(1, pid);
+            pstwin.setInt(2, 1);
+            ResultSet win = pstwin.executeQuery();
+            if (win.next()) {
+                int wins = win.getInt(1);
+                stats.setWins(wins);
+                stats.setLosses(total - wins);
+            }
+
+            pst.close();
+        } catch (SQLException s) {
+            s.printStackTrace();
+        }
+        return stats;
+    }
+
 
     public List<Game> getGamesForDate(String datePlayed) {
         List<Game> games = new ArrayList<>();
