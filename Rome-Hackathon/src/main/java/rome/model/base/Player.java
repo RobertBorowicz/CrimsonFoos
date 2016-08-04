@@ -1,5 +1,8 @@
 package rome.model.base;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Represents a player.
  *
@@ -84,11 +87,6 @@ public class Player {
             }
         }
         return games;
-    }
-
-    public boolean equals(Player otherPlayer)
-    {
-            return (id.equals(otherPlayer.getId()) firstname.equals(otherPlayer.getFirstName()) && lastName.equals(otherPlayer.getLastName()));
     }
 
 }
