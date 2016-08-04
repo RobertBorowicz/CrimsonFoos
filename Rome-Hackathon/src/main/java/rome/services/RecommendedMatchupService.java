@@ -1,13 +1,13 @@
 package rome.services;
 
-import java.util.Collection;
+import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
 import rome.model.base.Matchup;
 import rome.model.base.Player;
 import rome.model.base.Team;
 
-public static class RecommendedMatchupService
+public class RecommendedMatchupService
 {
     public List<Matchup> getRecommendedMatchups(List<Player> players)
     {
@@ -84,7 +84,7 @@ public static class RecommendedMatchupService
             }
         }
 
-        //Collection.sort(matchups);
+        Collections.sort(matchups);
         return matchups;
     }
 

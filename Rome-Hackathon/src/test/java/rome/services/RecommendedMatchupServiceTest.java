@@ -1,6 +1,12 @@
 package rome.services;
 
 import org.junit.Test;
+import java.util.ArrayList;
+import java.util.List;
+import rome.model.base.Player;
+import rome.model.base.Team;
+import rome.model.base.Matchup;
+import rome.services.RecommendedMatchupService;
 
 import static org.junit.Assert.*;
 
@@ -37,21 +43,23 @@ public class RecommendedMatchupServiceTest {
       for (Matchup match :
           pastGames)
       {
-        player1.add(match);
-        player2.add(match);
-        player3.add(match);
-        player4.add(match);
+        player1.addGame(match);
+        player2.addGame(match);
+        player3.addGame(match);
+        player4.addGame(match);
       }
 
       List<Player> players = new ArrayList<>();
       players.add(player1);
       players.add(player2);
       players.add(player3);
-      players.add(player5);
+      players.add(player4);
 
-      List<Matchups> recommendedGames = ReccommendedMatchupService.getRecommendedMatchups(players);
+      RecommendedMatchupService service = new RecommendedMatchupService();
+      List<Matchup> recommendedGames = service.getRecommendedMatchups(players);
 
-      assert(!recommendedGames == null && !recommendedGames.empty())
+      assertNotNull(recommendedGames);
+      assertTrue(!recommendedGames.isEmpty());
     }
 
 }
