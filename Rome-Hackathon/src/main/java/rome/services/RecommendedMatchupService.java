@@ -55,7 +55,10 @@ public class RecommendedMatchupService
                 if (i != j)
                 {
                     double[] ci = new double[]{teamCiMatrix[i][j], teamCiMatrix[j][i]};
-                    Team newTeam = new Team(players.get(i), players.get(j), mean(ci));
+                    Team newTeam = new Team();
+                    newTeam.addPlayer(players.get(i));
+                    newTeam.addPlayer(players.get(j));
+                    newTeam.setCI(mean(ci));
                     if (!teams.contains(newTeam))
                     {
                         teams.add(newTeam);
@@ -70,7 +73,7 @@ public class RecommendedMatchupService
         {
             for (int j = 0; j < teams.size(); j++)
             {
-                if (i != j && !teams.get(i).hasPlayer(teams.get(j).getPlayer1()) && !teams.get(i).hasPlayer(teams.get(j).getPlayer2()))
+                if (i != j && !teams.get(i).hasPlayer(teams.get(j).getPlayers().get(0)) && !teams.get(i).hasPlayer(teams.get(j).getPlayers().get(1)))
                 {
                     double[] cis = new double[2];
                     cis[0] = teams.get(i).getCI();
