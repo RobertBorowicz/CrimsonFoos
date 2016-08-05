@@ -432,7 +432,6 @@ public class DBConnection {
         try {
             conn.close();
             st.close();
-            rs.close();
         } catch (SQLException ex) {
             ex.printStackTrace();
         }
