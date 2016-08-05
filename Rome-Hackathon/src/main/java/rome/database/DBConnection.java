@@ -44,6 +44,7 @@ public class DBConnection {
                 p.setFirstName(rs.getString(2));
                 p.setLastName(rs.getString(3));
                 p.setNickname(rs.getString(4));
+                p.setStats(this.getPlayerStats(rs.getInt(1)));
                 players.add(p);
             }
         } catch (SQLException s) {
@@ -186,6 +187,7 @@ public class DBConnection {
                 p.setFirstName(rs.getString(7));
                 p.setLastName(rs.getString(8));
                 p.setNickname(rs.getString(9));
+                p.setStats(this.getPlayerStats(rs.getInt(6)));
 
                 if (rs.getInt(5) == 1) {
                     win.addPlayer(p);
@@ -238,6 +240,7 @@ public class DBConnection {
                 p.setFirstName(rs.getString(6));
                 p.setLastName(rs.getString(7));
                 p.setNickname(rs.getString(8));
+                p.setStats(this.getPlayerStats(rs.getInt(5)));
 
                 if (rs.getInt(4) == 1) {
                     win.addPlayer(p);
@@ -262,6 +265,74 @@ public class DBConnection {
 
         return games;
     }
+
+    public void updatePlayer(int pid, String first, String last, String nickname) {
+        String update = "UPDATE players SET first_name=?, last_name=?, nickname=? "
+                + "WHERE player_id=?";
+        try {
+            PreparedStatement pst = conn.prepareStatement(update);
+            pst.setString(1, first);
+            pst.setString(2, last);
+            pst.setString(3, nickname);
+            pst.setInt(4, pid);
+            pst.execute();
+            pst.close();
+        } catch (SQLException s) {
+            s.printStackTrace();
+        }
+    }
+
+    public void deletePlayer(int pid) {
+        String delete = "DELETE FROM players WHERE player_id=?";
+        try {
+            PreparedStatement pst = conn.prepareStatement(delete);
+            pst.setInt(1, pid);
+            pst.execute();
+            pst.close();
+        } catch (SQLException s) {
+            s.printStackTrace();
+        }
+    }
+
+    public Team getTeam(int teamID) {
+        String getTeam = "SELECT * FROM teams JOIN team_member_bridge WHERE "
+                       + "teams.team_id=team_member_bridge.team_id AND teams.team_id=?";
+        String getPlayer = "SELECT * FROM players WHERE player_id=?";
+
+        Team newTeam = null;
+        try {
+            PreparedStatement pst = conn.prepareStatement(getTeam);
+            pst.setInt(1, teamID);
+
+            ResultSet results = pst.executeQuery();
+            newTeam = new Team();
+
+            while (results.next()) {
+                int pid = results.getInt(5);
+
+                PreparedStatement play = conn.prepareStatement(getPlayer);
+                play.setInt(1, pid);
+                ResultSet player = play.executeQuery();
+                if (player.next()) {
+                    Player p = new Player();
+                    p.setId(pid);
+                    p.setFirstName(player.getString(6));
+                    p.setLastName(player.getString(7));
+                    p.setNickname(player.getString(8));
+                    p.setStats(this.getPlayerStats(pid));
+                    newTeam.addPlayer(p);
+                }
+                play.close();
+            }
+
+            pst.close();
+        } catch (SQLException s) {
+            s.printStackTrace();
+        }
+
+        return newTeam;
+    }
+
 
 
 
