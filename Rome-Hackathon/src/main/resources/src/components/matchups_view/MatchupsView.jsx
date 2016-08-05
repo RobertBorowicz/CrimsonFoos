@@ -22,14 +22,32 @@ export default class MatchupsView extends React.Component {
         this.props.onSubmit(this.props.matchups[this.state.index]);
     }
 
-    getItem(i) {
+    getItem() {
         return (
-            <div className='group-element'>
-                <ListGroup className='table-panel'>
-                    <ListGroupItem className='blue-team'>Blue Team {i}</ListGroupItem>
-                    <ListGroupItem>Table Image Here</ListGroupItem>
-                    <ListGroupItem className='red-team'>Red Team {i}</ListGroupItem>
-                </ListGroup>
+
+            <div className='table-group'>
+                <div className='group-element'>
+                    <Button
+                        className='toggle'
+                        onClick={() => this.handleToggle(-1)}>
+                        {'<'}
+                    </Button>
+                </div>
+                <div className='group-element'>
+                    <ListGroup className='table-panel'>
+                        <ListGroupItem className='blue-team'>Blue Team</ListGroupItem>
+                        <ListGroupItem>Table Image Here</ListGroupItem>
+                        <ListGroupItem className='red-team'>Red Team</ListGroupItem>
+                    </ListGroup>
+                </div>
+                <div className='group-element'>
+                    <Button
+                        className='toggle'
+                        disabled={this.state.index === this.props.matchups.length}
+                        onClick={() => this.handleToggle(1)}>
+                        {'>'}
+                    </Button>
+                </div>
             </div>
         );
     }
@@ -37,24 +55,6 @@ export default class MatchupsView extends React.Component {
     render() {
         return (
             <div>
-                <div className='table-group'>
-                    <div className='group-element'>
-                        <Button
-                            className='toggle'
-                            onClick={() => this.handleToggle(-1)}>
-                            {'<'}
-                        </Button>
-                    </div>
-                    {this.getItem(this.state.index)}
-                    <div className='group-element'>
-                        <Button
-                            className='toggle'
-                            disabled={this.state.index === this.props.matchups.length}
-                            onClick={() => this.handleToggle(1)}>
-                            {'>'}
-                        </Button>
-                    </div>
-                </div>
                 <div className='matchup-text'>
                     <h1 className='matchup-label'>Matchup {this.state.index}</h1>
                     <p>NameA {this.state.index}</p>

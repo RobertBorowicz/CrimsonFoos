@@ -3,7 +3,7 @@ import moment from 'moment';
 import ReactDatePicker from 'react-datepicker';
 import DeepEqual from '../../utils/DeepEqual.jsx';
 import {Panel, Button} from 'react-bootstrap';
-//import GameScore from './GameScore.jsx';
+import GameScore from './GameScore.jsx';
 import './scores-view.scss';
 import 'react-datepicker/dist/react-datepicker.css';
 
@@ -51,32 +51,38 @@ export default class Games extends React.Component {
         }
     }
 
-    render() {
-        return (
-            <Panel className='date-picker-toolbar'>
-                <span>
-                    <Button>Prev</Button>
-                    <ReactDatePicker
-                        className='date-picker'
-                        dateFormat='MM-DD-YYYY'
-                        selected={this.state.datePicked}
-                        maxDate={moment()}
-                        onChange={this.handleDateChange.bind(this)}
-                    />
-                    <Button>Next</Button>
-                </span>
-            </Panel>
-        );
+    getDateFilteredGames() {
+        if (!this.props.games) {
+            return [];
+        }
+        let games = [];
+        this.props.games.forEach(game => {
+            if (this.state.datePicked.isSame(moment(game.date), 'day')) {
+                games.push(<GameScore game={game} />);
+            }
+        });
+        return games;
     }
 
-    /*
     render() {
-        var games = null;
-        if (this.props.games) {
-            games = this.props.games.map((game, i) => {
-                return <GameScore game={game} key={i}/>;
-            });
-        }
-        return <div className='games-list'>{games}</div>;
-    }*/
+        let games = this.getDateFilteredGames();
+        return (
+            <div>
+                <Panel className='date-picker-toolbar'>
+                    <span>
+                        <Button onClick={this.handleGoToYesterday.bind(this)}>{'<'}</Button>
+                        <ReactDatePicker
+                            className='date-picker'
+                            dateFormat='MM-DD-YYYY'
+                            selected={this.state.datePicked}
+                            maxDate={moment()}
+                            onChange={this.handleDateChange.bind(this)}
+                        />
+                        <Button onClick={this.handleGoToTomorrow.bind(this)}>{'>'}</Button>
+                    </span>
+                </Panel>
+                {games}
+            </div>
+        );
+    }
 }

@@ -1,6 +1,9 @@
 import React from 'react';
 import DeepEqual from '../../utils/DeepEqual.jsx';
 import {Table} from 'react-bootstrap';
+import CreatePlayerView from './create_player_view/CreatePlayerView.jsx';
+import UpdatePlayerView from './update_player_view/UpdatePlayerView.jsx';
+import DeletePlayerView from './delete_player_view/DeletePlayerView.jsx';
 import './players-view.scss';
 
 export default class Players extends React.Component {
@@ -29,6 +32,24 @@ export default class Players extends React.Component {
     };
 
     shouldComponentUpdate = DeepEqual.updateIfPropsOrStateChanged;
+
+    handleCreateView() {
+        this.setState({
+            view: <CreatePlayerView onSubmit={this.props.onCreate} />
+        });
+    }
+
+    handleUpdateView() {
+        this.setState({
+            view: <UpdatePlayerView onSubmit={this.props.onUpdate} />
+        });
+    }
+
+    handleDeleteView() {
+        this.setState({
+            view: <DeletePlayerView onSubmit={this.props.onDelete} />
+        });
+    }
 
     getTable() {
         return(
