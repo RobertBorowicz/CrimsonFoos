@@ -53,13 +53,13 @@ public class PlayerController {
      */
     @RequestMapping(value = "/api/player/", method = RequestMethod.POST,
                     produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<Player> createPlayer(@RequestBody Player player) {
+    public ResponseEntity<Integer> createPlayer(@RequestBody Player player) {
 
-        Player p = playerService.createPlayer(player);
-        if (p == null) {
+        Integer id = playerService.createPlayer(player);
+        if (id == -1) {
             return new ResponseEntity<>(HttpStatus.CONFLICT);
         }
-        return new ResponseEntity<>(p, HttpStatus.CREATED);
+        return new ResponseEntity<>(id, HttpStatus.CREATED);
     }
 
     /**

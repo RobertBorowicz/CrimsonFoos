@@ -16,24 +16,24 @@ public class PlayerService {
         return players;
     }
 
-    public Player createPlayer(Player p) {
+    public int createPlayer(Player p) {
         DBConnection db = new DBConnection();
-        db.addNewPlayer(p);
+        int id = db.addNewPlayer(p);
         db.close();
-        return null;
+        return id;
     }
 
     public boolean updatePlayer(int id, Player p) {
         DBConnection db = new DBConnection();
-        db.updatePlayer(id, p.getFirstName(), p.getLastName(), p.getNickname());
+        boolean result = db.updatePlayer(id, p.getFirstName(), p.getLastName(), p.getNickname());
         db.close();
-        return true;
+        return result;
     }
 
     public boolean deletePlayerById(int id) {
         DBConnection db = new DBConnection();
-        db.deletePlayer(id);
+        boolean result = db.deletePlayer(id);
         db.close();
-        return true;
+        return result;
     }
 }
