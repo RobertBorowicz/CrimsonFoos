@@ -1,17 +1,14 @@
 import React from 'react';
 import DeepEqual from '../../utils/DeepEqual.jsx';
 import {Table} from 'react-bootstrap';
+import FaPencil from 'react-icons/lib/fa/pencil';
+import FaBan from 'react-icons/lib/fa/ban';
 import CreatePlayerView from './create_player_view/CreatePlayerView.jsx';
 import UpdatePlayerView from './update_player_view/UpdatePlayerView.jsx';
 import DeletePlayerView from './delete_player_view/DeletePlayerView.jsx';
 import './players-view.scss';
 
-export default class Players extends React.Component {
-
-    static tableView = 'tableView';
-    static createView = 'creatView';
-    static updateView = 'updateView';
-    static deleteView = 'deleteView';
+export default class PlayersView extends React.Component {
 
     static propTypes = {
         players: React.PropTypes.arrayOf(React.PropTypes.shape({
@@ -22,13 +19,12 @@ export default class Players extends React.Component {
         })).isRequired,
         onCreate: React.PropTypes.func.isRequired,
         onUpdate: React.PropTypes.func.isRequired,
-        onDelete: React.PropTypes
+        onDelete: React.PropTypes.func.isRequired
     };
 
     state = {
         players: this.props.players,
-        view: this.getTable(),
-        viewName: Players.tableView
+        view: this.getTable()
     };
 
     shouldComponentUpdate = DeepEqual.updateIfPropsOrStateChanged;
@@ -39,25 +35,56 @@ export default class Players extends React.Component {
         });
     }
 
-    handleUpdateView() {
+    handleUpdateView(index) {
         this.setState({
-            view: <UpdatePlayerView onSubmit={this.props.onUpdate} />
+            view: (
+                <UpdatePlayerView
+                    player={this.state.players[index]}
+                    onCancel={this.handleCancel.bind(this)}
+                    onUpdate={this.handleUpdate.bind(this)}
+                />
+            )
         });
     }
 
-    handleDeleteView() {
+    handleDeleteView(index) {
         this.setState({
-            view: <DeletePlayerView onSubmit={this.props.onDelete} />
+            view: (
+                <DeletePlayerView
+                    player={this.state.players[index]}
+                    onCancel={this.handleCancel.bind(this)}
+                    onDelete={this.handleDelete.bind(this)}
+                />
+            )
         });
+    }
+
+    handleCreate(firstName, lastName, nickname) {
+        this.props.onCreate(firstName, lastName, nickname);
+        this.setState({view: this.getTable()});
+    }
+
+    handleCancel() {
+        this.setState({view: this.getTable()});
+    }
+
+    handleUpdate(player) {
+        this.props.onUpdate(player);
+        this.setState({view: this.getTable});
+    }
+
+    handleDelete(player) {
+        this.props.onDelete(player);
+        this.setState({view: this.getTable()});
     }
 
     getTable() {
         return(
             <Table striped bordered condensed>
                 <thead>
-                <tr>
-                    {this.getHeaders()}
-                </tr>
+                    <tr>
+                        {this.getHeaders()}
+                    </tr>
                 </thead>
                 {this.getRows()}
             </Table>
@@ -65,19 +92,29 @@ export default class Players extends React.Component {
     }
 
     getHeaders() {
-        return ['ID', 'First Name', 'Last Name', 'Nickname'].map(header => {
+        return ['ID', 'First Name', 'Last Name', 'Nickname', 'Edit', 'Delete'].map(header => {
             return <th key={header + 'playersView'}>{header}</th>;
         });
     }
 
     getRows() {
-        let rows = this.props.players.map(player => {
+        let rows = this.props.players.map((player, i) => {
             return (
                 <tr key={player.id + 'playersView'}>
                     <td>{player.id}</td>
                     <td>{player.firstName}</td>
                     <td>{player.lastName}</td>
                     <td>{player.nickname}</td>
+                    <td>
+                        <a href='#' className='center' onClick={() => this.handleUpdateView(i)}>
+                            <FaPencil />
+                        </a>
+                    </td>
+                    <td>
+                        <a href='#' className='center' onClick={() => this.handleDeleteView(i)}>
+                            <FaBan className='remove'/>
+                        </a>
+                    </td>
                 </tr>
             );
         });

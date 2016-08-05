@@ -40,8 +40,7 @@ export default class NewGame extends React.Component {
     getSelectedPlayers() {
         let selectedPlayers = this.state.selected.map((player, i) => {
             return (
-                <ListGroupItem className='selected-player' key={player.id + 'selected'}
-                    onClick={() => this.handleRemovePlayer(player)}>
+                <ListGroupItem className='selected-player' key={player.id + 'selected'}>
                     {(i + 1) + '. ' + player.nickname}
                 </ListGroupItem>
             );
