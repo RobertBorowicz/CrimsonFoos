@@ -1,6 +1,6 @@
 package rome.services;
 
-import java.util.Collection;
+import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
 import rome.model.base.Matchup;
@@ -87,7 +87,7 @@ public class RecommendedMatchupService
             }
         }
 
-        //Collection.sort(matchups);
+        Collections.sort(matchups);
         return matchups;
     }
 
@@ -102,62 +102,3 @@ public class RecommendedMatchupService
         return sum / m.length;
     }
 }
-/*
-    int highestCi = matrix[0][1];
-
-    int p1index = 0;
-    int p2index = 0;
-
-    for(int i = 0; i < matrix.length; i ++)
-    {
-      for(int j = 0; j < matrix[i].length; j ++)
-      {
-        if (i != j)
-        {
-          if (matrix[i][j] > highestCi)
-          {
-            highestCi = matrix[i][j];
-            p1index = i;
-            p2index = j;
-          }
-        }
-      }
-    }
-
-    Team redTeam = new Team();
-    redTeam.setColor("RED");
-    redTeam.setPlayer1(players.get(p1index));
-    redTeam.setPlayer2(players.get(p2index));
-
-    highestCi = matrix[0][1];
-
-    int p3index = 0;
-    int p4index = 0;
-
-    for(int i = 0; i < matrix.length; i ++)
-    {
-      for(int j = 0; j < matrix[i].length; j ++)
-      {
-        if (i != j && i != p1 && i != p2 && j != p1 && j != p2)
-        {
-          if (matrix[i][j] > highestCi)
-          {
-            highestCi = matrix[i][j];
-            p3index = i;
-            p4index = j;
-          }
-        }
-      }
-    }
-
-    Team blueTeam = new Team();
-    blueTeam.setColor("BLUE");
-    blueTeam.setPlayer1(players.get(p3index));
-    blueTeam.setPlayer2(players.get(p4index));
-
-    Matchup match = new Matchup(redTeam, blueTeam);
-
-    return new ArrayList(); //todo: stuff
-
-  }
-}*/
