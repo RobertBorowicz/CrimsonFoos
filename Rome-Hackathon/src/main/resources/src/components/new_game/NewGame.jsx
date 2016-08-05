@@ -40,9 +40,7 @@ export default class NewGame extends React.Component {
     getSelectedPlayers() {
         let selectedPlayers = this.state.selected.map((player, i) => {
             return (
-                <ListGroupItem className='selected-player' key={player.id + 'selected'}>
-                    {(i + 1) + '. ' + player.nickname}
-                </ListGroupItem>
+                <p key={player.id + 'selected'}>{(i + 1) + '. ' + player.nickname}</p>
             );
         });
         return <ListGroup className='selected-players-container'>{selectedPlayers}</ListGroup>;
@@ -92,12 +90,14 @@ export default class NewGame extends React.Component {
     render() {
         return (
             <div>
-                <Panel className='player-selection-outer-container' header='Players at the table:'>
-                    <Panel className='selected-panel'>
+                <div className='player-selection-outer-container'>
+                    <h4 className='header'>Players at the table:</h4>
+                    <hr/>
+                    <div className='selected-panel'>
                         {this.getSelectedPlayers()}
                         {this.getMatchupsButton()}
-                    </Panel>
-                </Panel>
+                    </div>
+                </div>
                 {this.getPlayersList()}
             </div>
         );

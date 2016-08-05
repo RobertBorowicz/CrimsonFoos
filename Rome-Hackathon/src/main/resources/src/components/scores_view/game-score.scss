@@ -1,0 +1,36 @@
+.red {
+
+}
+
+.blue {
+
+}
+
+.winner {
+  color: rgb(36, 129, 255);
+}
+
+.loser {
+  color: rgb(128, 130, 131);
+}
+
+.left {
+  float: left;
+  width: 150px;
+  left: 2px;
+  text-align: left;
+}
+
+.right {
+  text-align: right;
+  margin-left: 12px;
+  border-left: 3px solid grey;
+}
+
+.inline {
+  dispay: inline-block;
+}
+
+.game-group {
+  display: inline-block;
+}

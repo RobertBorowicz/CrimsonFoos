@@ -1,10 +1,12 @@
 .player-selection-outer-container {
   margin-bottom: 0;
+  text-align: center;
+
 }
 
 .selected-panel {
-  background-color: rgb(151, 151, 151);
-  margin-bottom: 16px;
+  margin-top: 24px;
+  margin-bottom: 32px;
   padding-bottom: 0;
 }
 
@@ -30,10 +32,10 @@ div.selected-players-container.list-group {
 }
 
 .selected-list-item {
-  background-color: rgb(151, 151, 151);
+  background-color: rgb(251, 224, 134);
 }
 
-.unselected-list-item {
+.header {
 
 }
 

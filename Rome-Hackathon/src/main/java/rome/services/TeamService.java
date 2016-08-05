@@ -1,9 +1,7 @@
 package rome.services;
 
 import java.util.List;
-import org.springframework.context.ConfigurableApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
-import rome.database.TeamsDAO;
+import rome.database.DBConnection;
 import rome.model.base.Team;
 
 /**
@@ -11,19 +9,10 @@ import rome.model.base.Team;
  */
 public class TeamService {
 
-    /**
-     * Retrieves a list of all teams.
-     * @return a list of all teams
-     */
     public List<Team> getAllTeams() {
-
-        ConfigurableApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
-        List<Team> teams;
-
-        TeamsDAO conn = (TeamsDAO) context.getBean("teamsDAO");
-
-        teams = conn.getTeams();
-
+        DBConnection db = new DBConnection();
+        List<Team> teams = db.getAllTeams();
+        db.close();
         return teams;
     }
 }

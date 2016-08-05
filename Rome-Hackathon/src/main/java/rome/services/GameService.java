@@ -1,34 +1,19 @@
 package rome.services;
 
 import java.util.List;
-import org.springframework.context.ConfigurableApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
-import rome.database.GamesDAO;
+
+import rome.database.DBConnection;
 import rome.model.base.Game;
 
 /**
- * The GameScore service.
- *
- * @author Rome
- * @version 1.0
- * @since 8/3/2016
- *
+ * Created by walkercr on 8/5/16.
  */
 public class GameService {
 
-    /**
-     * Retrieves a list of all teams.
-     * @return a list of all teams
-     */
     public List<Game> getAllGames() {
-
-        ConfigurableApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
-        List<Game> games;
-
-        GamesDAO conn = (GamesDAO) context.getBean("gamesDAO");
-
-        games = conn.getGames();
-
+        DBConnection db = new DBConnection();
+        List<Game> games = db.getAllGames();
+        db.close();
         return games;
     }
 }

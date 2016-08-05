@@ -1,65 +1,39 @@
 package rome.services;
 
 import java.util.List;
-import org.springframework.context.ConfigurableApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
-import rome.database.PlayersDAO;
+import rome.database.DBConnection;
 import rome.model.base.Player;
 
 /**
- * The Player controller.
- *
- * @author Rome
- * @version 1.0
- * @since 7/27/2016
- *
+ * Created by walkercr on 8/5/16.
  */
 public class PlayerService {
 
-    /**
-     * Retrieves a list of all players.
-     * @return a list of all player
-     */
     public List<Player> getAllPlayers() {
-
-        ConfigurableApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
-        List<Player> players;
-
-        PlayersDAO conn = (PlayersDAO) context.getBean("playerDAO");
-
-        players = conn.getPlayers();
-
-        for (Player p : players) {
-            System.out.println(p.getNickname());
-        }
-
+        DBConnection db = new DBConnection();
+        List<Player> players = db.getPlayersAsList();
+        db.close();
         return players;
     }
 
-    /**
-     * Creates a new player.
-     * @param player the player to create
-     */
-    public Player createPlayer(Player player) {
-        // TODO: Create player in the database
+    public Player createPlayer(Player p) {
+        DBConnection db = new DBConnection();
+        db.addNewPlayer(p);
+        db.close();
         return null;
     }
 
-    /**
-     * Updates the given player.
-     * @param player the player to update
-     */
-    public boolean updatePlayer(long id, Player player) {
-        // TODO: Update player in the database
-        return false;
+    public boolean updatePlayer(int id, Player p) {
+        DBConnection db = new DBConnection();
+        db.updatePlayer(id, p.getFirstName(), p.getLastName(), p.getNickname());
+        db.close();
+        return true;
     }
 
-    /**
-     * Deletes the player with the given id.
-     * @param id the id of the player to delete
-     */
-    public boolean deletePlayerById(long id) {
-        // TODO: Delete player in the database
-        return false;
+    public boolean deletePlayerById(int id) {
+        DBConnection db = new DBConnection();
+        db.deletePlayer(id);
+        db.close();
+        return true;
     }
 }
