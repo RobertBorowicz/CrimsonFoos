@@ -55,19 +55,25 @@ public class DBConnection {
 
     }
 
-    public void addNewPlayer(Player newPlayer) {
+    public int addNewPlayer(Player newPlayer) {
         String insertPlayer = "INSERT INTO players (first_name, last_name, nickname)"
-                            + "VALUES (?,?,?)";
+                            + "VALUES (?,?,?);SELECT LAST_INSERT_ID()";
+
+        int playerID = -1;
         try {
             PreparedStatement pst = conn.prepareStatement(insertPlayer);
             pst.setString(1, newPlayer.getFirstName());
             pst.setString(2, newPlayer.getLastName());
             pst.setString(3, newPlayer.getNickname());
-            pst.execute();
+            ResultSet id = pst.executeQuery();
+            if (id.next()) {
+                playerID = id.getInt(1);
+            }
             pst.close();
         } catch (SQLException s) {
             s.printStackTrace();
         }
+        return playerID;
     }
 
     public int getTeam(int pid1, int pid2) {
@@ -312,9 +318,10 @@ public class DBConnection {
         return games;
     }
 
-    public void updatePlayer(int pid, String first, String last, String nickname) {
+    public boolean updatePlayer(int pid, String first, String last, String nickname) {
         String update = "UPDATE players SET first_name=?, last_name=?, nickname=? "
                 + "WHERE player_id=?";
+        boolean success = false;
         try {
             PreparedStatement pst = conn.prepareStatement(update);
             pst.setString(1, first);
@@ -323,21 +330,26 @@ public class DBConnection {
             pst.setInt(4, pid);
             pst.execute();
             pst.close();
+            success = true;
         } catch (SQLException s) {
             s.printStackTrace();
         }
+        return success;
     }
 
-    public void deletePlayer(int pid) {
+    public boolean deletePlayer(int pid) {
         String delete = "DELETE FROM players WHERE player_id=?";
+        boolean success = false;
         try {
             PreparedStatement pst = conn.prepareStatement(delete);
             pst.setInt(1, pid);
             pst.execute();
             pst.close();
+            success = true;
         } catch (SQLException s) {
             s.printStackTrace();
         }
+        return success;
     }
 
     public Team getTeam(int teamID) {
