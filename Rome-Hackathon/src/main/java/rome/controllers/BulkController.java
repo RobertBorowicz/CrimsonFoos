@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import rome.model.base.Bulk;
@@ -24,6 +25,7 @@ import java.util.List;
  * @since 8/3/2016
  *
  */
+@Controller
 public class BulkController {
 
     @Autowired
@@ -48,11 +50,11 @@ public class BulkController {
         List<Team> teams = teamService.getAllTeams();
 
         if (players.isEmpty() && games.isEmpty() && teams.isEmpty()) {
-            return new ResponseEntity<Bulk>(HttpStatus.NO_CONTENT);
+            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
         }
 
         Bulk bulk = new Bulk(players, games, teams);
 
-        return new ResponseEntity<Bulk>(bulk, HttpStatus.OK);
+        return new ResponseEntity<>(bulk, HttpStatus.OK);
     }
 }

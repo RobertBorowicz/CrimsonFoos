@@ -1,8 +1,8 @@
 import React from 'react';
 import './app.scss';
 import {Circle} from 'better-react-spinkit';
-import MockData from '../mocks/MockData.jsx';
-import WebApiClient from '../ajax/WebApiClient.jsx';
+//import MockData from '../mocks/MockData.jsx';
+//import WebApiClient from '../ajax/WebApiClient.jsx';
 import NavMenu from '../components/nav_menu/NavMenu.jsx';
 import NewGame from '../components/new_game/NewGame.jsx';
 import ScoresView from '../components/scores_view/ScoresView.jsx';
@@ -20,10 +20,10 @@ export default class App extends React.Component {
     static loading = 'loading';
     static error = 'error';
 
-    //state = {view: null, viewName: null, players: null, games: null};
+    state = {view: null, viewName: null, players: null, games: null};
 
     // test state -- remove for production
-    constructor(props) {
+    /*constructor(props) {
         super(props);
         let players = MockData.getPlayers();
         let games = MockData.getGames();
@@ -40,7 +40,7 @@ export default class App extends React.Component {
             games: games,
             teams: teams
         };
-    }
+    }*/
 
     componentDidMount() {
         this.fetchBulkData();  // production call
@@ -53,6 +53,7 @@ export default class App extends React.Component {
         request.onload = () => {
             if (request.status === 200) {
                 let bulk = JSON.parse(request.responseText);
+                console.log(bulk);
                 if (bulk) {
                     this.setState({
                         view: (
@@ -254,7 +255,7 @@ export default class App extends React.Component {
                         onPlayersView={this.handlePlayersView.bind(this)}
                     />
                 </div>
-                {this.state.view}
+                {this.state.view ? <Circle size={50} /> : this.state.view}
             </div>
         );
     }
