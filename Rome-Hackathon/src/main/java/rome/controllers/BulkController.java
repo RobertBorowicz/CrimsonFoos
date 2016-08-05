@@ -9,8 +9,10 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import rome.model.base.Bulk;
 import rome.model.base.Game;
 import rome.model.base.Player;
+import rome.model.base.Team;
 import rome.services.GameService;
 import rome.services.PlayerService;
+import rome.services.TeamService;
 
 import java.util.List;
 
@@ -30,6 +32,9 @@ public class BulkController {
     @Autowired
     GameService gameService;
 
+    @Autowired
+    TeamService teamService;
+
     /**
      * Retrieve all players.
      * @return a list of all players and the status code
@@ -40,12 +45,13 @@ public class BulkController {
 
         List<Player> players = playerService.getAllPlayers();
         List<Game> games = gameService.getAllGames();
+        List<Team> teams = teamService.getAllTeams();
 
-        if (players.isEmpty() && games.isEmpty()) {
+        if (players.isEmpty() && games.isEmpty() && teams.isEmpty()) {
             return new ResponseEntity<Bulk>(HttpStatus.NO_CONTENT);
         }
 
-        Bulk bulk = new Bulk(players, games);
+        Bulk bulk = new Bulk(players, games, teams);
 
         return new ResponseEntity<Bulk>(bulk, HttpStatus.OK);
     }

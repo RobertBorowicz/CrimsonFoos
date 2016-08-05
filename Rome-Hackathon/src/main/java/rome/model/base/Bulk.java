@@ -14,9 +14,11 @@ public class Bulk {
 
     private List<Player> players;
     private List<Game> games;
+    private List<Team> teams;
 
-    public Bulk(List<Player> players, List<Game> games) {
+    public Bulk(List<Player> players, List<Game> games, List<Team> teams) {
         this.players = players;
         this.games = games;
+        this.teams = teams;
     }
 }

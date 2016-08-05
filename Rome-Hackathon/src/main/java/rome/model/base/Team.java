@@ -11,6 +11,7 @@ public class Team {
     private int score;
     private int teamID;
     private double avgCI;
+    private Stats stats = new Stats();
 
     public ArrayList<Player> getPlayers() {
         return players;
@@ -42,6 +43,14 @@ public class Team {
     }
 
     public void setCI(double ci) {this.avgCI = ci;}
+
+    public Stats getStats() {
+        return stats;
+    }
+
+    public void setStats(Stats stats) {
+        this.stats = stats;
+    }
 
     public boolean equals(Team otherTeam)
     {
