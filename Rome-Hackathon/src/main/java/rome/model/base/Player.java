@@ -12,7 +12,7 @@ import java.util.List;
  *
  */
 public class Player {
-    private long id;
+    private int id;
     private String firstName;
     private String lastName;
     private String nickname;
@@ -21,7 +21,7 @@ public class Player {
 
     public Player() {}
 
-    public Player(long id, String firstName, String lastName, String nickname) {
+    public Player(int id, String firstName, String lastName, String nickname) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -30,10 +30,10 @@ public class Player {
         stats = new Stats();
     }
 
-    public long getId() {
+    public int getId() {
         return id;
     }
-    public void setId(long id) {
+    public void setId(int id) {
         this.id = id;
     }
 
