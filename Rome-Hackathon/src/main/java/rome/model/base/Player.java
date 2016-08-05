@@ -17,6 +17,7 @@ public class Player {
     private String lastName;
     private String nickname;
     public List<Matchup> matchupList;
+    private Stats stats;
 
     public Player() {}
 
@@ -26,6 +27,7 @@ public class Player {
         this.lastName = lastName;
         this.nickname = nickname;
         matchupList = new ArrayList<>();
+        stats = new Stats();
     }
 
     public long getId() {
@@ -87,6 +89,14 @@ public class Player {
             }
         }
         return games;
+    }
+
+    public Stats getStats() {
+        return stats;
+    }
+
+    public void setStats(Stats stats) {
+        this.stats = stats;
     }
 
 }
