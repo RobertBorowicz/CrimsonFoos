@@ -16,7 +16,7 @@ public class Player {
     private String firstName;
     private String lastName;
     private String nickname;
-    public List<Matchup> matchupList;
+    public List<Matchup> matchupList = new ArrayList<>();
     private Stats stats;
 
     public Player() {}

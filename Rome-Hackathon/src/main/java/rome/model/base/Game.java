@@ -5,10 +5,10 @@ package rome.model.base;
  */
 public class Game {
 
-    private Team winner;
-    private Team loser;
-    private String date;
-    private String winColor;
+    private Team winner = new Team();
+    private Team loser = new Team();
+    private String date = new String();
+    private String winColor = new String();
     private int gameID;
 
     public Team getWinner() {

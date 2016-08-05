@@ -51,13 +51,13 @@ export default class StatsView extends React.Component {
         }
         let ranked = this.getRankedElements(elements);
         let rows = ranked.map((element, i) => {
-            let name = this.state.teamStats ? element.players[0] + ' & ' + element.players[1] : element.nickname;
+            let name = this.state.teamStats ? element.players[0].nickname + ' & ' + element.players[1].nickname : element.nickname;
             return (
                 <tr key={element.id}>
                     <td>{i + 1}</td>
                     <td>{name}</td>
                     <td>{element.stats.pct}</td>
-                    <td>{element.stats.games}</td>
+                    <td>{element.stats.gamesPlayed}</td>
                     <td>{element.stats.wins}</td>
                     <td>{element.stats.losses}</td>
                 </tr>
@@ -69,7 +69,7 @@ export default class StatsView extends React.Component {
     getRankedElements(elements) {
         var ranked = [];
         elements.forEach(element => {
-            element.stats.pct = Math.round(element.stats.wins / element.stats.games * 1000) / 1000;
+            element.stats.pct = Math.round(element.stats.wins / element.stats.gamesPlayed * 1000) / 1000;
             ranked.push(element);
             for (let i = ranked.length - 1; i >= 1; i--) {
                 if (ranked[i].stats.pct > ranked[i - 1].stats.pct) {

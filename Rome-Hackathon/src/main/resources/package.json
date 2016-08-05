@@ -4,7 +4,7 @@
   "description": "an application to track foosball results",
   "main": "index.js",
   "scripts": {
-    "start-dev": "webpack-dev-server --content-base dev/ --port 9002 --hot --inline --open",
+    "start-dev": "webpack-dev-server --content-base dev/ --port 9003 --hot --inline --open",
     "build": "webpack -p --display-error-details"
   },
   "keywords": [
