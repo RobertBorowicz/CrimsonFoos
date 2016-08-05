@@ -1,6 +1,6 @@
 import React from 'react';
 import DeepEqual from '../../utils/DeepEqual.jsx';
-import {Grid, Row, Col} from 'react-bootstrap';
+import {ListGroupItem} from 'react-bootstrap';
 import './scores-view.scss';
 
 export default class GameScore extends React.Component {
@@ -23,21 +23,23 @@ export default class GameScore extends React.Component {
     render() {
         let winner = (this.props.game.red.goals > this.props.game.blue.goals)
                      ? 'red' : 'blue';
+        let redStyle = (winner === 'red') ? 'winner' : 'loser';
+        let blueStyle = (winner === 'blue') ? 'winner' : 'loser';
         let game = this.props.game;
         return (
-            <div className='game-group'>
-                <div className='group-pair'>
-                    <div>
-                        <div>{game.red.players[0] + ' & ' + game.red.players[1]}</div>
-                        <div>{game.red.goals}</div>
+            <div>
+                <hr/>
+                <div className='inline-container'>
+                    <div className={'inline-left'}>
+                        <p className={redStyle}>{game.red.players[0] + ' + ' + game.red.players[1]}</p>
+                        <p className={blueStyle}>{game.blue.players[0] + ' + ' + game.blue.players[1]}</p>
                     </div>
-                    <div>
-                        <div>{game.blue.players[0] + ' & ' + game.blue.players[1]}</div>
-                        <div>{game.blue.goals}</div>
+                    <div className={'inline-right'}>
+                        <p className={redStyle}>{game.red.goals}</p>
+                        <p className={blueStyle}>{game.blue.goals}</p>
                     </div>
+                    <div className='clear-both'/>
                 </div>
-                <div className={'group-element group-element-sep-' + winner}>{'<'}</div>
-                <div className='group-element'></div>
             </div>
         );
     }

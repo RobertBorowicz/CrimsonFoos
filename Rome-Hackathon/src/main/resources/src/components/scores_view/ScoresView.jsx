@@ -3,8 +3,11 @@ import moment from 'moment';
 import ReactDatePicker from 'react-datepicker';
 import DeepEqual from '../../utils/DeepEqual.jsx';
 import {Panel, Button} from 'react-bootstrap';
+import FaChevronLeft from 'react-icons/lib/fa/chevron-left';
+import FaChevronRight from 'react-icons/lib/fa/chevron-right';
 import GameScore from './GameScore.jsx';
 import './scores-view.scss';
+import './game-score.scss';
 import 'react-datepicker/dist/react-datepicker.css';
 
 export default class ScoresView extends React.Component {
@@ -66,11 +69,14 @@ export default class ScoresView extends React.Component {
 
     render() {
         let games = this.getDateFilteredGames();
+        let right = this.state.datePicked.isSame(moment(), 'day') ? ' disabled' : '';
         return (
-            <div>
-                <Panel className='date-picker-toolbar'>
+            <div className='container'>
+                <div className='date-picker-toolbar'>
                     <span>
-                        <Button onClick={this.handleGoToYesterday.bind(this)}>{'<'}</Button>
+                        <a className='toggle' href='#' onClick={this.handleGoToYesterday.bind(this)}>
+                            <FaChevronLeft className={'icon'} />
+                        </a>
                         <ReactDatePicker
                             className='date-picker'
                             dateFormat='MM-DD-YYYY'
@@ -78,9 +84,11 @@ export default class ScoresView extends React.Component {
                             maxDate={moment()}
                             onChange={this.handleDateChange.bind(this)}
                         />
-                        <Button onClick={this.handleGoToTomorrow.bind(this)}>{'>'}</Button>
+                        <a className='toggle' href='#' onClick={this.handleGoToTomorrow.bind(this)}>
+                            <FaChevronRight className={'icon' + right} />
+                        </a>
                     </span>
-                </Panel>
+                </div>
                 {games}
             </div>
         );

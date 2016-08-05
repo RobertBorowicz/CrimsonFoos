@@ -68,7 +68,7 @@ public class PlayerController {
      * @return the update player and the status code
      */
     @RequestMapping(value = "/api/player/{id}", method = RequestMethod.PUT)
-    public ResponseEntity<Void> updatePlayerById(@PathVariable("id") long id, @RequestBody Player player) {
+    public ResponseEntity<Void> updatePlayerById(@PathVariable("id") int id, @RequestBody Player player) {
 
         if (!playerService.updatePlayer(id, player)) {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
@@ -82,7 +82,7 @@ public class PlayerController {
      * @return the status code
      */
     @RequestMapping(value = "/api/player/{id}", method = RequestMethod.DELETE)
-    public ResponseEntity<Void> deletePlayerById(@PathVariable("id") long id) {
+    public ResponseEntity<Void> deletePlayerById(@PathVariable("id") int id) {
 
         if (!playerService.deletePlayerById(id)) {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
