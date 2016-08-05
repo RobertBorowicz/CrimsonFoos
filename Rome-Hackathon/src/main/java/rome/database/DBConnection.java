@@ -345,7 +345,7 @@ public class DBConnection {
                        + "teams.team_id=team_member_bridge.team_id AND teams.team_id=?";
         String getPlayer = "SELECT * FROM players WHERE player_id=?";
 
-        Team newTeam = null;
+        Team newTeam = new Team();
         try {
             PreparedStatement pst = conn.prepareStatement(getTeam);
             pst.setInt(1, teamID);
@@ -367,11 +367,14 @@ public class DBConnection {
                     p.setNickname(player.getString(8));
                     p.setStats(this.getPlayerStats(pid));
                     newTeam.addPlayer(p);
+                } else {
+                    return null;
                 }
                 play.close();
             }
 
             newTeam.setStats(this.getTeamStats(teamID));
+            newTeam.setTeamID(teamID);
 
             pst.close();
         } catch (SQLException s) {
@@ -379,6 +382,31 @@ public class DBConnection {
         }
 
         return newTeam;
+    }
+
+    public List<Team> getAllTeams() {
+        String teams = "SELECT team_id FROM teams";
+
+        List<Team> allTeams = new ArrayList<Team>();
+
+        try {
+
+            PreparedStatement pst = conn.prepareStatement(teams);
+
+            ResultSet teamids = pst.executeQuery();
+            while (teamids.next()) {
+                int id = teamids.getInt(1);
+
+                Team t = this.getTeam(id);
+                if (t != null) allTeams.add(t);
+
+            }
+
+        } catch (SQLException s) {
+            s.printStackTrace();
+        }
+
+        return allTeams;
     }
 
 
