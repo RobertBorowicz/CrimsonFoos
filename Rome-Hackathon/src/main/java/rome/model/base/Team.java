@@ -65,8 +65,9 @@ public class Team {
     public String toString() {
         String toRet = "";
 
-        toRet += "\nPlayer 1: " + players.get(0).toString() + "\n";
-        toRet += "Player 2: " + players.get(1).toString() + "\n";
+        toRet += "Team: " + teamID + "\n";
+        toRet += "\nPlayer 1:\n" + players.get(0).toString() + "\n";
+        toRet += "Player 2:\n" + players.get(1).toString() + "\n";
         toRet += "Score: " + score + "\n";
         toRet += "Team Stats: " + stats.toString();
 
