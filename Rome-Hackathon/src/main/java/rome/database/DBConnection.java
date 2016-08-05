@@ -37,14 +37,14 @@ public class DBConnection {
         List<Player> players = new ArrayList<>();
 
         try {
-            rs = st.executeQuery("SELECT player_id, first_name, last_name, nickname FROM players");
-            while (rs.next()) {
+            ResultSet plys = st.executeQuery("SELECT player_id, first_name, last_name, nickname FROM players");
+            while (plys.next()) {
                 Player p = new Player();
-                p.setId(rs.getInt(1));
-                p.setFirstName(rs.getString(2));
-                p.setLastName(rs.getString(3));
-                p.setNickname(rs.getString(4));
-                p.setStats(this.getPlayerStats(rs.getInt(1)));
+                p.setId(plys.getInt(1));
+                p.setFirstName(plys.getString(2));
+                p.setLastName(plys.getString(3));
+                p.setNickname(plys.getString(4));
+                p.setStats(this.getPlayerStats(plys.getInt(1)));
                 players.add(p);
             }
         } catch (SQLException s) {
@@ -80,10 +80,10 @@ public class DBConnection {
             PreparedStatement pst = conn.prepareStatement(getTeam);
             pst.setInt(1, pid1);
             pst.setInt(2, pid2);
-            rs = pst.executeQuery();
+            ResultSet t = pst.executeQuery();
 
-            if (rs.next()) {
-                teamID = rs.getInt("team_id");
+            if (t.next()) {
+                teamID = t.getInt("team_id");
             }
             pst.close();
         } catch (SQLException s) {
@@ -136,11 +136,11 @@ public class DBConnection {
             PreparedStatement pst = conn.prepareStatement(getTotal);
             PreparedStatement pstwin = conn.prepareStatement(getWins);
             pst.setInt(1, pid);
-            rs = pst.executeQuery();
+            ResultSet sts = pst.executeQuery();
             int total = 0;
-            if (rs.next()) {
+            if (sts.next()) {
                 stats = new Stats();
-                total = rs.getInt(1);
+                total = sts.getInt(1);
                 stats.setGamesPlayed(total);
             }
 
@@ -160,6 +160,42 @@ public class DBConnection {
         return stats;
     }
 
+    public Stats getTeamStats(int teamID) {
+        String getTotal = "SELECT COUNT(*) FROM v_all_games WHERE team_id=?";
+        String getWins = "SELECT COUNT(*) FROM v_all_games WHERE team_id=? AND won=?";
+
+        Stats stats = null;
+
+        try {
+            PreparedStatement pst = conn.prepareStatement(getTotal);
+            PreparedStatement pstwin = conn.prepareStatement(getWins);
+            pst.setInt(1, teamID);
+            ResultSet sts = pst.executeQuery();
+
+            int totalGames = 0;
+            if (sts.next()) {
+                stats = new Stats();
+                totalGames = sts.getInt(1);
+                stats.setGamesPlayed(totalGames);
+            }
+
+            pstwin.setInt(1, teamID);
+            pstwin.setInt(2, 1);
+            ResultSet win = pstwin.executeQuery();
+            if (win.next()) {
+                int wins = win.getInt(1);
+                stats.setWins(wins);
+                stats.setLosses(totalGames - wins);
+            }
+
+            pst.close();
+        } catch (SQLException s) {
+            s.printStackTrace();
+        }
+        return stats;
+    }
+
+
 
     public List<Game> getGamesForDate(String datePlayed) {
         List<Game> games = new ArrayList<>();
@@ -169,13 +205,13 @@ public class DBConnection {
         try {
             PreparedStatement pst = conn.prepareStatement(getGames);
             pst.setString(1, datePlayed);
-            rs = pst.executeQuery();
+            ResultSet gms = pst.executeQuery();
             Game currGame = new Game();
             Team win = new Team();
             Team lose = new Team();
             int index = 0;
             System.out.println("Query success");
-            while (rs.next()) {
+            while (gms.next()) {
                 index %= 4;
                 if (index == 0) {
                     currGame = new Game();
@@ -183,26 +219,30 @@ public class DBConnection {
                     lose = new Team();
                 }
                 Player p = new Player();
-                p.setId(rs.getInt(6));
-                p.setFirstName(rs.getString(7));
-                p.setLastName(rs.getString(8));
-                p.setNickname(rs.getString(9));
-                p.setStats(this.getPlayerStats(rs.getInt(6)));
+                p.setId(gms.getInt(7));
+                p.setFirstName(gms.getString(8));
+                p.setLastName(gms.getString(9));
+                p.setNickname(gms.getString(10));
+                p.setStats(this.getPlayerStats(gms.getInt(7)));
 
-                if (rs.getInt(5) == 1) {
+                if (gms.getInt(6) == 1) {
                     win.addPlayer(p);
-                    win.setScore(rs.getInt(4));
-                    currGame.setWinColor(rs.getString(3));
+                    win.setScore(gms.getInt(4));
+                    win.setTeamID(gms.getInt(5));
+                    currGame.setWinColor(gms.getString(3));
                 } else {
                     lose.addPlayer(p);
-                    lose.setScore(rs.getInt(4));
+                    lose.setScore(gms.getInt(4));
+                    lose.setTeamID(gms.getInt(5));
                 }
 
                 if (index == 3) {
+                    win.setStats(this.getTeamStats(win.getTeamID()));
+                    lose.setStats(this.getTeamStats(lose.getTeamID()));
                     currGame.setWinner(win);
                     currGame.setLoser(lose);
-                    currGame.setDate(rs.getString(2));
-                    currGame.setGameID(rs.getInt(1));
+                    currGame.setDate(gms.getString(2));
+                    currGame.setGameID(gms.getInt(1));
                     games.add(currGame);
                 }
 
@@ -222,13 +262,13 @@ public class DBConnection {
 
         try {
             PreparedStatement pst = conn.prepareStatement(getGames);
-            rs = pst.executeQuery();
+            ResultSet gms = pst.executeQuery();
             Game currGame = new Game();
             Team win = new Team();
             Team lose = new Team();
             int index = 0;
 
-            while (rs.next()) {
+            while (gms.next()) {
                 index %= 4;
                 if (index == 0) {
                     currGame = new Game();
@@ -236,24 +276,30 @@ public class DBConnection {
                     lose = new Team();
                 }
                 Player p = new Player();
-                p.setId(rs.getInt(5));
-                p.setFirstName(rs.getString(6));
-                p.setLastName(rs.getString(7));
-                p.setNickname(rs.getString(8));
-                p.setStats(this.getPlayerStats(rs.getInt(5)));
+                p.setId(gms.getInt(7));
+                p.setFirstName(gms.getString(8));
+                p.setLastName(gms.getString(9));
+                p.setNickname(gms.getString(10));
+                p.setStats(this.getPlayerStats(gms.getInt(7)));
 
-                if (rs.getInt(4) == 1) {
+                if (gms.getInt(6) == 1) {
                     win.addPlayer(p);
-                    currGame.setWinColor(rs.getString(3));
+                    win.setScore(gms.getInt(4));
+                    win.setTeamID(gms.getInt(5));
+                    currGame.setWinColor(gms.getString(3));
                 } else {
                     lose.addPlayer(p);
+                    lose.setScore(gms.getInt(4));
+                    lose.setTeamID(gms.getInt(5));
                 }
 
                 if (index == 3) {
+                    win.setStats(this.getTeamStats(win.getTeamID()));
+                    lose.setStats(this.getTeamStats(lose.getTeamID()));
                     currGame.setWinner(win);
                     currGame.setLoser(lose);
-                    currGame.setDate(rs.getString(2));
-                    currGame.setGameID(rs.getInt(1));
+                    currGame.setDate(gms.getString(2));
+                    currGame.setGameID(gms.getInt(1));
                     games.add(currGame);
                 }
 
@@ -324,6 +370,8 @@ public class DBConnection {
                 }
                 play.close();
             }
+
+            newTeam.setStats(this.getTeamStats(teamID));
 
             pst.close();
         } catch (SQLException s) {
