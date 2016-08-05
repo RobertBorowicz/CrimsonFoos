@@ -1,5 +1,7 @@
 import React from 'react';
 import {ListGroup, ListGroupItem, Button} from 'react-bootstrap';
+import FaChevronLeft from 'react-icons/lib/fa/chevron-left';
+import FaChevronRight from 'react-icons/lib/fa/chevron-right';
 import './matchups-view.scss';
 
 export default class MatchupsView extends React.Component {
@@ -23,15 +25,14 @@ export default class MatchupsView extends React.Component {
     }
 
     getItem() {
+        let left = this.state.index === 0 ? ' disabled' : '';
+        let right = this.state.index + 1 === this.props.matchups.length ? ' disabled' : '';
         return (
-
             <div className='table-group'>
                 <div className='group-element'>
-                    <Button
-                        className='toggle'
-                        onClick={() => this.handleToggle(-1)}>
-                        {'<'}
-                    </Button>
+                    <a className='toggle' href='#' onClick={() => this.handleToggle(-1)}>
+                        <FaChevronLeft className={'icon' + left} />
+                    </a>
                 </div>
                 <div className='group-element'>
                     <ListGroup className='table-panel'>
@@ -41,12 +42,9 @@ export default class MatchupsView extends React.Component {
                     </ListGroup>
                 </div>
                 <div className='group-element'>
-                    <Button
-                        className='toggle'
-                        disabled={this.state.index === this.props.matchups.length}
-                        onClick={() => this.handleToggle(1)}>
-                        {'>'}
-                    </Button>
+                    <a className='toggle' href='#' onClick={() => this.handleToggle(1)}>
+                        <FaChevronRight className={'icon' + right} />
+                    </a>
                 </div>
             </div>
         );
@@ -55,6 +53,7 @@ export default class MatchupsView extends React.Component {
     render() {
         return (
             <div>
+                {this.getItem()}
                 <div className='matchup-text'>
                     <h1 className='matchup-label'>Matchup {this.state.index}</h1>
                     <p>NameA {this.state.index}</p>

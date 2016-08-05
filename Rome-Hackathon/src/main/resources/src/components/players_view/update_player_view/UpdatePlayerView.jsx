@@ -1,43 +1,33 @@
 import React from 'react';
-import {SplitButton, MenuItem, FormGroup, FormControl, ControlLabel, Button} from 'react-bootstrap';
-import ModifyPlayerAlert from '../alerts/ModifyPlayerAlert.jsx';
+import {FormGroup, FormControl, ControlLabel, ButtonToolbar, Button} from 'react-bootstrap';
 import '../player_form/player-form.scss';
 
 export default class UpdatePlayerView extends React.Component {
 
     static propTypes = {
-        players: React.PropTypes.array.isRequired,
-        onSubmit: React.PropTypes.func.isRequired
+        player: React.PropTypes.shape({
+            id: React.PropTypes.number,
+            firstName: React.PropTypes.string,
+            lastName: React.PropTypes.string,
+            nickname: React.PropTypes.string
+        }).isRequired,
+        onCancel: React.PropTypes.func.isRequired,
+        onUpdate: React.PropTypes.func.isRequired
     };
 
     state = {
-        selected: false,
-        id: null,
-        firstName: null,
-        lastName: null,
-        nickname: null,
-        alertVisible: false
+        id: this.props.player.id,
+        firstName: this.props.player.firstName,
+        lastName: this.props.player.lastName,
+        nickname: this.props.player.nickname
     };
 
     componentWillReceiveProps() {
         this.setState({
-            selected: false,
-            id: null,
-            firstName: null,
-            lastName: null,
-            nickname: null,
-            alertVisible: false
-        });
-    }
-
-    handlePlayerSelection(eventKey) {
-        let player = this.props.players[eventKey];
-        this.setState({
-            selected: true,
-            id: player.id,
-            firstName: player.firstName,
-            lastName: player.lastName,
-            nickname: player.nickname
+            id: this.props.player.id,
+            firstName: this.props.player.firstName,
+            lastName: this.props.player.lastName,
+            nickname: this.props.player.nickname
         });
     }
 
@@ -53,42 +43,16 @@ export default class UpdatePlayerView extends React.Component {
         this.setState({nickname: event.target.value});
     }
 
-    handleAlertShow() {
-        this.setState({alertVisible: true});
-    }
-
-    handleSubmitConfirmation(confirm) {
-        this.setState({alertVisible: false, selected: false});
-        if (confirm) {
-            this.props.onSubmit({
-                id: this.state.id,
-                firstName: this.state.firstName,
-                lastName: this.state.lastName,
-                nickname: this.state.nickname
-            });
-        }
-    }
-
-    getPlayerMenuItems() {
-        if (!this.props.players) {
-            return [];
-        }
-
-        let items = [];
-        this.props.players.forEach((player, i) => {
-            items.push(
-                <MenuItem eventKey={i} key={i}>
-                    {player.firstName + ' ' + player.lastName}
-                </MenuItem>
-            );
-            if (i < (this.props.players.length - 1)) {
-                items.push(<MenuItem divider key={this.props.players.length + i}/>);
-            }
+    handleUpdate() {
+        this.props.onUpdate({
+            id: this.state.id,
+            firstName: this.state.firstName,
+            lastName: this.state.lastName,
+            nickname: this.state.nickname
         });
-        return items;
     }
 
-    getPlayerForm() {
+    render() {
         return (
             <FormGroup className='player-form-container'>
                 <div className='player-form-group'>
@@ -118,42 +82,20 @@ export default class UpdatePlayerView extends React.Component {
                         onChange={this.handleNicknameChange.bind(this)}
                     />
                 </div>
-                <Button
-                    bsStyle='warning'
-                    className='player-form-element'
-                    onClick={this.handleAlertShow.bind(this)}>
-                    Update Player
-                </Button>
+                <ButtonToolbar>
+                    <Button
+                        className='player-form-element left-btn'
+                        onClick={this.props.onCancel}>
+                        Cancel
+                    </Button>
+                    <Button
+                        bsStyle='warning'
+                        className='player-form-element'
+                        onClick={this.handleUpdate.bind(this)}>
+                        Update Player
+                    </Button>
+                </ButtonToolbar>
             </FormGroup>
         );
-    }
-
-    render() {
-        let view;
-        if (this.state.alertVisible) {
-            view = (
-                <ModifyPlayerAlert
-                    action='Updates'
-                    alertStyle='warning'
-                    firstName={this.state.firstName}
-                    lastName={this.state.lastName}
-                    nickname={this.state.nickname}
-                    onConfirm={this.handleSubmitConfirmation.bind(this)}
-                />
-            );
-        } else {
-            view = (
-                <form className='outer-container'>
-                    <SplitButton
-                        title='Select a player to update'
-                        id='update'
-                        onSelect={this.handlePlayerSelection.bind(this)}>
-                        {this.getPlayerMenuItems()}
-                    </SplitButton>
-                    {this.state.selected && this.props.players ? this.getPlayerForm() : null}
-                </form>
-            );
-        }
-        return view;
     }
 }

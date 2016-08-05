@@ -7,7 +7,7 @@ import GameScore from './GameScore.jsx';
 import './scores-view.scss';
 import 'react-datepicker/dist/react-datepicker.css';
 
-export default class Games extends React.Component {
+export default class ScoresView extends React.Component {
 
     static propTypes = {
         games: React.PropTypes.arrayOf(React.PropTypes.shape({
@@ -56,9 +56,9 @@ export default class Games extends React.Component {
             return [];
         }
         let games = [];
-        this.props.games.forEach(game => {
+        this.props.games.forEach((game, i) => {
             if (this.state.datePicked.isSame(moment(game.date), 'day')) {
-                games.push(<GameScore game={game} />);
+                games.push(<GameScore key={game.date + '' + i} game={game} />);
             }
         });
         return games;
