@@ -88,6 +88,7 @@ export default class NewGame extends React.Component {
         return <ListGroup className='players-list'>{players}</ListGroup>;
     }
 
+    // this is a test
     render() {
         return (
             <div>
