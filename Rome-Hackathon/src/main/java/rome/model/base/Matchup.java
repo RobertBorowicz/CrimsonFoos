@@ -2,8 +2,8 @@ package rome.model.base;
 
 public class Matchup implements Comparable<Matchup>
 {
-  private Team team1;
-  private Team team2;
+  private Team team1 = new Team();
+  private Team team2 = new Team();
   private double avgCI;
 
   public Matchup(Team team1, Team team2, double calcedCI)

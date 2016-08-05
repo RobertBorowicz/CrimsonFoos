@@ -1,7 +1,7 @@
 import React from 'react';
 import './app.scss';
 import {Circle} from 'better-react-spinkit';
-//import MockData from '../mocks/MockData.jsx';
+import MockData from '../mocks/MockData.jsx';
 //import WebApiClient from '../ajax/WebApiClient.jsx';
 import NavMenu from '../components/nav_menu/NavMenu.jsx';
 import NewGame from '../components/new_game/NewGame.jsx';
@@ -43,32 +43,27 @@ export default class App extends React.Component {
     }*/
 
     componentDidMount() {
-        this.fetchBulkData();  // production call
+        this.fetchPlayers();  // production call
     }
 
-    fetchBulkData() {
+    fetchPlayers() {
         let request = new XMLHttpRequest();
-        request.open('GET', '/api/bulk/', true);
+        request.open('GET', '/api/player/', true);
         request.setRequestHeader('Content-Type', 'application/json');
         request.onload = () => {
-            if (request.status === 200) {
+           // if (request.status === 200) {
                 let bulk = JSON.parse(request.responseText);
-                console.log(bulk);
-                if (bulk) {
-                    this.setState({
-                        view: (
-                            <NewGame
-                                players={bulk.players}
-                                onSubmit={this.handleGetMatchups.bind(this)}
-                            />
-                        ),
-                        viewName: App.newGameView,
-                        players: bulk.players,
-                        games: bulk.games,
-                        teams: bulk.teams
-                    });
-                }
-            }
+                this.setState({
+                    view: (
+                        <NewGame
+                            players={bulk}
+                            onSubmit={this.handleGetMatchups.bind(this)}
+                        />
+                    ),
+                    viewName: App.newGameView,
+                    players: bulk
+                });
+           // }
         };
         request.send();
     }
@@ -90,21 +85,54 @@ export default class App extends React.Component {
     }
 
     handleScoresView() {
-        console.log('handling scores view');
-        if (this.state.viewName !== App.scoresView) {
-            this.setState({
-                view: <ScoresView games={this.state.games} />,
-                viewName: App.scoresView
-            });
+        if (!this.state.games) {
+            let request = new XMLHttpRequest();
+            request.open('GET', '/api/game/', true);
+            request.setRequestHeader('Content-Type', 'application/json');
+            request.onload = () => {
+                if (request.status === 200) {
+                    let bulk = JSON.parse(request.responseText);
+                    this.setState({
+                        view: <ScoresView games={bulk}/>,
+                        viewName: App.newGameView,
+                        games: bulk
+                    });
+                }
+            };
+            request.send();
+        } else {
+           // if (this.state.viewName !== App.scoresView) {
+                this.setState({
+                    view: <ScoresView games={this.state.games}/>,
+                    viewName: App.scoresView
+                });
+           // }
         }
     }
 
     handleStatsView() {
-        if (this.state.viewName !== App.statsView) {
-            this.setState({
-                view: <StatsView players={this.state.players} teams={this.state.teams} />,
-                viewName: App.statsView
-            });
+        if (!this.state.teams) {
+            let request = new XMLHttpRequest();
+            request.open('GET', '/api/team/', true);
+            request.setRequestHeader('Content-Type', 'application/json');
+            request.onload = () => {
+                if (request.status === 200) {
+                    let bulk = JSON.parse(request.responseText);
+                    this.setState({
+                        view: <StatsView players={this.state.players} teams={bulk} />,
+                        viewName: App.statsView,
+                        teams: bulk
+                    });
+                }
+            };
+            request.send();
+        } else {
+            //if (this.state.viewName !== App.scoresView) {
+                this.setState({
+                    view: <StatsView players={this.state.players} teams={this.state.teams} />,
+                    viewName: App.statsView
+                });
+            //}
         }
     }
 
@@ -166,6 +194,9 @@ export default class App extends React.Component {
         request.onload = () => {
             if (request.status === 200) {
                 let players = JSON.parse(request.responseText);
+                //let players = this.state.players;
+                player.id = players[players.length - 1].id + 1;
+                players.push(player);
                 this.setState({
                     view: this.handlePlayersView(players),
                     viewName: App.playersView,
@@ -255,7 +286,7 @@ export default class App extends React.Component {
                         onPlayersView={this.handlePlayersView.bind(this)}
                     />
                 </div>
-                {this.state.view ? <Circle size={50} /> : this.state.view}
+                {!this.state.view ? <Circle size={50} /> : this.state.view}
             </div>
         );
     }

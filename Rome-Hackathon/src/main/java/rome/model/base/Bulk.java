@@ -1,5 +1,6 @@
 package rome.model.base;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -12,9 +13,9 @@ import java.util.List;
  */
 public class Bulk {
 
-    private List<Player> players;
-    private List<Game> games;
-    private List<Team> teams;
+    private List<Player> players = new ArrayList<>();
+    private List<Game> games = new ArrayList<>();
+    private List<Team> teams = new ArrayList<>();
 
     public Bulk(List<Player> players, List<Game> games, List<Team> teams) {
         this.players = players;
