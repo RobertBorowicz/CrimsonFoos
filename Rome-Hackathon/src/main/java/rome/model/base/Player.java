@@ -70,7 +70,8 @@ public class Player {
         return "ID: " + id
                 + "\nFirst Name: " + firstName
                 + "\nLast Name: " + lastName
-                + "\nNickname: " + nickname;
+                + "\nNickname: " + nickname
+                + "\nStats: " + stats.toString();
     }
 
     public int getGamesPlayed()

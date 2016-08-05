@@ -32,4 +32,11 @@ public class Stats {
     public void setLosses(int losses) {
         this.losses = losses;
     }
+
+    public String toString() {
+        String toRet = "";
+
+        toRet += "Wins: " + wins + " Losses " + losses + "\n";
+        return toRet;
+    }
 }
