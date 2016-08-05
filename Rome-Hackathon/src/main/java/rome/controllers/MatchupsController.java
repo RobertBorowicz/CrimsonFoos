@@ -42,6 +42,9 @@ public class MatchupsController {
                     produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<List<Matchup>> getMatchups(List<Player> players) {
         // matchupService.getRecommendedMatchups(players)
-        return null;
+    	RecommendedMatchupService matchupService = new RecommendedMatchupService();
+    	List<Matchup> recommendedMatchups = matchupService.getRecommendedMatchups(players);
+    	
+        return new ResponseEntity<List<Matchup>>(recommendedMatchups, HttpStatus.OK);
     }
 }
